@@ -1,14 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag Base</title>
+    <title>Exemplo da Tag &lt;base&gt;</title>
+    <link rel="stylesheet" href="utils/css/base.css">
 </head>
 
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Tags HTML</a>
+        <ul class="nav-links">
+            <li><a href="home_page.html">Início</a></li>
+            <li><a href="referencias.html">Referências</li>
+            <li><a href="sobre_nos.html">Sobre nós</a></li>
+        </ul>
+    </nav>
 
+
+    <div class="container">
+
+        <h1>Tag &lt;base&gt;</h1>
+
+        <section id="definicao">
+            <h1>Definição</h1>
+            <p>A tag <code>&lt;base&gt;</code> define a URL base para todos os links e recursos relativos de um
+                documento
+                HTML.
+                Ela deve ser utilizada dentro do elemento <code>&lt;head&gt;</code> e é útil quando se deseja
+                centralizar
+                os caminhos relativos, facilitando a manutenção dos links e recursos.</p>
+        </section>
+
+        <!-- Parte 2: Exemplo de uso -->
+        <section id="exemplo">
+            <h2>Exemplo de Uso</h2>
+            <p>No exemplo abaixo, definimos a URL base para que todos os links ou imagens que usarem caminhos relativos
+                sejam referenciados a partir de "https://www.exemplo.com/".</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+    &lt;head&gt;
+        &lt;base href="https://www.exemplo.com/" target="_blank"&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Documento com Base&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="pagina.html"&gt;Página Relativa&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>O link acima apontará para "https://www.exemplo.com/pagina.html" e será aberto em uma nova aba.</p>
+        </section>
+
+        <!-- Parte 3: Tabela de Atributos -->
+        <section id="atributos">
+            <h2>Atributos da tag &lt;base&gt;</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>href</td>
+                        <td>URL</td>
+                        <td>Define a URL base para todos os links e recursos relativos.</td>
+                    </tr>
+                    <tr>
+                        <td>target</td>
+                        <td>_self, _blank, _parent, _top</td>
+                        <td>Define o destino padrão para a abertura de links e formulários.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <div class="outros">
+        <h2>Outras Referências</h2>
+        <ul>
+            <li><a href="tags/dfn.html"> &lt;dfn&gt; </a></li>
+            <li><a href="tags/i.html"> &lt;i&gt; </a></li>
+            <li><a href="tags/object.html"> &lt;object&gt; </a></li>
+            <li><a href="tags/section.html"> &lt;section&gt; </a></li>
+            <li><a href="tags/thead.html"> &lt;thead&gt; </a></li>
+        </ul>
+    </div>
 </body>
 
 </html>
