@@ -4,92 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo da Tag &lt;base&gt;</title>
+    <title>Guia Completo da Tag &lt;base&gt; | Tags HTML</title>
+
     <link rel="stylesheet" href="utils/css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
+    <header class="navbar">
         <a href="index.html" class="nav-logo">Tags HTML</a>
-        <ul class="nav-links">
-            <li><a href="home_page.html">Início</a></li>
-            <li><a href="referencias.html">Referências</li>
-            <li><a href="sobre_nos.html">Sobre nós</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home_page.html">Início</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Um wrapper para controlar o layout principal com CSS Grid -->
+    <div class="page-layout">
 
-    <div class="container">
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Tag &lt;base&gt;</h1>
+                <p class="subtitle">A tag que define a URL base para todos os links relativos em uma página.</p>
+            </header>
 
-        <h1>Tag &lt;base&gt;</h1>
+            <section id="definicao" class="card">
+                <h2>Definição</h2>
+                <p>A tag <code>&lt;base&gt;</code> especifica a URL base a ser usada para todos os URLs relativos em um
+                    documento. Só pode haver um elemento <code>&lt;base&gt;</code> em um documento, e ele deve estar
+                    dentro do elemento <code>&lt;head&gt;</code>.</p>
+                <p>Isso é útil para centralizar os caminhos, facilitando a manutenção de links e recursos (como imagens
+                    e scripts) quando a estrutura de pastas do site muda.</p>
+            </section>
 
-        <section id="definicao">
-            <h1>Definição</h1>
-            <p>A tag <code>&lt;base&gt;</code> define a URL base para todos os links e recursos relativos de um
-                documento
-                HTML.
-                Ela deve ser utilizada dentro do elemento <code>&lt;head&gt;</code> e é útil quando se deseja
-                centralizar
-                os caminhos relativos, facilitando a manutenção dos links e recursos.</p>
-        </section>
+            <section id="exemplo" class="card">
+                <h2>Exemplo de Uso</h2>
+                <p>No exemplo abaixo, a URL base é definida como "https://developer.mozilla.org/". Todos os links
+                    relativos na página serão resolvidos a partir dessa URL.</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;base href="https://developer.mozilla.org/" target="_blank"&gt;
+    &lt;title&gt;Exemplo de Base&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Este link apontará para "https://developer.mozilla.org/pt-BR/docs/Web/HTML" --&gt;
+    &lt;a href="pt-BR/docs/Web/HTML"&gt;Documentação de HTML&lt;/a&gt;
 
-        <!-- Parte 2: Exemplo de uso -->
-        <section id="exemplo">
-            <h2>Exemplo de Uso</h2>
-            <p>No exemplo abaixo, definimos a URL base para que todos os links ou imagens que usarem caminhos relativos
-                sejam referenciados a partir de "https://www.exemplo.com/".</p>
-            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-br"&gt;
-    &lt;head&gt;
-        &lt;base href="https://www.exemplo.com/" target="_blank"&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&gt;Documento com Base&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;a href="pagina.html"&gt;Página Relativa&lt;/a&gt;
-    &lt;/body&gt;
+    &lt;!-- Esta imagem será carregada de "https://developer.mozilla.org/static/img/favicon32.png" --&gt;
+    &lt;img src="static/img/favicon32.png" alt="Logo MDN"&gt;
+  &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-            <p>O link acima apontará para "https://www.exemplo.com/pagina.html" e será aberto em uma nova aba.</p>
-        </section>
+                <p>Note que o atributo <code>target="_blank"</code> na tag <code>&lt;base&gt;</code> fará com que todos
+                    os links da página abram em uma nova aba por padrão.</p>
+            </section>
 
-        <!-- Parte 3: Tabela de Atributos -->
-        <section id="atributos">
-            <h2>Atributos da tag &lt;base&gt;</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Atributo</th>
-                        <th>Valor</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>href</td>
-                        <td>URL</td>
-                        <td>Define a URL base para todos os links e recursos relativos.</td>
-                    </tr>
-                    <tr>
-                        <td>target</td>
-                        <td>_self, _blank, _parent, _top</td>
-                        <td>Define o destino padrão para a abertura de links e formulários.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <section id="atributos" class="card">
+                <h2>Atributos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>href</code></td>
+                            <td>URL</td>
+                            <td><strong>(Obrigatório)</strong> Define a URL base para todos os caminhos relativos na
+                                página. Deve ser uma URL absoluta.</td>
+                        </tr>
+                        <tr>
+                            <td><code>target</code></td>
+                            <td><code>_self</code>, <code>_blank</code>, <code>_parent</code>, <code>_top</code></td>
+                            <td>Define o contexto de navegação padrão para links e formulários que não possuem um
+                                atributo <code>target</code> explícito.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="boas-praticas" class="card">
+                <h2>Boas Práticas e Observações</h2>
+                <ul>
+                    <li><strong>Posicionamento:</strong> Coloque a tag <code>&lt;base&gt;</code> o mais cedo possível
+                        dentro do <code>&lt;head&gt;</code>. Qualquer recurso com URL relativa (como
+                        <code>&lt;link rel="stylesheet"&gt;</code>) declarado antes da tag <code>&lt;base&gt;</code> não
+                        será afetado por ela.
+                    </li>
+                    <li><strong>Apenas uma por página:</strong> Um documento HTML só pode ter uma única tag
+                        <code>&lt;base&gt;</code>.
+                    </li>
+                    <li><strong>Cuidado com Âncoras:</strong> Links de âncora (<code>href="#secao"</code>) também são
+                        afetados pela tag base. Se você tem <code>&lt;base href="/docs/"&gt;</code>, um link para
+                        <code>#secao</code> apontará para <code>/docs/#secao</code>, o que pode quebrar a navegação
+                        interna da página.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="acessibilidade" class="card">
+                <h2>Considerações de Acessibilidade</h2>
+                <p>O uso de <code>target="_blank"</code> na tag <code>&lt;base&gt;</code> força a abertura de todos os
+                    links em uma nova aba, o que pode ser desorientador para usuários, especialmente aqueles que
+                    utilizam leitores de tela. Se for utilizá-lo, é uma boa prática avisar visualmente (com um ícone) e
+                    textualmente (para leitores de tela) que o link abrirá em uma nova janela.</p>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="card">
+                <h2>Outras Tags</h2>
+                <ul class="sidebar-links">
+                    <li><a href="tags/dfn.html">&lt;dfn&gt;</a></li>
+                    <li><a href="tags/i.html">&lt;i&gt;</a></li>
+                    <li><a href="tags/object.html">&lt;object&gt;</a></li>
+                    <li><a href="tags/section.html">&lt;section&gt;</a></li>
+                    <li><a href="tags/thead.html">&lt;thead&gt;</a></li>
+                </ul>
+            </div>
+        </aside>
 
     </div>
 
-    <div class="outros">
-        <h2>Outras Referências</h2>
-        <ul>
-            <li><a href="tags/dfn.html"> &lt;dfn&gt; </a></li>
-            <li><a href="tags/i.html"> &lt;i&gt; </a></li>
-            <li><a href="tags/object.html"> &lt;object&gt; </a></li>
-            <li><a href="tags/section.html"> &lt;section&gt; </a></li>
-            <li><a href="tags/thead.html"> &lt;thead&gt; </a></li>
-        </ul>
-    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Tags HTML. Todos os direitos reservados.</p>
+            <nav class="footer-links">
+                <a href="privacy_policy.html">Política de Privacidade</a> |
+                <a href="terms_of_service.html">Termos de Serviço</a> |
+                <a href="sitemap.html">Mapa do Site</a> |
+                <a href="sobre_nos.html">Sobre nós</a>
+            </nav>
+        </div>
+    </footer>
+
 </body>
 
 </html>

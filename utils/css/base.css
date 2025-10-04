@@ -1,81 +1,227 @@
-.container {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+:root {
+    --primary-color: #4A4DE7;
+    /* Um azul/roxo mais vibrante */
+    --primary-color-dark: #373AC6;
+    --background-color: #f4f7f9;
+    --surface-color: #ffffff;
+    --text-color: #333333;
+    --text-color-light: #666666;
+    --border-color: #e0e0e0;
+    --header-bg: var(--primary-color);
+    --header-text: #ffffff;
+    --code-bg: #f0f2f5;
+    --font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    margin-top: 0px;
-
-
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-.navbar ul {
-    list-style-type: none;
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
 }
 
-section {
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+/* === LAYOUT PRINCIPAL === */
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* Layout para telas maiores */
+@media (min-width: 992px) {
+    .page-layout {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.main-content .page-header {
     margin-bottom: 2em;
 }
 
+.main-content .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color-light);
+}
+
+
+/* === COMPONENTES REUTILIZÁVEIS === */
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5em;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2em;
+    /* Espaçamento entre as seções */
+}
+
+
+/* === ESTILOS DE ELEMENTOS ESPECÍFICOS === */
+
+.navbar {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--header-text);
+}
+
+.nav-logo:hover {
+    text-decoration: none;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links a {
+    color: var(--header-text);
+    font-weight: 500;
+}
+
+/* --- Barra Lateral (Sidebar) --- */
+.sidebar .card {
+    margin-bottom: 0;
+}
+
+.sidebar-links {
+    list-style-type: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 0.5em;
+}
+
+.sidebar-links a {
+    font-weight: 500;
+}
+
+
+/* --- Tabela --- */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 1em;
 }
 
-table,
 th,
 td {
-    border: 1px solid #ccc;
-    padding: 8px;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
+thead th {
+    background-color: #f8f9fa;
+    font-weight: 700;
 }
 
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* --- Bloco de Código --- */
 pre {
-    background: #f8f8f8;
-    padding: 10px;
+    background: var(--code-bg);
+    padding: 1em;
+    border-radius: calc(var(--border-radius) / 2);
     overflow-x: auto;
+    border: 1px solid var(--border-color);
 }
 
-.outros {
-    max-width: 60%;
-    margin: 20px auto;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    float: right;
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre code {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #343a40;
+    color: #e9ecef;
+    text-align: center;
+    padding: 2em 1em;
+    margin-top: 2em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 0.5em;
+}
+
+.footer-links a {
+    color: #ffffff;
+    margin: 0 10px;
 }
