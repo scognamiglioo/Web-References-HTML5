@@ -1,0 +1,15 @@
+.attention-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    border-left: 4px solid #ff0000;
+}
+
+.suggestion-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    border-left: 4px solid #017e16;
+}
