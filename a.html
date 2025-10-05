@@ -25,7 +25,135 @@
     </header>
 
     <main>
-       
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;a&gt;</h1>
+            </section>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>Cria um link para o site do IFNMG.</p>
+                    <div class="code-block">&lt;a href="http://www.ifnmg.edu.br"&gt;Visite o site do IFNMG!&lt;/a&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;a&gt; define um hyperlink, o qual é usado para ligar uma página a
+                        outra.
+                    </p>
+                    <p>O atributo <strong>href</strong> especifica o destino do link. O texto entre as
+                        tags de abertura e fechamento é o texto do link que os usuários clicam.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>download</strong></td>
+                                <td>filename</td>
+                                <td class="description">Especifica que o recurso vinculado será baixado quando o usuário
+                                    clicar no link.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>href</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica a URL da página ou recurso que o link aponta.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>hreflang</strong></td>
+                                <td>language_code</td>
+                                <td class="description">Especifica o idioma do documento vinculado.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>media</strong></td>
+                                <td>media_query</td>
+                                <td class="description">Especifica para qual mídia ou dispositivo o documento vinculado
+                                    está otimizado.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>ping</strong></td>
+                                <td>list_of_URLs</td>
+                                <td class="description">Lista de URLs que receberão uma requisição POST em segundo plano
+                                    quando o link for seguido, geralmente usado para rastreamento.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>referrerpolicy</strong></td>
+                                <td>no-referrer / no-referrer-when-downgrade / origin / origin-when-cross-origin /
+                                    same-origin / strict-origin-when-cross-origin / unsafe-url</td>
+                                <td class="description">Especifica quais informações de referência serão enviadas com o
+                                    link.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>rel</strong></td>
+                                <td>alternate / author / bookmark / external / help / license / next / nofollow /
+                                    noreferrer / noopener / prev / search / tag</td>
+                                <td class="description">Especifica o relacionamento entre o documento atual e o
+                                    documento vinculado.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>target</strong></td>
+                                <td>_blank / _parent / _self / _top</td>
+                                <td class="description">Especifica onde abrir o documento vinculado.</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>type</strong></td>
+                                <td>media_type</td>
+                                <td class="description">Especifica o tipo de mídia do documento vinculado.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                   
+                    <p>Como usar uma imagem como link:</p>
+                    <div class="code-block">
+                        &lt;a href="http://www.ifnmg.edu.br"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="ifnmg_logo.png" alt="Logo IFNMG"&gt;<br>
+                        &lt;/a&gt;</div>
+                    <p>Como abrir um link em uma nova aba:</p>
+                    <div class="code-block">
+                        &lt;a href="https://www.w3schools.com" target="_blank"&gt;Visit W3Schools.com!&lt;/a&gt; </div>
+                    <p>Como criar um link de email:</p>
+                    <div class="code-block">
+                        &lt;a href="mailto:exemplo@ifnmg.edu.br"&gt;Enviar Email&lt;/a&gt; </div>
+                    <p>Como criar um link para um número de telefone:</p>
+                    <div class="code-block">
+                        &lt;a href="tel:+1234567890"&gt;Ligar para +1234567890&lt;/a&gt; </div>
+                    <p>Como criar um link para uma seção específica da mesma página:</p>
+                    <div class="code-block">
+                        &lt;a href="#secao1"&gt;Ir para Seção 1&lt;/a&gt; <br><br>
+                        &lt;h2 id="secao1"&gt;Seção 1&lt
+                        ;/h2&gt; </div>
+                    <p> 
+                        Como fazer link para JavaScript:
+                    </p>
+                    <div class="code-block">   
+                        &lt;a href="javascript:void(0);" onclick="alert('Olá! Você clicou no link.');"&gt;Clique aqui&lt;/a&gt;
+                    </div>
+
+                </section>
+            </section>
+        </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
@@ -34,152 +162,153 @@
 
 
             <ul class="sidebar-links" id="tagList">
-               
-                    <li><a href="canvas.html">&lt;canvas&gt;</a></li>
-                    <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
-                    <li><a href="legend.html">&lt;legend&gt;</a></li>
-                    <li><a href="picture.html">&lt;picture&gt;</a></li>
-                    <li><a href="sub.html">&lt;sub&gt;</a></li>
-                    <li><a href="var.html">&lt;var&gt;</a></li>
 
-                    <li><a href="base.html">&lt;base&gt;</a></li>
-                    <li><a href="dfn.html">&lt;dfn&gt;</a></li>
-                    <li><a href="i.html">&lt;i&gt;</a></li>
-                    <li><a href="object.html">&lt;object&gt;</a></li>
-                    <li><a href="section.html">&lt;section&gt;</a></li>
-                    <li><a href="thead.html">&lt;thead&gt;</a></li>
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
 
-                    <li><a href="a.html">&lt;a&gt;</a></li>
-                    <li><a href="code.html">&lt;code&gt;</a></li>
-                    <li><a href="footer.html">&lt;footer&gt;</a></li>
-                    <li><a href="main.html">&lt;main&gt;</a></li>
-                    <li><a href="q.html">&lt;q&gt;</a></li>
-                    <li><a href="svg.html">&lt;svg&gt;</a></li>
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
 
-                    <li><a href="audio.html">&lt;audio&gt;</a></li>
-                    <li><a href="del.html">&lt;del&gt;</a></li>
-                    <li><a href="hr.html">&lt;hr&gt;</a></li>
-                    <li><a href="nav.html">&lt;nav&gt;</a></li>
-                    <li><a href="script.html">&lt;script&gt;</a></li>
-                    <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
 
-                    <li><a href="article.html">&lt;article&gt;</a></li>
-                    <li><a href="datalist.html">&lt;datalist&gt;</a></li>
-                    <li><a href="header.html">&lt;header&gt;</a></li>
-                    <li><a href="meta.html">&lt;meta&gt;</a></li>
-                    <li><a href="s.html">&lt;s&gt;</a></li>
-                    <li><a href="template.html">&lt;template&gt;</a></li>
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
 
-                    <li><a href="body.html">&lt;body&gt;</a></li>
-                    <li><a href="dt.html">&lt;dt&gt;</a></li>
-                    <li><a href="ins.html">&lt;ins&gt;</a></li>
-                    <li><a href="output.html">&lt;output&gt;</a></li>
-                    <li><a href="span.html">&lt;span&gt;</a></li>
-                    <li><a href="track.html">&lt;track&gt;</a></li>
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
 
-                    <li><a href="abbr.html">&lt;abbr&gt;</a></li>
-                    <li><a href="col.html">&lt;col&gt;</a></li>
-                    <li><a href="form.html">&lt;form&gt;</a></li>
-                    <li><a href="map.html">&lt;map&gt;</a></li>
-                    <li><a href="rp.html">&lt;rp&gt;</a></li>
-                    <li><a href="table.html">&lt;table&gt;</a></li>
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
 
-                    <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
-                    <li><a href="cite.html">&lt;cite&gt;</a></li>
-                    <li><a href="figure.html">&lt;figure&gt;</a></li>
-                    <li><a href="link.html">&lt;link&gt;</a></li>
-                    <li><a href="progress.html">&lt;progress&gt;</a></li>
-                    <li><a href="sup.html">&lt;sup&gt;</a></li>
-                    <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
 
-                    <li><a href="area.html">&lt;area&gt;</a></li>
-                    <li><a href="data.html">&lt;data&gt;</a></li>
-                    <li><a href="head.html">&lt;head&gt;</a></li>
-                    <li><a href="menu.html">&lt;menu&gt;</a></li>
-                    <li><a href="ruby.html">&lt;ruby&gt;</a></li>
-                    <li><a href="td.html">&lt;td&gt;</a></li>
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
 
-                    <li><a href="button.html">&lt;button&gt;</a></li>
-                    <li><a href="embed.html">&lt;embed&gt;</a></li>
-                    <li><a href="label.html">&lt;label&gt;</a></li>
-                    <li><a href="param.html">&lt;param&gt;</a></li>
-                    <li><a href="style.html">&lt;style&gt;</a></li>
-                    <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
 
-                    <li><a href="br.html">&lt;br&gt;</a></li>
-                    <li><a href="em.html">&lt;em&gt;</a></li>
-                    <li><a href="kbd.html">&lt;kbd&gt;</a></li>
-                    <li><a href="p.html">&lt;p&gt;</a></li>
-                    <li><a href="strong.html">&lt;strong&gt;</a></li>
-                    <li><a href="u.html">&lt;u&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
 
-                    <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
-                    <li><a href="dl.html">&lt;dl&gt;</a></li>
-                    <li><a href="input.html">&lt;input&gt;</a></li>
-                    <li><a href="option.html">&lt;option&gt;</a></li>
-                    <li><a href="source.html">&lt;source&gt;</a></li>
-                    <li><a href="tr.html">&lt;tr&gt;</a></li>
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
 
-                    <li><a href="bdi.html">&lt;bdi&gt;</a></li>
-                    <li><a href="dialog.html">&lt;dialog&gt;</a></li>
-                    <li><a href="iframe.html">&lt;iframe&gt;</a></li>
-                    <li><a href="ol.html">&lt;ol&gt;</a></li>
-                    <li><a href="select.html">&lt;select&gt;</a></li>
-                    <li><a href="time.html">&lt;time&gt;</a></li>
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
 
-                    <li><a href="bdo.html">&lt;bdo&gt;</a></li>
-                    <li><a href="div.html">&lt;div&gt;</a></li>
-                    <li><a href="img.html">&lt;img&gt;</a></li>
-                    <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
-                    <li><a href="small.html">&lt;small&gt;</a></li>
-                    <li><a href="title.html">&lt;title&gt;</a></li>
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
 
-                    <li><a href="b.html">&lt;b&gt;</a></li>
-                    <li><a href="details.html">&lt;details&gt;</a></li>
-                    <li><a href="html.html">&lt;html&gt;</a></li>
-                    <li><a href="noscript.html">&lt;noscript&gt;</a></li>
-                    <li><a href="search.html">&lt;search&gt;</a></li>
-                    <li><a href="th.html">&lt;th&gt;</a></li>
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
 
-                    <li><a href="aside.html">&lt;aside&gt;</a></li>
-                    <li><a href="dd.html">&lt;dd&gt;</a></li>
-                    <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
-                    <li><a href="meter.html">&lt;meter&gt;</a></li>
-                    <li><a href="samp.html">&lt;samp&gt;</a></li>
-                    <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
 
-                    <li><a href="address.html">&lt;address&gt;</a></li>
-                    <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
 
-                    <li><a href="h1.html">&lt;h1&gt;</a></li>
-                    <li><a href="h2.html">&lt;h2&gt;</a></li>
-                    <li><a href="h3.html">&lt;h3&gt;</a></li>
-                    <li><a href="h4.html">&lt;h4&gt;</a></li>
-                    <li><a href="h5.html">&lt;h5&gt;</a></li>
-                    <li><a href="h6.html">&lt;h6&gt;</a></li>
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
 
-                    <li><a href="mark.html">&lt;mark&gt;</a></li>
-                    <li><a href="rt.html">&lt;rt&gt;</a></li>
-                    <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
 
-                    <li><a href="comment.html">&lt;!--...--&gt;</a></li>
-                    <li><a href="caption.html">&lt;caption&gt;</a></li>
-                    <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
-                    <li><a href="li.html">&lt;li&gt;</a></li>
-                    <li><a href="pre.html">&lt;pre&gt;</a></li>
-                    <li><a href="summary.html">&lt;summary&gt;</a></li>
-                    <li><a href="video.html">&lt;video&gt;</a></li>
-                </ul>
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
 
         </aside>
     </main>
 
 
 
-   
+
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="home.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="home.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
 </body>
 
