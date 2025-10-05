@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;dfn&gt;</title>
+    <title>Tag &lt;i&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,36 +26,29 @@
     <main>
         <article class="main-content">
             <section class="title-section">
-                <h1>Tag HTML &lt;dfn&gt;</h1>
+                <h1>Tag HTML &lt;i&gt;</h1>
             </section>
-            <p class="subtitle">A tag usada para indicar o termo que está sendo definido em um texto.</p>
+            <p class="subtitle">A tag usada para destacar um texto com ênfase sem alterar seu significado semântico.</p>
 
             <section class="content">
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>No exemplo abaixo, o termo “HTML” é destacado como o termo sendo definido, usando a tag
-                        <code>&lt;dfn&gt;</code>:
-                    </p>
+                    <p>No exemplo abaixo, o texto dentro da tag <code>&lt;i&gt;</code> é exibido em itálico:</p>
 
                     <div class="code-block">
                         <pre>
-&lt;p&gt;
-    &lt;dfn&gt;HTML&lt;/dfn&gt; (HyperText Markup Language) é a linguagem padrão para criar páginas da web.
-&lt;/p&gt;
+&lt;p&gt;A palavra &lt;i&gt;carpe diem&lt;/i&gt; vem do latim e significa "aproveite o dia".&lt;/p&gt;
                         </pre>
                     </div>
                 </section>
 
-
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p>A tag <code>&lt;dfn&gt;</code> identifica um termo que está sendo definido no contexto do
-                        documento.
-                        É útil para leitores, motores de busca e tecnologias assistivas entenderem que o texto marcado é
-                        o nome de um conceito que está sendo explicado.</p>
-                    <p>Quando usada junto com o elemento <code>&lt;abbr&gt;</code> ou <code>&lt;a&gt;</code>, pode
-                        oferecer
-                        definições mais completas e acessíveis.</p>
+                    <p>A tag <code>&lt;i&gt;</code> representa uma parte do texto que é destacada de maneira
+                        alternativa — normalmente em itálico — sem adicionar ênfase semântica, apenas estilística.</p>
+                    <p>É frequentemente usada para termos estrangeiros, pensamentos internos, nomes científicos, ou
+                        palavras que precisam se diferenciar do restante do texto sem ganhar destaque semântico
+                        (como <code>&lt;em&gt;</code> faz).</p>
                 </section>
 
                 <section class="example-section">
@@ -70,17 +63,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>title</code></td>
-                                <td>Texto</td>
-                                <td>Fornece uma definição curta ou descrição do termo, exibida como dica (tooltip)
-                                    quando o cursor passa sobre o termo.</td>
+                                <td><code>class</code></td>
+                                <td>Nome de classe</td>
+                                <td>Permite aplicar estilos CSS personalizados à tag.</td>
                             </tr>
                             <tr>
                                 <td><code>id</code></td>
                                 <td>Identificador único</td>
-                                <td>Permite que o termo seja referenciado por outros elementos (por exemplo,
-                                    <code>&lt;a href="#termo"&gt;</code>).
-                                </td>
+                                <td>Permite identificar o elemento unicamente dentro da página.</td>
+                            </tr>
+                            <tr>
+                                <td><code>style</code></td>
+                                <td>Declaração CSS</td>
+                                <td>Permite adicionar estilos inline diretamente no elemento.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -89,41 +84,39 @@
                 <section class="example-section">
                     <h3>Boas Práticas e Observações</h3>
                     <ul>
-                        <li><strong>Use com significado semântico:</strong> Só use <code>&lt;dfn&gt;</code> quando o
-                            termo
-                            estiver sendo <em>definido</em>, e não apenas mencionado.</li>
-                        <li><strong>Termo único:</strong> A tag deve envolver apenas o termo em si, não a frase inteira
-                            onde ele aparece.</li>
-                        <li><strong>Combinação útil:</strong> Combine <code>&lt;dfn&gt;</code> com
-                            <code>&lt;abbr&gt;</code>
-                            para fornecer uma definição completa de siglas e termos técnicos.
+                        <li><strong>Semântica:</strong> Use <code>&lt;i&gt;</code> apenas quando o texto tiver uma
+                            aparência diferenciada, mas não um significado diferente. Para dar ênfase real, use
+                            <code>&lt;em&gt;</code>.
                         </li>
-                        <li><strong>Acessibilidade:</strong> Quando usada corretamente, melhora a compreensão para
-                            leitores
-                            de tela e indexadores.</li>
+                        <li><strong>Estilo CSS:</strong> O itálico pode ser alterado via CSS, usando
+                            <code>font-style: italic;</code>.
+                        </li>
+                        <li><strong>Acessibilidade:</strong> Evite usar <code>&lt;i&gt;</code> apenas para destacar algo
+                            importante; leitores de tela não reconhecem essa tag como ênfase.</li>
+                        <li><strong>Uso comum:</strong> Palavras estrangeiras, pensamentos, termos técnicos,
+                            citações curtas e nomes científicos.</li>
                     </ul>
                 </section>
 
                 <section class="example-section">
                     <h3>Outros exemplos</h3>
-                    <p class="subtitle">Aqui estão mais alguns exemplos de uso da tag <code>&lt;dfn&gt;</code>:</p>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;i&gt;</code>:</p>
 
-
-                    <h4>Exemplo 1: <code>&lt;dfn&gt;</code> para um termo técnico</h4>
+                    <h4>Exemplo 1: Termo estrangeiro</h4>
                     <div class="code-block">
-                        <pre>&lt;dfn&gt;HTML&lt;/dfn&gt; é uma linguagem de marcação usada para criar páginas da web.</pre>
+                        <pre>&lt;p&gt;A expressão &lt;i&gt;déjà vu&lt;/i&gt; é de origem francesa.&lt;/p&gt;</pre>
                     </div>
                     <h4>Output</h4>
-                    <p> <dfn>HTML</dfn> é uma linguagem de marcação usada para criar páginas da web</p>
+                    <p>A expressão <i>déjà vu</i> é de origem francesa.</p>
 
                     <hr>
 
-                    <h4>Exemplo 2: <code>&lt;dfn&gt;</code> com atributo <code>title</code></h4>
+                    <h4>Exemplo 2: Pensamento interno</h4>
                     <div class="code-block">
-                        <pre>&lt;dfn title="Cascading Style Sheets"&gt;CSS&lt;/dfn&gt; é usado para estilizar páginas da web.</pre>
+                        <pre>&lt;p&gt;Ela pensou: &lt;i&gt;Será que ele vai lembrar?&lt;/i&gt;&lt;/p&gt;</pre>
                     </div>
                     <h4>Output</h4>
-                    <p> <dfn title="Cascading Style Sheets">CSS</dfn> é usado para estilizar páginas da web.</p>
+                    <p>Ela pensou: <i>Será que ele vai lembrar?</i></p>
                 </section>
         </article>
 
@@ -131,7 +124,6 @@
             <h2>Outras Tags HTML</h2>
 
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-
 
             <ul class="sidebar-links" id="tagList">
                 <li><a href="base.html">&lt;base&gt;</a></li>
