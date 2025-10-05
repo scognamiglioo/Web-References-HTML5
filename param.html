@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;a&gt;</title>
+    <title>Tag &lt;param&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/embed.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,7 +26,70 @@
     </header>
 
     <main>
+        
+
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;param&gt;</h1>
+            </section>
+
+            <section class="content">
+
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;param&gt; é usada para definir parâmetros para plugins em elementos <a href = "object.html">&lt;object&gt;</a>.</p>
+                    
+                </section>
+
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>name</strong></td>
+                                <td>name</td>
+                                <td class="description">Especifica o nome do parâmetro.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>value</strong></td>
+                                <td>value</td>
+                                <td class="description">Especifica o valor do parâmetro.</td>
+                            </tr>
+                            
+                            
+
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo:</h3>
+
+                    <p>Setar parametro <strong>autoplay</strong> para <strong>true</strong>, então o som vai começar tocar assim que a página carregar:</p>
+                    <div class="code-block">    
+                        
+                        &lt;object data="som.mp3" type="audio/mpeg"&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;param name="autoplay" value="true"&gt; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;param name="volume" value="0.5"&gt; <br>
+                        &lt;/object&gt;
+                    </div>
+                    
+                    
+
+                </section>
+            </section>
+        </article>
        
+        
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
