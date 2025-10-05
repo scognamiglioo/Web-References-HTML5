@@ -216,3 +216,28 @@
      color: var(--text-color-light);
      margin-left: 10px;
  }
+
+ .btn {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     color: white;
+     border: none;
+     padding: 0.5rem 1rem;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-size: 1rem;
+     margin-top: 10px;
+
+ }
+
+ .btn .search-box {
+     padding: 0.5rem;
+     border: none;
+     border-radius: 5px;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ input::placeholder {
+     color: #ebedf0;
+ }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;dfn&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <h1>Tag HTML &lt;dfn&gt;</h1>
+            </section>
+            <p class="subtitle">A tag usada para indicar o termo que está sendo definido em um texto.</p>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>No exemplo abaixo, o termo “HTML” é destacado como o termo sendo definido, usando a tag
+                        <code>&lt;dfn&gt;</code>:
+                    </p>
+
+                    <div class="code-block">
+                        <pre>
+&lt;p&gt;
+    &lt;dfn&gt;HTML&lt;/dfn&gt; (HyperText Markup Language) é a linguagem padrão para criar páginas da web.
+&lt;/p&gt;
+                        </pre>
+                    </div>
+                </section>
+
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>A tag <code>&lt;dfn&gt;</code> identifica um termo que está sendo definido no contexto do
+                        documento.
+                        É útil para leitores, motores de busca e tecnologias assistivas entenderem que o texto marcado é
+                        o nome de um conceito que está sendo explicado.</p>
+                    <p>Quando usada junto com o elemento <code>&lt;abbr&gt;</code> ou <code>&lt;a&gt;</code>, pode
+                        oferecer
+                        definições mais completas e acessíveis.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>title</code></td>
+                                <td>Texto</td>
+                                <td>Fornece uma definição curta ou descrição do termo, exibida como dica (tooltip)
+                                    quando o cursor passa sobre o termo.</td>
+                            </tr>
+                            <tr>
+                                <td><code>id</code></td>
+                                <td>Identificador único</td>
+                                <td>Permite que o termo seja referenciado por outros elementos (por exemplo,
+                                    <code>&lt;a href="#termo"&gt;</code>).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Use com significado semântico:</strong> Só use <code>&lt;dfn&gt;</code> quando o
+                            termo
+                            estiver sendo <em>definido</em>, e não apenas mencionado.</li>
+                        <li><strong>Termo único:</strong> A tag deve envolver apenas o termo em si, não a frase inteira
+                            onde ele aparece.</li>
+                        <li><strong>Combinação útil:</strong> Combine <code>&lt;dfn&gt;</code> com
+                            <code>&lt;abbr&gt;</code>
+                            para fornecer uma definição completa de siglas e termos técnicos.
+                        </li>
+                        <li><strong>Acessibilidade:</strong> Quando usada corretamente, melhora a compreensão para
+                            leitores
+                            de tela e indexadores.</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Aqui estão mais alguns exemplos de uso da tag <code>&lt;dfn&gt;</code>:</p>
+
+
+                    <h4>Exemplo 1: <code>&lt;dfn&gt;</code> para um termo técnico</h4>
+                    <div class="code-block">
+                        <pre>&lt;dfn&gt;HTML&lt;/dfn&gt; é uma linguagem de marcação usada para criar páginas da web.</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p> <dfn>HTML</dfn> é uma linguagem de marcação usada para criar páginas da web</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: <code>&lt;dfn&gt;</code> com atributo <code>title</code></h4>
+                    <div class="code-block">
+                        <pre>&lt;dfn title="Cascading Style Sheets"&gt;CSS&lt;/dfn&gt; é usado para estilizar páginas da web.</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p> <dfn title="Cascading Style Sheets">CSS</dfn> é usado para estilizar páginas da web.</p>
+                </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class=" btn search-box">
+
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="base.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tags HTML. Todos os direitos reservados.</p>
+        <p><a href="home.html">Home</a> | <a href="sobre.html">Sobre Nós</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
