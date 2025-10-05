@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;base&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <h1>Tag HTML &lt;base&gt;</h1>
+            </section>
+            <p class="subtitle">A tag que define a URL base para todos os links relativos em uma página.</p>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>No exemplo abaixo, a URL base é definida como "https://developer.mozilla.org/". Todos os links
+                        relativos na página serão resolvidos a partir dessa URL.</p>
+
+                    <div class="code-block">
+                        <pre>
+
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;base href="https://developer.mozilla.org/" target="_blank"&gt;
+                        &lt;title&gt;Exemplo de Base&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;!-- Este link apontará para "https://developer.mozilla.org/pt-BR/docs/Web/HTML" --&gt;
+                        &lt;a href="pt-BR/docs/Web/HTML"&gt;Documentação de HTML&lt;/a&gt;
+
+                        &lt;!-- Esta imagem será carregada de "https://developer.mozilla.org/static/img/favicon32.png"
+                        --&gt;
+                        &lt;img src="static/img/favicon32.png" alt="Logo MDN"&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        
+                        </pre>
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>A tag <code>&lt;base&gt;</code> especifica a URL base a ser usada para todos os URLs relativos em
+                        um
+                        documento. Só pode haver um elemento <code>&lt;base&gt;</code> em um documento, e ele deve estar
+                        dentro do elemento <code>&lt;head&gt;</code>.</p>
+                    <p>Isso é útil para centralizar os caminhos, facilitando a manutenção de links e recursos (como
+                        imagens
+                        e scripts) quando a estrutura de pastas do site muda.</p>
+                </section>
+
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>href</code></td>
+                                <td>URL</td>
+                                <td><strong>(Obrigatório)</strong> Define a URL base para todos os caminhos relativos na
+                                    página. Deve ser uma URL absoluta.</td>
+                            </tr>
+                            <tr>
+                                <td><code>target</code></td>
+                                <td><code>_self</code>, <code>_blank</code>, <code>_parent</code>, <code>_top</code>
+                                </td>
+                                <td>Define o contexto de navegação padrão para links e formulários que não possuem um
+                                    atributo <code>target</code> explícito.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+
+
+                <section class="example-section">
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Posicionamento:</strong> Coloque a tag <code>&lt;base&gt;</code> o mais cedo
+                            possível
+                            dentro do <code>&lt;head&gt;</code>. Qualquer recurso com URL relativa (como
+                            <code>&lt;link rel="stylesheet"&gt;</code>) declarado antes da tag <code>&lt;base&gt;</code>
+                            não
+                            será afetado por ela.
+                        </li>
+                        <li><strong>Apenas uma por página:</strong> Um documento HTML só pode ter uma única tag
+                            <code>&lt;base&gt;</code>.
+                        </li>
+                        <li><strong>Cuidado com Âncoras:</strong> Links de âncora (<code>href="#secao"</code>) também
+                            são
+                            afetados pela tag base. Se você tem <code>&lt;base href="/docs/"&gt;</code>, um link para
+                            <code>#secao</code> apontará para <code>/docs/#secao</code>, o que pode quebrar a navegação
+                            interna da página.
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <ul class="sidebar-links">
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="base.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+
+            </ul>
+        </aside>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2025 Tags HTML. Todos os direitos reservados.</p>
+        <p><a href="home.html">Home</a> | <a href="sobre.html">Sobre Nós</a></p>
+    </footer>
+</body>
+
+</html>
