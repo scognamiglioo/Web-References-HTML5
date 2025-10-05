@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;i&gt;</title>
+    <title>Tag &lt;section&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,29 +26,41 @@
     <main>
         <article class="main-content">
             <section class="title-section">
-                <h1>Tag HTML &lt;i&gt;</h1>
+                <h1>Tag HTML &lt;section&gt;</h1>
             </section>
-            <p class="subtitle">A tag usada para destacar um texto com ênfase sem alterar seu significado semântico.</p>
+            <p class="subtitle">A tag usada para agrupar conteúdo relacionado dentro de uma página, formando seções
+                temáticas ou lógicas de um documento HTML.</p>
 
             <section class="content">
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>No exemplo abaixo, o texto dentro da tag <code>&lt;i&gt;</code> é exibido em itálico:</p>
+                    <p>No exemplo abaixo, utilizamos a tag <code>&lt;section&gt;</code> para dividir a página em partes
+                        temáticas, como "Introdução" e "Contato":</p>
 
                     <div class="code-block">
                         <pre>
-&lt;p&gt;A palavra &lt;i&gt;carpe diem&lt;/i&gt; vem do latim e significa "aproveite o dia".&lt;/p&gt;
+&lt;section&gt;
+    &lt;h2&gt;Introdução&lt;/h2&gt;
+    &lt;p&gt;Bem-vindo ao nosso site! Aqui você encontrará várias informações úteis.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Contato&lt;/h2&gt;
+    &lt;p&gt;Entre em contato conosco pelo e-mail: contato@exemplo.com&lt;/p&gt;
+&lt;/section&gt;
                         </pre>
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p>A tag <code>&lt;i&gt;</code> representa uma parte do texto que é destacada de maneira
-                        alternativa — normalmente em itálico — sem adicionar ênfase semântica, apenas estilística.</p>
-                    <p>É frequentemente usada para termos estrangeiros, pensamentos internos, nomes científicos, ou
-                        palavras que precisam se diferenciar do restante do texto sem ganhar destaque semântico
-                        (como <code>&lt;em&gt;</code> faz).</p>
+                    <p>A tag <code>&lt;section&gt;</code> define uma seção temática dentro de um documento HTML. Cada
+                        seção deve agrupar conteúdo relacionado, normalmente iniciando com um cabeçalho
+                        (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>).</p>
+                    <p>Ela é frequentemente usada dentro de páginas longas para organizar o conteúdo em partes
+                        distintas, facilitando tanto a leitura quanto a semântica do documento.</p>
+                    <p>É importante usar <code>&lt;section&gt;</code> apenas quando o agrupamento tiver um significado
+                        semântico; caso contrário, prefira <code>&lt;div&gt;</code>.</p>
                 </section>
 
                 <section class="example-section">
@@ -63,19 +75,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>class</code></td>
-                                <td>Nome de classe</td>
-                                <td>Permite aplicar estilos CSS personalizados à tag.</td>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Identificador único da seção, útil para navegação e âncoras.</td>
                             </tr>
                             <tr>
-                                <td><code>id</code></td>
-                                <td>Identificador único</td>
-                                <td>Permite identificar o elemento unicamente dentro da página.</td>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Define uma ou mais classes CSS para estilização.</td>
                             </tr>
                             <tr>
                                 <td><code>style</code></td>
-                                <td>Declaração CSS</td>
-                                <td>Permite adicionar estilos inline diretamente no elemento.</td>
+                                <td>Declarações CSS</td>
+                                <td>Permite aplicar estilos diretamente no elemento (não recomendado para uso extenso).
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -84,45 +97,59 @@
                 <section class="example-section">
                     <h3>Boas Práticas e Observações</h3>
                     <ul>
-                        <li><strong>Semântica:</strong> Use <code>&lt;i&gt;</code> apenas quando o texto tiver uma
-                            aparência diferenciada, mas não um significado diferente. Para dar ênfase real, use
-                            <code>&lt;em&gt;</code>.
+                        <li><strong>Use para conteúdo relacionado:</strong> Utilize <code>&lt;section&gt;</code> para
+                            separar blocos de conteúdo com temas ou propósitos semelhantes.</li>
+                        <li><strong>Sempre inclua um cabeçalho:</strong> Cada seção deve conter um título claro com
+                            <code>&lt;h2&gt;</code> ou outro nível adequado de cabeçalho.
                         </li>
-                        <li><strong>Estilo CSS:</strong> O itálico pode ser alterado via CSS, usando
-                            <code>font-style: italic;</code>.
-                        </li>
-                        <li><strong>Acessibilidade:</strong> Evite usar <code>&lt;i&gt;</code> apenas para destacar algo
-                            importante; leitores de tela não reconhecem essa tag como ênfase.</li>
-                        <li><strong>Uso comum:</strong> Palavras estrangeiras, pensamentos, termos técnicos,
-                            citações curtas e nomes científicos.</li>
+                        <li><strong>Evite uso excessivo:</strong> Se o agrupamento não tiver significado semântico,
+                            prefira <code>&lt;div&gt;</code>.</li>
+                        <li><strong>SEO e acessibilidade:</strong> Navegadores e leitores de tela entendem melhor a
+                            estrutura da página quando seções são usadas corretamente.</li>
                     </ul>
                 </section>
 
                 <section class="example-section">
                     <h3>Outros exemplos</h3>
-                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;i&gt;</code>:</p>
+                    <p class="subtitle">Veja como a tag <code>&lt;section&gt;</code> pode ser usada em diferentes
+                        contextos:</p>
 
-                    <h4>Exemplo 1: Termo estrangeiro</h4>
+                    <h4>Exemplo 1: Estruturando um artigo</h4>
                     <div class="code-block">
-                        <pre>&lt;p&gt;A expressão &lt;i&gt;déjà vu&lt;/i&gt; é de origem francesa.&lt;/p&gt;</pre>
+                        <pre>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Introdução&lt;/h2&gt;
+        &lt;p&gt;Este artigo explica a importância das tags semânticas no HTML.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Conclusão&lt;/h2&gt;
+        &lt;p&gt;Usar tags como &lt;section&gt; melhora a acessibilidade e o SEO.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+                        </pre>
                     </div>
-                    <h4>Output</h4>
-                    <p>A expressão <i>déjà vu</i> é de origem francesa.</p>
 
-                    <hr>
-
-                    <h4>Exemplo 2: Pensamento interno</h4>
+                    <h4>Exemplo 2: Seções em uma página de produto</h4>
                     <div class="code-block">
-                        <pre>&lt;p&gt;Ela pensou: &lt;i&gt;Será que ele vai lembrar?&lt;/i&gt;&lt;/p&gt;</pre>
+                        <pre>
+&lt;section id="descricao"&gt;
+    &lt;h2&gt;Descrição do Produto&lt;/h2&gt;
+    &lt;p&gt;Um smartphone moderno com excelente desempenho.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="avaliacoes"&gt;
+    &lt;h2&gt;Avaliações dos Usuários&lt;/h2&gt;
+    &lt;p&gt;Nota média: 4.8/5&lt;/p&gt;
+&lt;/section&gt;
+                        </pre>
                     </div>
-                    <h4>Output</h4>
-                    <p>Ela pensou: <i>Será que ele vai lembrar?</i></p>
                 </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
 
             <ul class="sidebar-links" id="tagList">
@@ -270,22 +297,21 @@
                 href="referencias.html">Referências</a>
         </p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>
