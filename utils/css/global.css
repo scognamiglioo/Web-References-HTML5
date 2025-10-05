@@ -241,3 +241,98 @@
  input::placeholder {
      color: #ebedf0;
  }
+
+
+ /* Estilos específicos para a página index.html */
+    
+        
+        main.index-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    
+        
+        .hero-index {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #b3bef0 0%, #8096f8 100%);
+            border-radius: 8px;
+        }
+        
+        .hero-index h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-index p {
+            font-size: 1.2rem;
+            color: #111827;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-index {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card-index {
+            background-color: white;
+            border: 2px solid #93C5FD;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card-index h3 {
+            color: #2563EB;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-index {
+            text-align: center;
+            background-color: white;
+            border: 2px solid #93C5FD;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .cta-index h2 {
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        
+        .btn-index {
+            background-color: #2563EB;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #1D4ED8;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    
