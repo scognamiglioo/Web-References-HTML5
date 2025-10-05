@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;object&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <h1>Tag HTML &lt;object&gt;</h1>
+            </section>
+            <p class="subtitle">A tag usada para incorporar conteúdo externo, como imagens, vídeos, PDFs e outros
+                recursos dentro de uma página HTML.</p>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>No exemplo abaixo, um arquivo PDF é incorporado dentro da página usando a tag
+                        <code>&lt;object&gt;</code>:
+                    </p>
+
+                    <div class="code-block">
+                        <pre>
+&lt;object data="documento.pdf" type="application/pdf" width="600" height="400"&gt;
+    Seu navegador não suporta a exibição de PDFs.
+&lt;/object&gt;
+                        </pre>
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>A tag <code>&lt;object&gt;</code> é usada para incorporar recursos externos — como arquivos
+                        multimídia, documentos ou aplicativos — diretamente em uma página HTML.</p>
+                    <p>Ela pode ser usada como alternativa para <code>&lt;iframe&gt;</code> e
+                        <code>&lt;embed&gt;</code>, mas é mais versátil por aceitar conteúdo alternativo entre suas
+                        tags.
+                    </p>
+                    <p>Quando o recurso não pode ser exibido (por exemplo, se o navegador não suporta o tipo do
+                        arquivo), o conteúdo dentro do <code>&lt;object&gt;</code> é mostrado como fallback.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>data</code></td>
+                                <td>URL</td>
+                                <td><strong>(Obrigatório)</strong> Especifica o caminho do recurso externo que será
+                                    exibido.</td>
+                            </tr>
+                            <tr>
+                                <td><code>type</code></td>
+                                <td>MIME type</td>
+                                <td>Indica o tipo de conteúdo a ser incorporado (por exemplo, <code>image/png</code>,
+                                    <code>application/pdf</code>).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>width</code> / <code>height</code></td>
+                                <td>Valor em px ou %</td>
+                                <td>Define as dimensões da área de exibição do objeto incorporado.</td>
+                            </tr>
+                            <tr>
+                                <td><code>name</code></td>
+                                <td>Texto</td>
+                                <td>Define um nome para o objeto, que pode ser usado por scripts.</td>
+                            </tr>
+                            <tr>
+                                <td><code>form</code></td>
+                                <td>ID do formulário</td>
+                                <td>Associa o objeto a um formulário HTML específico.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Fallback importante:</strong> Sempre forneça um texto ou conteúdo alternativo entre
+                            as tags <code>&lt;object&gt;</code> para casos em que o navegador não consiga renderizar o
+                            recurso.</li>
+                        <li><strong>Versatilidade:</strong> Use <code>&lt;object&gt;</code> para diversos tipos de
+                            conteúdo, como PDFs, vídeos, imagens SVG ou até aplicativos interativos.</li>
+                        <li><strong>Alternativa ao &lt;embed&gt;:</strong> A tag <code>&lt;object&gt;</code> é mais
+                            padronizada e semântica que <code>&lt;embed&gt;</code>.</li>
+                        <li><strong>Evite uso excessivo:</strong> Prefira <code>&lt;img&gt;</code> para imagens simples
+                            e <code>&lt;iframe&gt;</code> para páginas HTML inteiras.</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;object&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Incorporando um arquivo PDF</h4>
+                    <div class="code-block">
+                        <pre>&lt;object data="utils/doc/homepage.pdf" type="application/pdf" width="300" height="50"&gt;
+Seu navegador não suporta PDF incorporado.
+&lt;/object&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <object data="utils/doc/homepage.pdf" type="application/pdf" width="100%" height="600">
+                        Seu navegador não suporta PDF incorporado.
+                    </object>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Exibindo um SVG</h4>
+                    <div class="code-block">
+                        <pre>&lt;object data="utils/imgs/cat.svg" type="image/svg+xml" width="200" height="200"&gt;&lt;/object&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <object data="utils/imgs/cat.svg" type="image/svg+xml" width="200" height="200"></object>
+                </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html" class="active">&lt;object&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tags HTML. Todos os direitos reservados.</p>
+        <p><a href="home.html">Home</a> | <a href="sobre.html">Sobre Nós</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
