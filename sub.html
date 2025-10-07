@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;picture&gt;</title>
+    <title>Tag &lt;sub&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,21 +29,22 @@
         </nav>
     </header>
 
+
     <!--MAIN ===================================================================================-->
 
     <main>
 
         <article class="main-content">
-            
+
             <!-- Título e explicação------------------------------------------------------>
             <section class="title-section">
-                <h1>Tag HTML &lt;picture&gt;</h1>
+                <h1>Tag HTML &lt;sub&gt;</h1>
 
-                <p class="subtitle">Em HTML, as tags para imagens são <code>&lt;img&gt;</code> e <code>&lt;picture&gt;</code>. 
-                    A tag <code>&lt;img&gt;</code> é usada para exibir uma única imagem, enquanto a tag <code>&lt;picture&gt;</code> 
-                    é usada para imagens responsivas, permitindo que você especifique diferentes 
-                    imagens (via tags source) que o navegador escolherá com base nas capacidades 
-                    do dispositivo, como o tamanho da tela.</p> 
+
+                <p> A tag <code>&lt;sub&gt;</code> em HTML serve para marcar texto que deve ser exibido em posição subscrita, 
+                    ou seja, um texto menor que aparece abaixo da linha base, sendo comumente usada em fórmulas químicas 
+                    como o "2" em "H<sub>2</sub>O". Para usá-la, basta envolver o texto que você deseja sublinhar 
+                    com <code>&lt;sub&gt;</code> (abertura) e <code>&lt;/sub&gt;</code> (fechamento).</p>
 
             </section>
 
@@ -54,47 +55,33 @@
                 <section class="example-section">
 
                     <h3>Exemplo</h3>
-                    <p>Uso da tag <code>&lt;picture&gt;</code>.</p>
-
+                    <p>Uso da tag <code>&lt;sub&gt;</code>.</p>
 
                     <!-- Script do exemplo---------------------------------------------------------->
                     <section class="content">
                         <div class="code-block">
                             <pre>
                                 
-                                &lt;picture&gt;
-                                &lt;source media="(min-width:650px)" srcset="img_pink_flowers.jpg"&gt;
-                                &lt;source media="(min-width:465px)" srcset="img_white_flower.jpg"&gt;
-                                &lt;img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"&gt;
-                                &lt;/picture&gt;
+                                &lt;p&gt;This text contains &lt;sub&gt;subscript&lt;/sub&gt; text.&lt;/p&gt;
                                 
                             </pre>
                         </div>
                     </section>
 
 
-                
                 </section>
 
-
+    
                 <!-- Definição e uso da tag---------------------------------------------------->
                 <section class="example-section">
+
                     <h3>Definição e uso</h3>
+                    <p>
+                        A tag <code>&lt;sub&gt;</code> define texto subscrito. O texto subscrito aparece meio caractere abaixo da linha normal e
+                        , às vezes, é renderizado em uma fonte menor. O texto subscrito pode ser usado para fórmulas químicas, como H<sub>2</sub>O.
+                    </p>
 
-                    <p> A <code>&lt;picture&gt;</code>tag dá aos desenvolvedores web mais flexibilidade na especificação de recursos de imagem.
-                        O uso mais comum do <code>&lt;picture&gt;</code> elemento será para direção de arte em designs responsivos. 
-                        Em vez de ter uma imagem que é ampliada ou reduzida com base na largura da janela de visualização, 
-                        várias imagens podem ser projetadas para preencher melhor a janela de visualização do navegador.</p>
-                    
-                    <p> O elemento <code>&lt;picture&gt;</code> contém duas tags: uma ou mais tags <code>&lt;source&gt;</code> e uma tag <code>&lt;img&gt;</code> .</p> 
-
-                    <p>O navegador procurará o primeiro elemento <code>&lt;source&gt;</code> onde a consulta de mídia corresponde à largura da janela de visualização atual e,
-                         em seguida, exibirá a imagem correta (especificada no atributo srcset). O elemento <code>&lt;img&gt;</code> é necessário como 
-                         o último filho do elemento <code>&lt;picture&gt;</code>, como uma opção de fallback caso nenhuma das tags de origem corresponda.</p>
-                    
-          
-                </section> 
-
+                </section>
 
                 <!-- Atributos da TAG----------------------------------------------------------->
                 <section class="example-section">
@@ -103,18 +90,17 @@
 
                     <h4>Atributos Globais</h4>
 
-                    <p>A tag <code>&lt;picture&gt;</code> também suporta os atributos globais em HTML</p>
+                    <p>A tag <code>&lt;sub&gt;</code> também suporta os atributos globais em HTML</p>
 
                     <h4>Atributos do Evento</h4>
 
-                    <p>A tag <code>&lt;picture&gt;</code> também suporta os atributos de evento em HTML</p>
+                    <p>A tag <code>&lt;sub&gt;</code> também suporta os atributos de evento em HTML</p>
 
                     
                 </section>
 
+
             </section>
-
-
 
         </article>
 
@@ -263,6 +249,7 @@
             
         </aside>
 
+
     </main>
 
     <!--Footer ===================================================================================-->
@@ -274,18 +261,7 @@
     </footer>
 
 
-
-
-
-
-
-
 </body>
-
-
-
-
-
 
 </html>
 
