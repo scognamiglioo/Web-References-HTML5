@@ -36,12 +36,94 @@
             <section class="example-section">
                 <h3>Definição e uso</h3>
                 <p class="description">
-                    A tag &lt;ins&gt; representa um texto que foi inserido em um documento HTML.
+                    A tag &lt;ins&gt; é utilizada para indicar que um trecho de texto foi inserido em um documento HTML.
                     Por padrão, o conteúdo dentro de &lt;ins&gt; é exibido <ins>sublinhado</ins> pelos navegadores,
-                    indicando que aquele trecho foi adicionado ao texto original.
+                    destacando visualmente a adição feita em relação ao texto original. <br><br>
+
+                    Além de seu efeito visual, a tag possui um valor semântico importante, pois permite que ferramentas de análise,
+                    leitores automáticos, validadores e sistemas de controle de versões identifiquem alterações e compreendam
+                    o histórico de modificações em um documento.
                 </p>
             </section>
 
+            <section class="example-section">
+                <h3>Estrutura básica</h3>
+                <p class="description">
+                    A sintaxe geral é: <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&lt;ins&gt; Conteúdo &lt;/ins&gt;
+                    </code>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo:</h3>
+                <p>Exemplo sem parâmetros: </p>
+                <div class="code-block">
+                    &lt;p&gt;O aluno entregou o trabalho em &lt;ins&gt;outubro&lt;/ins&gt;.&lt;/p&gt; <br><br>
+
+                    &lt;p&gt;A nova versão do site inclui a seção
+                    &lt;ins&gt;Depoimentos&lt;/ins&gt;.&lt;/p&gt;
+                </div>
+
+                <p>Exemplo com parâmetros: </p>
+                <div class="code-block">
+                    &lt;p&gt;O aluno entregou o trabalho em
+                    &lt;ins cite="https://escola.exemplo.com/projetos" datetime="2025-10-07T10:00"&gt;outubro&lt;/ins&gt;.&lt;/p&gt; <br><br>
+
+                    &lt;p&gt;A nova versão do site inclui a seção
+                    &lt;ins cite="https://site.exemplo.com/novidades" datetime="2025-10-06T15:30"&gt;Depoimentos&lt;/ins&gt;.&lt;/p&gt;
+                </div>
+
+                <p class="description">
+                    A tag &lt;ins&gt; é rotineiramente utilizada em conjunto com a
+                    <a href="del.html" class="inline-link">tag &lt;del&gt;</a>,
+                    indicando que um conteúdo foi removido para adição de outro,
+                    apontando uma justificativa para a mudança bem como a data de ocorrência.<br>
+                    <mark> Note que a tag &lt;ins&gt; não cria um link para o conteúdo sublinhado automaticamente!</mark>
+                </p>
+
+
+            </section>
+
+            <section class="example-section">
+                <h3>Atributos</h3>
+                <table class="attributes-table">
+                    <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>cite</code></td>
+                        <td>URL</td>
+                        <td>Especifica a origem ou referência do conteúdo inserido. Pode ser um link para um documento ou página externa.</td>
+                    </tr>
+                    <tr>
+                        <td><code>datetime</code></td>
+                        <td>Data e hora</td>
+                        <td>Indica a data e hora da inserção do conteúdo, no formato ISO 8601 (por exemplo, "2025-10-07T10:00").</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section class="example-section">
+                <h3>Configurações CSS Padrões</h3>
+                <p class="description">A maioria dos navegadores exibirá o elemento &lt;ins&gt; com os seguintes valores padrão:</p>
+                <div class="code-block">
+                    ins { <br>
+                    &nbsp;&nbsp;&nbsp;text-decoration: underline; <br>
+                    }
+                </div>
+            </section>
+
+        </section>
+    </article>
 
     <aside class="sidebar">
         <h2>Outras Tags HTML</h2>
