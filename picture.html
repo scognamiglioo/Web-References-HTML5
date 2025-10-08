@@ -34,16 +34,20 @@
     <main>
 
         <article class="main-content">
-            
+
             <!-- Título e explicação------------------------------------------------------>
             <section class="title-section">
-                <h1>Tag HTML &lt;picture&gt;</h1>
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;picture&gt;</h1>
+                </section>
 
-                <p class="subtitle">Em HTML, as tags para imagens são <code>&lt;img&gt;</code> e <code>&lt;picture&gt;</code>. 
-                    A tag <code>&lt;img&gt;</code> é usada para exibir uma única imagem, enquanto a tag <code>&lt;picture&gt;</code> 
-                    é usada para imagens responsivas, permitindo que você especifique diferentes 
-                    imagens (via tags source) que o navegador escolherá com base nas capacidades 
-                    do dispositivo, como o tamanho da tela.</p> 
+                <p class="subtitle">Em HTML, as tags para imagens são <code>&lt;img&gt;</code> e
+                    <code>&lt;picture&gt;</code>.
+                    A tag <code>&lt;img&gt;</code> é usada para exibir uma única imagem, enquanto a tag
+                    <code>&lt;picture&gt;</code>
+                    é usada para imagens responsivas, permitindo que você especifique diferentes
+                    imagens (via tags source) que o navegador escolherá com base nas capacidades
+                    do dispositivo, como o tamanho da tela.</p>
 
             </section>
 
@@ -61,7 +65,7 @@
                     <section class="content">
                         <div class="code-block">
                             <pre>
-                                
+
                                 &lt;picture&gt;
                                 &lt;source media="(min-width:650px)" srcset="img_pink_flowers.jpg"&gt;
                                 &lt;source media="(min-width:465px)" srcset="img_white_flower.jpg"&gt;
@@ -73,7 +77,7 @@
                     </section>
 
 
-                
+
                 </section>
 
 
@@ -81,19 +85,27 @@
                 <section class="example-section">
                     <h3>Definição e uso</h3>
 
-                    <p> A <code>&lt;picture&gt;</code>tag dá aos desenvolvedores web mais flexibilidade na especificação de recursos de imagem.
-                        O uso mais comum do <code>&lt;picture&gt;</code> elemento será para direção de arte em designs responsivos. 
-                        Em vez de ter uma imagem que é ampliada ou reduzida com base na largura da janela de visualização, 
-                        várias imagens podem ser projetadas para preencher melhor a janela de visualização do navegador.</p>
-                    
-                    <p> O elemento <code>&lt;picture&gt;</code> contém duas tags: uma ou mais tags <code>&lt;source&gt;</code> e uma tag <code>&lt;img&gt;</code> .</p> 
+                    <p> A <code>&lt;picture&gt;</code>tag dá aos desenvolvedores web mais flexibilidade na especificação
+                        de recursos de imagem.
+                        O uso mais comum do <code>&lt;picture&gt;</code> elemento será para direção de arte em designs
+                        responsivos.
+                        Em vez de ter uma imagem que é ampliada ou reduzida com base na largura da janela de
+                        visualização,
+                        várias imagens podem ser projetadas para preencher melhor a janela de visualização do navegador.
+                    </p>
 
-                    <p>O navegador procurará o primeiro elemento <code>&lt;source&gt;</code> onde a consulta de mídia corresponde à largura da janela de visualização atual e,
-                         em seguida, exibirá a imagem correta (especificada no atributo srcset). O elemento <code>&lt;img&gt;</code> é necessário como 
-                         o último filho do elemento <code>&lt;picture&gt;</code>, como uma opção de fallback caso nenhuma das tags de origem corresponda.</p>
-                    
-          
-                </section> 
+                    <p> O elemento <code>&lt;picture&gt;</code> contém duas tags: uma ou mais tags
+                        <code>&lt;source&gt;</code> e uma tag <code>&lt;img&gt;</code> .</p>
+
+                    <p>O navegador procurará o primeiro elemento <code>&lt;source&gt;</code> onde a consulta de mídia
+                        corresponde à largura da janela de visualização atual e,
+                        em seguida, exibirá a imagem correta (especificada no atributo srcset). O elemento
+                        <code>&lt;img&gt;</code> é necessário como
+                        o último filho do elemento <code>&lt;picture&gt;</code>, como uma opção de fallback caso nenhuma
+                        das tags de origem corresponda.</p>
+
+
+                </section>
 
 
                 <!-- Atributos da TAG----------------------------------------------------------->
@@ -109,7 +121,7 @@
 
                     <p>A tag <code>&lt;picture&gt;</code> também suporta os atributos de evento em HTML</p>
 
-                    
+
                 </section>
 
             </section>
@@ -119,7 +131,7 @@
         </article>
 
         <aside class="sidebar">
-            
+
             <h2>Outras Tags HTML</h2>
 
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
@@ -260,7 +272,7 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-            
+
         </aside>
 
     </main>
