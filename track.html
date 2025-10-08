@@ -32,6 +32,31 @@
         </section>
 
         <section class="content">
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag <code>&lt;track&gt;</code> é utilizada para definir faixas de texto temporizadas que acompanham elementos de
+                    mídia como <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>. Essas faixas geralmente contêm legendas, descrições de áudio,
+                    traduções ou outros tipos de metadados que tornam o conteúdo mais acessível e informativo.<br><br>
+
+                    O elemento <code>&lt;track&gt;</code> não possiu funcionalidade isolada
+                    e deve ser inserido dentro de <code>&lt;audio&gt;</code> ou <code>&lt;video&gt;</code>. Ele utiliza arquivos externos no formato <strong>WebVTT (.vtt)</strong> para
+                    exibir o texto correspondente ao áudio ou vídeo.<br><br>
+
+                    É especialmente útil para acessibilidade e internacionalização, permitindo que diferentes idiomas e
+                    descrições sejam facilmente incorporados à mídia.
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo de uso</h3>
+                <div class="code-block">
+                    <pre><code>&lt;video&gt;
+    &lt;source src="exemplo.mp4" type="video/mp4"&gt;
+    &lt;track src="legendas.vtt" kind="subtitles" srclang="pt" label="Português"&gt;
+&lt;/video&gt;</code></pre>
+                </div>
+            </section>
 
         </section>
     </article>
