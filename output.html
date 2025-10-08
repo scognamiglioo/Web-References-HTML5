@@ -32,7 +32,74 @@
         </section>
 
         <section class="content">
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag &lt;output&gt; representa o resultado de um cálculo ou ação do usuário em um formulário HTML.
+                    Normalmente é utilizada para exibir valores calculados dinamicamente, como totais, somas, ou resultados de scripts.
+                    O conteúdo dentro de &lt;output&gt; é tratado como texto normal e pode ser atualizado via JavaScript.
+                </p>
+            </section>
 
+            <section class="example-section">
+                <h3>Atributos</h3>
+                <table class="attributes-table">
+                    <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>for</code></td>
+                        <td>ID(s) do(s) elemento(s)</td>
+                        <td>Especifica a relação entre o &lt;output&gt; e os elementos que contribuem para seu valor (ex.: campos de formulário).</td>
+                    </tr>
+                    <tr>
+                        <td><code>form</code></td>
+                        <td>form_id</td>
+                        <td>Especifica a qual formulário o elemento &lt;output&gt; pertence.</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>Texto</td>
+                        <td>Define o nome do elemento &lt;output&gt;, útil para enviar dados via formulário.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo:</h3>
+
+                <div class="code-block">
+                    &lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt; <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&lt;input type="number" id="a" value="50"&gt; + <br>
+                    &nbsp;&nbsp;&nbsp;&lt;input type="number" id="b" value="25"&gt; = <br>
+                    &nbsp;&nbsp;&nbsp;&lt;output name="result" for="a b"&gt;0&lt;/output&gt; <br><br>
+
+                    &lt;/form&gt;
+                </div>
+
+                <p class="description">
+                    No exemplo acima, os campos de entrada <code>a</code> e <code>b</code> estão ligados ao elemento &lt;output&gt; via atributo <code>for</code>.
+                    Sempre que o usuário alterar os valores, o &lt;output&gt; atualiza automaticamente mostrando a soma.
+                </p>
+
+            </section>
+
+            <section class="example-section">
+                <h3>Configurações CSS Padrões</h3>
+                <p class="description">A maioria dos navegadores exibirá o elemento &lt;output&gt; com os seguintes valores padrão:</p>
+                <div class="code-block">
+                    output { <br>
+                    &nbsp;&nbsp;&nbsp;display: inline; <br>
+                    }
+                </div>
+            </section>
 
         </section>
     </article>
