@@ -56,8 +56,69 @@
     &lt;track src="legendas.vtt" kind="subtitles" srclang="pt" label="Português"&gt;
 &lt;/video&gt;</code></pre>
                 </div>
+
+                <div class="code-block">
+        <pre><code>&lt;audio&gt;
+    &lt;source src="exemplo.mp3" type="audio/mpeg"&gt;
+    &lt;track src="transcricao.vtt" kind="captions" srclang="pt" label="Português"&gt;
+&lt;/audio&gt;
+        </code></pre>
+                </div>
+
             </section>
 
+            <section class="example-section">
+                <h3>Atributos</h3>
+                <p class="description">
+                    A tag <code>&lt;track&gt;</code> suporta todos atributos globais do HTML.
+                    Os atributos específicos da que podem ser utilizados com a tag são:
+                </p>
+
+                <table class="attributes-table">
+                    <thead>
+                    <tr>
+                        <th>Atributo</th>
+                        <th>Valor</th>
+                        <th>Descrição</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>default</code></td>
+                        <td><i>boolean</i></td>
+                        <td>Define a faixa como padrão quando o navegador não conseguir determinar a faixa preferida do usuário.</td>
+                    </tr>
+                    <tr>
+                        <td><code>kind</code></td>
+                        <td><i>subtitles | captions | descriptions | chapters | metadata</i></td>
+                        <td>Especifica o tipo de informação contida na faixa.</td>
+                    </tr>
+                    <tr>
+                        <td><code>label</code></td>
+                        <td><i>texto</i></td>
+                        <td>Define um rótulo legível pelo usuário, exibido nas configurações de faixa do player.</td>
+                    </tr>
+                    <tr>
+                        <td><code>src</code></td>
+                        <td><i>URL</i></td>
+                        <td>Especifica o caminho do arquivo de texto temporizado (geralmente um arquivo .vtt).</td>
+                    </tr>
+                    <tr>
+                        <td><code>srclang</code></td>
+                        <td><i>código de linguagem ISO</i></td>
+                        <td>Define o idioma da faixa de texto (por exemplo, <code>pt</code> para português). É obrigatório se kind="subtitles".</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="example-section">
+                <h3>Configurações CSS padrão</h3>
+                <p class="description">
+                    None
+                </p>
+
+            </section>
         </section>
     </article>
 
