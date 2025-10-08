@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;thead&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/thead.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <h1>Tag HTML &lt;thead&gt;</h1>
+            </section>
+
+            <p class="subtitle">Elemento usado para agrupar as linhas do cabeçalho de uma tabela HTML. Ajuda na
+                organização semântica, acessibilidade e estilização de tabelas complexas.</p>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo simples</h3>
+                    <p>Neste exemplo, o cabeçalho da tabela está dentro de <code>&lt;thead&gt;</code> e o conteúdo
+                        dentro
+                        de <code>&lt;tbody&gt;</code>:</p>
+
+                    <div class="code-block">
+                        <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Produto&lt;/th&gt;
+      &lt;th&gt;Preço&lt;/th&gt;
+      &lt;th&gt;Disponível&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fone de ouvido&lt;/td&gt;
+      &lt;td&gt;R$ 79,90&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Teclado&lt;/td&gt;
+      &lt;td&gt;R$ 149,00&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <table class="sample-table">
+                        <caption>Exemplo: Produtos</caption>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço</th>
+                                <th>Disponível</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fone de ouvido</td>
+                                <td>R$ 79,90</td>
+                                <td>Sim</td>
+                            </tr>
+                            <tr>
+                                <td>Teclado</td>
+                                <td>R$ 149,00</td>
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>O elemento <code>&lt;thead&gt;</code> é usado para agrupar as linhas de cabeçalho de uma
+                        tabela. Ele deve conter uma ou mais linhas (<code>&lt;tr&gt;</code>), e essas linhas costumam
+                        incluir células de cabeçalho (<code>&lt;th&gt;</code>).</p>
+
+                    <p>Semânticamente, <code>&lt;thead&gt;</code> serve para separar a parte de cabeçalho do corpo da
+                        tabela (<code>&lt;tbody&gt;</code>) e do rodapé (<code>&lt;tfoot&gt;</code>), o que facilita:
+                    </p>
+                    <ul>
+                        <li>a leitura por tecnologias assistivas (leitores de tela);</li>
+                        <li>a estilização via CSS (por exemplo: aplicar estilos apenas ao cabeçalho);</li>
+                        <li>a repetição automática de cabeçalhos em situações de impressão ou em tabelas com scroll
+                            (dependendo da implementação do navegador/estilos).</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;thead&gt;</code> não possui atributos específicos além dos atributos globais
+                        (como <code>id</code>, <code>class</code>, <code>style</code>, etc.). Em termos de
+                        acessibilidade,
+                        é comum usar atributos nos elementos <code>&lt;th&gt;</code>, como <code>scope</code> e
+                        <code>headers</code>.
+                    </p>
+
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Identificador único da seção de cabeçalho (útil para scripts ou âncoras).</td>
+                            </tr>
+                            <tr>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Classes CSS para estilização do cabeçalho.</td>
+                            </tr>
+                            <tr>
+                                <td><code>role</code></td>
+                                <td>Texto</td>
+                                <td>Normalmente <code>rowgroup</code> — pode ser usado para explicitar o papel para
+                                    tecnologias assistivas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Observação:</strong> atributos relevantes para acessibilidade como
+                        <code>scope=&quot;col&quot;</code> ou <code>scope=&quot;row&quot;</code> devem ser aplicados às
+                        células <code>&lt;th&gt;</code>, não ao <code>&lt;thead&gt;</code> diretamente.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Use &lt;thead&gt; sempre que houver cabeçalho lógico:</strong> facilita a leitura e
+                            a
+                            manutenção do HTML.</li>
+                        <li><strong>Coloque títulos de coluna dentro de &lt;th&gt; e use <code>scope</code>:</strong>
+                            &lt;th scope="col"&gt;Nome&lt;/th&gt; ajuda leitores de tela a mapear cabeçalhos para
+                            células.</li>
+                        <li><strong>Para cabeçalhos compostos (agrupados):</strong> use múltiplas linhas dentro de
+                            &lt;thead&gt; (ver exemplo abaixo).</li>
+                        <li><strong>Evite misturar conteúdo estrutural e visual:</strong> não use &lt;thead&gt; apenas
+                            para
+                            estilizar; ele tem significado semântico.</li>
+                        <li><strong>Impressão e scroll:</strong> alguns navegadores podem repetir o conteúdo de
+                            &lt;thead&gt; em páginas impressas; para headers fixos (sticky) prefira soluções via CSS
+                            com cuidado.</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplos avançados</h3>
+
+                    <h4>1) Cabeçalho com múltiplas linhas (grupos de colunas)</h4>
+                    <div class="code-block">
+                        <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan="2"&gt;Produto&lt;/th&gt;
+      &lt;th colspan="2"&gt;Vendas (Q1)&lt;/th&gt;
+      &lt;th rowspan="2"&gt;Total&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Janeiro&lt;/th&gt;
+      &lt;th&gt;Fevereiro&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mouse&lt;/td&gt;
+      &lt;td&gt;120&lt;/td&gt;
+      &lt;td&gt;95&lt;/td&gt;
+      &lt;td&gt;215&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                    </div>
+
+                    <h4>2) Cabeçalho com acessibilidade (usando <code>scope</code>)</h4>
+                    <div class="code-block">
+                        <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Nome&lt;/th&gt;
+      &lt;th scope="col"&gt;Email&lt;/th&gt;
+      &lt;th scope="col"&gt;Telefone&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt; ... &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                    </div>
+
+                    <h4>3) Cabeçalho fixo (sticky) — exemplo de CSS</h4>
+                    <p>Este exemplo mostra a técnica mais comum para deixar o cabeçalho fixo enquanto o corpo da
+                        tabela rola. Atenção: para funcionar corretamente, o contêiner pai pode precisar de
+                        <code>overflow</code> e a tabela deve ter largura definida.
+                    </p>
+
+                    <div class="code-block">
+                        <pre>&lt;!-- CSS --&gt;
+.table-container {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.table-container thead th {
+  position: sticky;
+  top: 0;
+  background: #fff; /* garanta contraste */
+  z-index: 2;
+}
+
+&lt;!-- HTML --&gt;
+&lt;div class="table-container"&gt;
+  &lt;table&gt;
+    &lt;thead&gt; ... &lt;/thead&gt;
+    &lt;tbody&gt; ... &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</pre>
+                    </div>
+
+                    <p><strong>Nota:</strong> o comportamento exato pode variar entre navegadores e depende de estilos
+                        como <code>border-collapse</code> e do fluxo de layout. Teste em diferentes navegadores e
+                        dispositivos.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo completo: tabela com &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;</h3>
+
+                    <div class="code-block">
+                        <pre>&lt;table&gt;
+  &lt;caption&gt;Relatório de Vendas&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Mês&lt;/th&gt;
+      &lt;th scope="col"&gt;Vendas&lt;/th&gt;
+      &lt;th scope="col"&gt;Crescimento&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Janeiro&lt;/td&gt;&lt;td&gt;R$ 10.000&lt;/td&gt;&lt;td&gt;+5%&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Fevereiro&lt;/td&gt;&lt;td&gt;R$ 12.000&lt;/td&gt;&lt;td&gt;+20%&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;R$ 22.000&lt;/td&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <table class="sample-table">
+                        <caption>Relatório de Vendas</caption>
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Vendas</th>
+                                <th>Crescimento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Janeiro</td>
+                                <td>R$ 10.000</td>
+                                <td>+5%</td>
+                            </tr>
+                            <tr>
+                                <td>Fevereiro</td>
+                                <td>R$ 12.000</td>
+                                <td>+20%</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Total</td>
+                                <td>R$ 22.000</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
+
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
+
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
+
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
+
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
+
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
+
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
+
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
+
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
+
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
+
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
+
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
+
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

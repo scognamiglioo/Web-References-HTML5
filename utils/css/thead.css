@@ -1,0 +1,56 @@
+.sample-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sample-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+.sample-table thead {
+    background-color: #f0f2f5;
+    border-bottom: 2px solid #ccc;
+}
+
+.sample-table thead th {
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    color: #222;
+    background-color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.sample-table tbody td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+}
+
+.sample-table tbody tr:hover {
+    background-color: #fafafa;
+}
+
+.sample-table tfoot {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.sample-table tfoot td {
+    padding: 0.8rem 1rem;
+    border-top: 2px solid #ccc;
+}
