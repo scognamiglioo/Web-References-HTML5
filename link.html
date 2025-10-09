@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;link&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;link&gt;</h1>
+            </section>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>Usada para vincular arquivos externos, como folhas de estilo CSS.</p>
+                    <div class="code-block">
+                        &lt;head&gt;<br>
+                        &nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+                        &lt;/head&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">
+                        A tag <strong>&lt;link&gt;</strong> define uma relação entre o documento HTML atual e um recurso externo.
+                        É usada principalmente para conectar folhas de estilo (<em>CSS</em>), ícones e fontes.
+                    </p>
+                    <p>
+                        Essa tag deve aparecer sempre dentro da seção <strong>&lt;head&gt;</strong> do documento e não possui tag de fechamento.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>href</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica o caminho para o recurso vinculado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>rel</strong></td>
+                                <td>stylesheet / icon / alternate / preconnect / manifest</td>
+                                <td class="description">Indica o tipo de relação entre o documento e o recurso.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>type</strong></td>
+                                <td>media_type</td>
+                                <td class="description">Define o tipo de conteúdo do recurso vinculado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>media</strong></td>
+                                <td>media_query</td>
+                                <td class="description">Especifica para quais dispositivos ou condições o recurso é aplicado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>sizes</strong></td>
+                                <td>16x16 / 32x32 / etc.</td>
+                                <td class="description">Usado com ícones para definir seus tamanhos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo com ícone de site</h3>
+                    <div class="code-block">
+                        &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+                    </div>
+                </section>
+
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
