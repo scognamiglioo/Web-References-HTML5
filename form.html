@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;col&gt;</title>
+    <title>Tag &lt;form&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,35 +27,28 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;col&gt;</h1>
+                <h1>Tag HTML &lt;form&gt;</h1>
             </section>
 
             <section class="content">
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define uma cor de fundo para a primeira coluna de uma tabela.</p>
+                    <p>Cria um formulário de login simples.</p>
                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #f2f2f2;"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;João&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
+                        &lt;form action="/processar-login" method="post"&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="usuario"&gt;Usuário:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="usuario" name="usuario"&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="senha"&gt;Senha:&lt;/label&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="password" id="senha" name="senha"&gt;&lt;br&gt;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="submit" value="Entrar"&gt;<br>
+                        &lt;/form&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">A tag &lt;col&gt; é usada para especificar propriedades de coluna para cada coluna dentro de um elemento &lt;colgroup&gt;.</p>
-                    <p>Ela é útil para aplicar estilos a colunas inteiras de uma tabela, em vez de ter que aplicar o estilo a cada célula individualmente.</p>
+                    <p class="description">A tag &lt;form&gt; é usada para criar um formulário HTML para a entrada de dados do usuário.</p>
+                    <p>O formulário é um contêiner para diferentes tipos de elementos de entrada, como campos de texto, caixas de seleção, botões de rádio, botões de envio, etc. O objetivo é coletar informações do usuário e enviá-las a um servidor para processamento.</p>
                 </section>
 
                 <section class="example-section">
@@ -70,65 +63,59 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>span</strong></td>
-                                <td>number</td>
-                                <td class="description">Especifica o número de colunas que o elemento &lt;col&gt; deve abranger.</td>
+                                <td><strong>action</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica para onde enviar os dados do formulário quando ele for submetido.</td>
                             </tr>
                             <tr>
-                                <td><strong>style</strong></td>
-                                <td>CSS_styles</td>
-                                <td class="description">Permite a aplicação de estilos CSS inline diretamente na coluna (por exemplo, cor de fundo, largura, etc.).</td>
+                                <td><strong>method</strong></td>
+                                <td>get / post</td>
+                                <td class="description">Especifica o método HTTP a ser usado ao enviar os dados do formulário.</td>
                             </tr>
-                             <tr>
-                                <td><strong>class</strong></td>
-                                <td>classname</td>
-                                <td class="description">Especifica uma ou mais classes para a coluna, permitindo a estilização através de uma folha de estilo externa ou interna.</td>
+                            <tr>
+                                <td><strong>target</strong></td>
+                                <td>_blank / _self / _parent / _top</td>
+                                <td class="description">Especifica onde exibir a resposta recebida após o envio do formulário.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>enctype</strong></td>
+                                <td>application/x-www-form-urlencoded<br>multipart/form-data<br>text/plain</td>
+                                <td class="description">Especifica como os dados do formulário devem ser codificados antes de serem enviados ao servidor (essencial para uploads de arquivos).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>autocomplete</strong></td>
+                                <td>on / off</td>
+                                <td class="description">Especifica se o navegador deve preencher automaticamente os campos do formulário.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>novalidate</strong></td>
+                                <td>(sem valor)</td>
+                                <td class="description">Indica que o formulário não deve ser validado pelo navegador ao ser submetido.</td>
                             </tr>
                         </tbody>
                     </table>
-                     <p><b>Nota:</b> Outros atributos de formatação como `width`, `align`, e `bgcolor` foram descontinuados no HTML5. Recomenda-se usar CSS para estilização.</p>
                 </section>
 
                 <section class="example-section">
                     <h3>Outros exemplos</h3>
                     
-                    <p>Como usar o atributo `span` para estilizar as duas primeiras colunas:</p>
+                    <p>Formulário com método GET (os dados são visíveis na URL):</p>
                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col span="2" style="background-color: lightblue;"&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;ISBN&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Título&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Preço&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                         &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;3476896&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Meu Livro&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;R$ 50,00&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
+                        &lt;form action="/buscar" method="get"&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="pesquisa"&gt;Pesquisar:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="text" id="pesquisa" name="q"&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="submit" value="Buscar"&gt;<br>
+                        &lt;/form&gt;
                     </div>
-
-                    <p>Como estilizar colunas diferentes com múltiplos &lt;col&gt;:</p>
-                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #f2f2f2; width: 40%;"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #e6e6e6; width: 60%;"&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Produto&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Descrição&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                         &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Notebook&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Processador i5, 8GB RAM&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
+                    
+                    <p>Formulário para upload de arquivo (usando POST e enctype):</p>
+                    <div class="code-block">
+                        &lt;form action="/upload-arquivo" method="post" enctype="multipart/form-data"&gt;<br>
+                        &nbsp;&nbsp;&lt;label for="arquivo"&gt;Selecione um arquivo:&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="file" id="arquivo" name="arquivo"&gt;<br>
+                        &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+                        &lt;/form&gt;
                     </div>
-
                 </section>
             </section>
         </article>
@@ -307,4 +294,3 @@
         }
     });
 </script>
-```
