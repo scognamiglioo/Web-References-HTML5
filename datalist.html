@@ -42,43 +42,35 @@
 
                 <section class="example-section">
                     <h3>Atributos</h3>
-                    <p>A tag <code>&lt;article&gt;</code> não possui atributos específicos, mas suporta todos os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code> e <code>class</code>.</p>
+                    <p>A tag <code>&lt;datalist&gt;</code> suporta os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code>. O <code>id</code> é essencial para conectar a lista ao campo <code>&lt;input&gt;</code>.</p>
                 </section>
 
                 <section class="example-section">
                     <h3>Boas Práticas e Observações</h3>
                     <ul>
-                        <li><strong>Conteúdo Autocontido:</strong> Use <code>&lt;article&gt;</code> apenas para conteúdo que faria sentido se fosse visto isoladamente (por exemplo, em um feed RSS).</li>
-                        <li><strong>Não confunda com &lt;section&gt;:</strong> Use <code>&lt;section&gt;</code> para agrupar conteúdos temáticos, e <code>&lt;article&gt;</code> para agrupar conteúdos independentes. É comum ter várias <code>&lt;section&gt;</code> dentro de um <code>&lt;article&gt;</code>.</li>
-                        <li><strong>Acessibilidade:</strong> O uso correto de <code>&lt;article&gt;</code> ajuda leitores de tela a navegar pelo conteúdo principal da página de forma mais eficiente.</li>
+                        <li><strong>Experiência do Usuário:</strong> Use <code>&lt;datalist&gt;</code> para guiar o usuário com sugestões comuns, sem forçá-lo a escolher apenas uma opção (diferente da tag <code>&lt;select&gt;</code>).</li>
+                        <li><strong>Compatibilidade:</strong> A tag <code>&lt;datalist&gt;</code> é bem suportada nos navegadores modernos.</li>
+                        <li><strong>Semântica:</strong> A tag <code>&lt;option&gt;</code> é usada dentro do <code>&lt;datalist&gt;</code> para definir cada sugestão.</li>
                     </ul>
                 </section>
 
             <section class="example-section">
-                <h3>Exemplos</h3>
-                <p class="subtitle">Veja como a tag <code>&lt;article&gt;</code> pode ser usada:</p>
-
-                <h4>Exemplo 1: Post de um Blog</h4>
+                <h3>Exemplo Prático</h3>
+                <p class="subtitle">Um campo de busca de navegador com sugestões.</p>
                 <div class="code-block">
                         <pre>
-&lt;article&gt;
-  &lt;h2&gt;O Título do Meu Post&lt;/h2&gt;
-  &lt;p&gt;Este é o primeiro parágrafo do meu post no blog. Fala sobre a importância do HTML semântico.&lt;/p&gt;
-  &lt;p&gt;Aqui continuo com mais detalhes...&lt;/p&gt;
-&lt;/article&gt;
-                        </pre>
-                </div>
-
-                <h4>Exemplo 2: Comentários de Usuários</h4>
-                <div class="code-block">
-                        <pre>
-&lt;article&gt;
-  &lt;header&gt;
-    &lt;h3&gt;Comentário de @usuario123&lt;/h3&gt;
-    &lt;p&gt;Postado em &lt;time datetime="2025-10-08"&gt;8 de Outubro de 2025&lt;/time&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;Ótimo artigo! Muito informativo.&lt;/p&gt;
-&lt;/article&gt;
+&lt;form&gt;
+  &lt;label for="browser"&gt;Escolha seu navegador na lista:&lt;/label&gt;
+  &lt;input list="browsers" name="browser" id="browser"&gt;
+  &lt;datalist id="browsers"&gt;
+    &lt;option value="Edge"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Opera"&gt;
+    &lt;option value="Safari"&gt;
+  &lt;/datalist&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
                         </pre>
                 </div>
             </section>
