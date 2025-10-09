@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;cite&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;cite&gt;</h1>
+            </section>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>Marca o título de uma obra citada, como livros, filmes, músicas ou artigos.</p>
+                    <div class="code-block">
+                        &lt;p&gt;O filme &lt;cite&gt;Interestelar&lt;/cite&gt; foi dirigido por Christopher Nolan.&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">
+                        A tag <strong>&lt;cite&gt;</strong> é usada para indicar o título de uma obra criativa,
+                        como um livro, filme, poema, pintura, peça de teatro ou artigo científico.
+                    </p>
+                    <p>
+                        O texto dentro de <strong>&lt;cite&gt;</strong> geralmente é exibido em <em>itálico</em>
+                        pelos navegadores, representando uma citação de uma fonte criativa.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo com citação real</h3>
+                    <p>Exemplo de uso em contexto literário:</p>
+                    <div class="code-block">
+                        &lt;p&gt;Em &lt;cite&gt;Dom Casmurro&lt;/cite&gt;, Machado de Assis explora temas de ciúme e memória.&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Diferente de &lt;blockquote&gt; e &lt;q&gt;</h3>
+                    <p>
+                        Enquanto <strong>&lt;cite&gt;</strong> serve para marcar o nome de uma obra,
+                        as tags <strong>&lt;blockquote&gt;</strong> e <strong>&lt;q&gt;</strong> são usadas
+                        para inserir o conteúdo de uma citação (texto dito ou escrito por alguém).
+                    </p>
+                    <div class="code-block">
+                        &lt;blockquote&gt;<br>
+                        &nbsp;&nbsp;&nbsp;"Ser ou não ser, eis a questão."<br>
+                        &lt;/blockquote&gt;<br>
+                        &lt;p&gt;— &lt;cite&gt;Hamlet&lt;/cite&gt;, de William Shakespeare&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>A tag <strong>&lt;cite&gt;</strong> não possui atributos específicos no HTML5.</p>
+                </section>
+
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
