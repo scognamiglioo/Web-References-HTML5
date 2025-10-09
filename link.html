@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;wbr&gt;</title>
+    <title>Tag &lt;link&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,42 +26,76 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;wbr&gt;</h1>
+                <h1>Tag HTML &lt;link&gt;</h1>
             </section>
 
             <section class="content">
 
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Usada para indicar uma possível quebra de linha em palavras longas.</p>
+                    <p>Usada para vincular arquivos externos, como folhas de estilo CSS.</p>
                     <div class="code-block">
-                        &lt;p&gt;EstaPalavraExtremamente<wbr>LongaPode<wbr>SerQuebrada.&lt;/p&gt;
+                        &lt;head&gt;<br>
+                        &nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+                        &lt;/head&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
                     <p class="description">
-                        A tag <strong>&lt;wbr&gt;</strong> (Word Break Opportunity) indica onde o navegador pode quebrar uma palavra longa se necessário, evitando que o texto ultrapasse os limites do contêiner.
+                        A tag <strong>&lt;link&gt;</strong> define uma relação entre o documento HTML atual e um recurso externo.
+                        É usada principalmente para conectar folhas de estilo (<em>CSS</em>), ícones e fontes.
                     </p>
                     <p>
-                        Ela não insere uma quebra de linha obrigatória, apenas marca um ponto onde a quebra é permitida se o espaço for insuficiente.
+                        Essa tag deve aparecer sempre dentro da seção <strong>&lt;head&gt;</strong> do documento e não possui tag de fechamento.
                     </p>
                 </section>
 
                 <section class="example-section">
                     <h3>Atributos</h3>
-                    <p>
-                        A tag <strong>&lt;wbr&gt;</strong> não possui atributos específicos, mas aceita os atributos globais do HTML, como <em>class</em>, <em>id</em> e <em>style</em>.
-                    </p>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>href</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica o caminho para o recurso vinculado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>rel</strong></td>
+                                <td>stylesheet / icon / alternate / preconnect / manifest</td>
+                                <td class="description">Indica o tipo de relação entre o documento e o recurso.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>type</strong></td>
+                                <td>media_type</td>
+                                <td class="description">Define o tipo de conteúdo do recurso vinculado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>media</strong></td>
+                                <td>media_query</td>
+                                <td class="description">Especifica para quais dispositivos ou condições o recurso é aplicado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>sizes</strong></td>
+                                <td>16x16 / 32x32 / etc.</td>
+                                <td class="description">Usado com ícones para definir seus tamanhos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Exemplo prático</h3>
+                    <h3>Exemplo com ícone de site</h3>
                     <div class="code-block">
-                        &lt;div style="width: 100px; border: 1px solid #ccc;"&gt;<br>
-                        &nbsp;&nbsp;supercalifragilist<wbr>icexpialidocious<br>
-                        &lt;/div&gt;
+                        &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
                     </div>
                 </section>
 
@@ -72,7 +106,6 @@
             <h2>Outras Tags HTML</h2>
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
             <ul class="sidebar-links" id="tagList">
-    
                 <li><a href="a.html">&lt;a&gt;</a></li>
                 <li><a href="abbr.html">&lt;abbr&gt;</a></li>
                 <li><a href="address.html">&lt;address&gt;</a></li>
@@ -148,6 +181,8 @@
                 <li><a href="pre.html">&lt;pre&gt;</a></li>
                 <li><a href="progress.html">&lt;progress&gt;</a></li>
                 <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
                 <li><a href="ruby.html">&lt;ruby&gt;</a></li>
                 <li><a href="s.html">&lt;s&gt;</a></li>
                 <li><a href="samp.html">&lt;samp&gt;</a></li>
@@ -161,7 +196,6 @@
                 <li><a href="style.html">&lt;style&gt;</a></li>
                 <li><a href="sub.html">&lt;sub&gt;</a></li>
                 <li><a href="sup.html">&lt;sup&gt;</a></li>
-                <li><a href="svg.html">&lt;svg&gt;</a></li>
                 <li><a href="table.html">&lt;table&gt;</a></li>
                 <li><a href="tbody.html">&lt;tbody&gt;</a></li>
                 <li><a href="td.html">&lt;td&gt;</a></li>
@@ -189,6 +223,7 @@
         const searchInput = document.getElementById('searchInput');
         const tagList = document.getElementById('tagList');
         const items = tagList.getElementsByTagName('li');
+
         searchInput.addEventListener('keyup', function () {
             const filter = this.value.toLowerCase();
             for (let i = 0; i < items.length; i++) {
