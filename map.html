@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;col&gt;</title>
+    <title>Tag &lt;map&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,39 +27,29 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;col&gt;</h1>
+                <h1>Tag HTML &lt;map&gt;</h1>
             </section>
 
             <section class="content">
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define uma cor de fundo para a primeira coluna de uma tabela.</p>
+                    <p>Cria um mapa de imagem com uma área clicável.</p>
                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #f2f2f2;"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;João&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
+                        &lt;img src="planetas.gif" alt="Planetas" usemap="#planetmap"&gt;<br><br>
+                        &lt;map name="planetmap"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="rect" coords="0,0,82,126" href="sol.html" alt="Sol"&gt;<br>
+                        &lt;/map&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">A tag &lt;col&gt; é usada para especificar propriedades de coluna para cada coluna dentro de um elemento &lt;colgroup&gt;.</p>
-                    <p>Ela é útil para aplicar estilos a colunas inteiras de uma tabela, em vez de ter que aplicar o estilo a cada célula individualmente.</p>
+                    <p class="description">A tag &lt;map&gt; é usada para definir um mapa de imagem do lado do cliente. Um mapa de imagem é uma imagem com áreas clicáveis.</p>
+                    <p>A tag &lt;map&gt; contém uma série de tags &lt;area&gt;, que definem as áreas clicáveis no mapa de imagem. O atributo <strong>name</strong> da tag &lt;map&gt; é associado ao atributo <strong>usemap</strong> da tag &lt;img&gt;, criando a relação entre a imagem e o mapa.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Atributos</h3>
+                    <h3>Atributos da Tag &lt;map&gt;</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
@@ -70,65 +60,63 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>span</strong></td>
-                                <td>number</td>
-                                <td class="description">Especifica o número de colunas que o elemento &lt;col&gt; deve abranger.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>style</strong></td>
-                                <td>CSS_styles</td>
-                                <td class="description">Permite a aplicação de estilos CSS inline diretamente na coluna (por exemplo, cor de fundo, largura, etc.).</td>
-                            </tr>
-                             <tr>
-                                <td><strong>class</strong></td>
-                                <td>classname</td>
-                                <td class="description">Especifica uma ou mais classes para a coluna, permitindo a estilização através de uma folha de estilo externa ou interna.</td>
+                                <td><strong>name</strong></td>
+                                <td>text</td>
+                                <td class="description">Especifica o nome do mapa de imagem. Este nome é referenciado pelo atributo `usemap` na tag &lt;img&gt;.</td>
                             </tr>
                         </tbody>
                     </table>
-                     <p><b>Nota:</b> Outros atributos de formatação como `width`, `align`, e `bgcolor` foram descontinuados no HTML5. Recomenda-se usar CSS para estilização.</p>
+
+                    <h3 style="margin-top: 20px;">Atributos da Tag &lt;area&gt; (usada dentro de &lt;map&gt;)</h3>
+                     <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>alt</strong></td>
+                                <td>text</td>
+                                <td class="description">Especifica um texto alternativo para a área, essencial para acessibilidade.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>coords</strong></td>
+                                <td>coordinates</td>
+                                <td class="description">Especifica as coordenadas da área clicável. Os valores dependem do atributo `shape`.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>href</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica o destino do link para a área.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>shape</strong></td>
+                                <td>default / rect / circle / poly</td>
+                                <td class="description">Define a forma da área (retângulo, círculo, polígono ou padrão).</td>
+                            </tr>
+                             <tr>
+                                <td><strong>target</strong></td>
+                                <td>_blank / _parent / _self / _top</td>
+                                <td class="description">Especifica onde abrir o documento vinculado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
 
                 <section class="example-section">
                     <h3>Outros exemplos</h3>
                     
-                    <p>Como usar o atributo `span` para estilizar as duas primeiras colunas:</p>
+                    <p>Mapa de imagem com múltiplas formas (círculo e retângulo):</p>
                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col span="2" style="background-color: lightblue;"&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;ISBN&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Título&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Preço&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                         &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;3476896&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Meu Livro&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;R$ 50,00&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
+                        &lt;img src="estacao_trabalho.jpg" alt="Estação de Trabalho" usemap="#workmap" width="400" height="379"&gt;<br><br>
+                        &lt;map name="workmap"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350" alt="Computador" href="computador.html"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="circle" coords="290,172,33" alt="Xícara de Café" href="cafe.html"&gt;<br>
+                        &lt;/map&gt;
                     </div>
-
-                    <p>Como estilizar colunas diferentes com múltiplos &lt;col&gt;:</p>
-                     <div class="code-block">
-                        &lt;table&gt;<br>
-                        &nbsp;&nbsp;&lt;colgroup&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #f2f2f2; width: 40%;"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;col style="background-color: #e6e6e6; width: 60%;"&gt;<br>
-                        &nbsp;&nbsp;&lt;/colgroup&gt;<br>
-                        &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Produto&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Descrição&lt;/th&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                         &nbsp;&nbsp;&lt;tr&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Notebook&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Processador i5, 8GB RAM&lt;/td&gt;<br>
-                        &nbsp;&nbsp;&lt;/tr&gt;<br>
-                        &lt;/table&gt;
-                    </div>
-
                 </section>
             </section>
         </article>
