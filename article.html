@@ -42,47 +42,15 @@
 
                 <section class="example-section">
                     <h3>Atributos</h3>
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Atributo</th>
-                                <th>Valor</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>id</code></td>
-                                <td>Texto</td>
-                                <td>Identificador único da seção, útil para navegação e âncoras.</td>
-                            </tr>
-                            <tr>
-                                <td><code>class</code></td>
-                                <td>Texto</td>
-                                <td>Define uma ou mais classes CSS para estilização.</td>
-                            </tr>
-                            <tr>
-                                <td><code>style</code></td>
-                                <td>Declarações CSS</td>
-                                <td>Permite aplicar estilos diretamente no elemento (não recomendado para uso extenso).
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>A tag <code>&lt;article&gt;</code> não possui atributos específicos, mas suporta todos os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code> e <code>class</code>.</p>
                 </section>
 
                 <section class="example-section">
                     <h3>Boas Práticas e Observações</h3>
                     <ul>
-                        <li><strong>Use para conteúdo relacionado:</strong> Utilize <code>&lt;section&gt;</code> para
-                            separar blocos de conteúdo com temas ou propósitos semelhantes.</li>
-                        <li><strong>Sempre inclua um cabeçalho:</strong> Cada seção deve conter um título claro com
-                            <code>&lt;h2&gt;</code> ou outro nível adequado de cabeçalho.
-                        </li>
-                        <li><strong>Evite uso excessivo:</strong> Se o agrupamento não tiver significado semântico,
-                            prefira <code>&lt;div&gt;</code>.</li>
-                        <li><strong>SEO e acessibilidade:</strong> Navegadores e leitores de tela entendem melhor a
-                            estrutura da página quando seções são usadas corretamente.</li>
+                        <li><strong>Conteúdo Autocontido:</strong> Use <code>&lt;article&gt;</code> apenas para conteúdo que faria sentido se fosse visto isoladamente (por exemplo, em um feed RSS).</li>
+                        <li><strong>Não confunda com &lt;section&gt;:</strong> Use <code>&lt;section&gt;</code> para agrupar conteúdos temáticos, e <code>&lt;article&gt;</code> para agrupar conteúdos independentes. É comum ter várias <code>&lt;section&gt;</code> dentro de um <code>&lt;article&gt;</code>.</li>
+                        <li><strong>Acessibilidade:</strong> O uso correto de <code>&lt;article&gt;</code> ajuda leitores de tela a navegar pelo conteúdo principal da página de forma mais eficiente.</li>
                     </ul>
                 </section>
 
