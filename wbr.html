@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;wbr&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;wbr&gt;</h1>
+            </section>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>Usada para indicar uma possível quebra de linha em palavras longas.</p>
+                    <div class="code-block">
+                        &lt;p&gt;EstaPalavraExtremamente<wbr>LongaPode<wbr>SerQuebrada.&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">
+                        A tag <strong>&lt;wbr&gt;</strong> (Word Break Opportunity) indica onde o navegador pode quebrar uma palavra longa se necessário, evitando que o texto ultrapasse os limites do contêiner.
+                    </p>
+                    <p>
+                        Ela não insere uma quebra de linha obrigatória, apenas marca um ponto onde a quebra é permitida se o espaço for insuficiente.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>
+                        A tag <strong>&lt;wbr&gt;</strong> não possui atributos específicos, mas pode usar os atributos globais do HTML.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo prático</h3>
+                    <div class="code-block">
+                        &lt;div style="width: 100px; border: 1px solid #ccc;"&gt;<br>
+                        &nbsp;&nbsp;supercalifragilist<wbr>icexpialidocious<br>
+                        &lt;/div&gt;
+                    </div>
+                </section>
+
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
