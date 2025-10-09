@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;figure&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;figure&gt;</h1>
+            </section>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>Usada para agrupar conteúdo visual com uma legenda.</p>
+                    <div class="code-block">
+                        &lt;figure&gt;<br>
+                        &nbsp;&nbsp;&lt;img src="paisagem.jpg" alt="Paisagem ao pôr do sol"&gt;<br>
+                        &nbsp;&nbsp;&lt;figcaption&gt;Vista do pôr do sol na serra.&lt;/figcaption&gt;<br>
+                        &lt;/figure&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">
+                        A tag <strong>&lt;figure&gt;</strong> é usada para agrupar conteúdo de mídia — como imagens, gráficos, diagramas, vídeos ou trechos de código — e uma legenda opcional, fornecida pela tag <strong>&lt;figcaption&gt;</strong>.
+                    </p>
+                    <p>
+                        O conteúdo dentro de <strong>&lt;figure&gt;</strong> é independente do fluxo principal da página e pode ser movido sem alterar o significado do texto.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplo com citação e legenda</h3>
+                    <div class="code-block">
+                        &lt;figure&gt;<br>
+                        &nbsp;&nbsp;&lt;blockquote&gt;"A simplicidade é o último grau da sofisticação."&lt;/blockquote&gt;<br>
+                        &nbsp;&nbsp;&lt;figcaption&gt;— Leonardo da Vinci&lt;/figcaption&gt;<br>
+                        &lt;/figure&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>
+                        A tag <strong>&lt;figure&gt;</strong> não possui atributos específicos. Ela apenas organiza semanticamente elementos visuais com uma legenda.
+                    </p>
+                </section>
+
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
