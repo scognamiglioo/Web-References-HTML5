@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;area&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;area&gt;</h1>
+                </section>
+            </section>
+            <p class="subtitle">A tag usada para definir áreas clicáveis dentro de uma imagem mapeada no HTML.</p>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>No exemplo abaixo, criamos uma imagem com áreas clicáveis definidas por coordenadas dentro de um mapa de imagem:</p>
+
+                    <div class="code-block">
+                        <pre>
+                            &lt;img src="planeta.jpg" alt="Mapa dos planetas" usemap="#planetmap"&gt;
+
+                            &lt;map name="planetmap"&gt;             
+                                &lt;area shape="circle" coords="180,139,60" href="mercurio.html" alt="Mercúrio"&gt;
+                                &lt;area target="_blank" alt="sol" title="sol" href="https://en.wikipedia.org/wiki/Sun" coords="246,246,73" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="saturno" title="saturno" href="https://en.wikipedia.org/wiki/Saturn" coords="97,313,33" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="urano" title="urano" href="https://en.wikipedia.org/wiki/Uranus" coords="195,394,28" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="netuno" title="netuno" href="https://en.wikipedia.org/wiki/Neptune" coords="312,391,31" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="jupiter" title="jupiter" href="https://en.wikipedia.org/wiki/Jupiter" coords="406,287,50" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="terra" title="terra" href="https://en.wikipedia.org/wiki/Earth" coords="263,93,25" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="venus" title="venus" href="https://en.wikipedia.org/wiki/Venus" coords="143,118,19" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="marte" title="marte" href="https://en.wikipedia.org/wiki/Mars" coords="386,164,21" shape="circle"&gt; 
+                                &lt;area target="_blank" alt="mercurio" title="mercurio" href="https://en.wikipedia.org/wiki/Mercury_(planet)" coords="97,213,14" shape="circle"&gt; 
+                            &lt;/map&gt;
+
+                        </pre>
+                    </div>
+
+                    <p>Neste exemplo, cada <code>&lt;area&gt;</code> representa uma parte clicável diferente da imagem.</p>
+
+                    <h4>Output</h4>
+                    <img src="utils/imgs/planeta.jpg" alt="Mapa dos planetas" usemap="#planetmap" height="100%" width="500">
+
+                    <map name="planetmap">
+                        <area target="_blank" alt="sol" title="sol" href="https://en.wikipedia.org/wiki/Sun" coords="246,246,73" shape="circle">
+                        <area target="_blank" alt="saturno" title="saturno" href="https://en.wikipedia.org/wiki/Saturn" coords="97,313,33" shape="circle">
+                        <area target="_blank" alt="urano" title="urano" href="https://en.wikipedia.org/wiki/Uranus" coords="195,394,28" shape="circle">
+                        <area target="_blank" alt="netuno" title="netuno" href="https://en.wikipedia.org/wiki/Neptune" coords="312,391,31" shape="circle">
+                        <area target="_blank" alt="jupiter" title="jupiter" href="https://en.wikipedia.org/wiki/Jupiter" coords="406,287,50" shape="circle">
+                        <area target="_blank" alt="terra" title="terra" href="https://en.wikipedia.org/wiki/Earth" coords="263,93,25" shape="circle">
+                        <area target="_blank" alt="venus" title="venus" href="https://en.wikipedia.org/wiki/Venus" coords="143,118,19" shape="circle">
+                        <area target="_blank" alt="marte" title="marte" href="https://en.wikipedia.org/wiki/Mars" coords="386,164,21" shape="circle">
+                        <area target="_blank" alt="mercurio" title="mercurio" href="https://en.wikipedia.org/wiki/Mercury_(planet)" coords="97,213,14" shape="circle">
+                    </map>
+                    <p>Experimente clicar em um dos planetas da imagem.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>A tag <code>&lt;area&gt;</code> define uma região interativa dentro de um mapa de imagem (<code>&lt;map&gt;</code>).
+Essas áreas permitem criar links em partes específicas de uma imagem, como em um diagrama, mapa geográfico ou infográfico.</p>
+                    <p>Cada <code>&lt;area&gt;</code> é definida por coordenadas que especificam sua posição e formato dentro da imagem.
+Ela deve estar sempre dentro de um elemento <code>&lt;map&gt;</code> e associada a uma imagem por meio do atributo usemap.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>alt</code></td>
+                                <td>Texto alternativo</td>
+                                <td>Descreve a área; importante para acessibilidade.</td>
+                            </tr>
+                            <tr>
+                                <td><code>coords</code></td>
+                                <td>Lista de números</td>
+                                <td>Define as coordenadas que determinam a posição e o formato da área dentro da imagem.</td>
+                            </tr>
+                             <tr>
+                                <td><code>download</code></td>
+                                <td>Nome do arquivo</td>
+                                <td>Indica que o link deve fazer download do destino em vez de abri-lo.</td>
+                            </tr>
+                            <tr>
+                                <td><code>href</code></td>
+                                <td>URL</td>
+                                <td>Define o destino do link ao clicar na área.</td>
+                            </tr>
+                            <tr>
+                                <td><code>hreflang</code></td>
+                                <td>Código de idioma</td>
+                                <td>Indica o idioma do documento de destino.</td>
+                            </tr>
+                            <tr>
+                                <td><code>media</code></td>
+                                <td>Media query</td>
+                                <td>Define para quais dispositivos ou condições de mídia o link é otimizado.</td>
+                            </tr>
+                            <tr>
+                                <td><code>referrerpolicy</code></td>
+                                <td><code>no-referrer</code>, <code>origin</code>, <code>same-origin</code>, etc.</td>
+                                <td>Controla quais informações de referência (referrer) são enviadas ao acessar o link.</td>
+                            </tr>
+                            <tr>
+                                <td><code>rel</code></td>
+                                <td>Tipo de relação</td>
+                                <td>Define a relação entre o documento atual e o destino do link.</td>
+                            </tr>
+                            <tr>
+                                <td><code>shape</code></td>
+                                <td><code>rect</code>, <code>circle</code>, <code>poly</code>, <code>default</code></td>
+                                <td>Define o formato da área clicável.</td>
+                            </tr>
+                            <tr>
+                                <td><code>target</code></td>
+                                <td><code>_blank</code>, <code>_self</code>, etc.</td>
+                                <td>Especifica onde abrir o link.</td>
+                            </tr>
+                            <tr>
+                                <td><code>type</code></td>
+                                <td>Tipo MIME.</td>
+                                <td>Define o tipo de mídia (MIME type) do recurso de destino.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Uso Correto:</strong> Sempre use <code>&lt;area&gt;</code> dentro de um <code>&lt;map&gt;</code>.</li>
+                        <li><strong>Acessibilidade:</strong> Forneça sempre o atributo <code>&lt;alt&gt;</code> para descrever a área.</li>
+                        <li><strong>Coordenadas:</strong> Ajuste as coordenadas de acordo com o tamanho real da imagem. Se a imagem for redimensionada via CSS, o mapeamento pode perder a precisão.</li>
+                        <li><strong>Forma adequada:</strong> Use <code>shape="rect"</code> para retângulos, <code>shape="circle"</code> para círculos e <code>shape="poly"</code> para formas irregulares.</li>
+                        <li><strong>SEO e usabilidade:</strong> Evite usar apenas imagens mapeadas como meio principal de navegação; ofereça alternativas textuais.</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;area&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Área retangular</h4>
+                    <div class="code-block">
+                        <pre>&lt;area shape="rect" coords="34,44,270,350" href="produto.html" alt="Produto"&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Cria uma área clicável retangular na imagem.</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Área circular</h4>
+                    <div class="code-block">
+                        <pre>&lt;area shape="circle" coords="180,139,60" href="informacoes.html" alt="Informações"&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Cria uma área clicável circular com raio de 60 pixels.</p>
+                    
+                    <hr>
+
+                    <h4>Exemplo 3: Área poligonal</h4>
+                    <div class="code-block">
+                        <pre>&lt;area shape="poly" coords="140,121,181,116,204,164,121,198" href="setor.html" alt="Setor do mapa"&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Cria uma área clicável com formato personalizado de acordo com os pontos definidos.</p>
+                
+                </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
+
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
+
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
+
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
+
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
+
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
+
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
+
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
+
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
+
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
+
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
+
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
+
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
