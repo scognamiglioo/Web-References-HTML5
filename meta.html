@@ -35,52 +35,61 @@
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p>A tag <code>&lt;meta&gt;</code> define metadados sobre um documento HTML. Metadados são dados (informações) sobre dados. As tags <code>&lt;meta&gt;</code> sempre vão dentro do elemento <a href="head.html">&lt;head&gt;</a> e são normalmente usadas para especificar o conjunto de caracteres, a descrição da página, palavras-chave, o autor do documento e as configurações da janela de visualização (viewport).</p>
+                    <p>A tag <code>&lt;meta&gt;</code> define metadados sobre um documento HTML. Metadados são informações sobre dados. As tags <code>&lt;meta&gt;</code> sempre vão dentro do elemento <code>&lt;head&gt;</code> e são normalmente usadas para especificar o conjunto de caracteres, a descrição da página, palavras-chave, o autor do documento e as configurações da janela de visualização (viewport).</p>
                     <p>Os metadados não são exibidos na página, mas são utilizados por navegadores (como exibir conteúdo ou recarregar a página), por mecanismos de busca (para palavras-chave) e outros serviços da web.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Atributos</h3>
-                    <p>A tag <code>&lt;article&gt;</code> não possui atributos específicos, mas suporta todos os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code> e <code>class</code>.</p>
-                </section>
-
-                <section class="example-section">
-                    <h3>Boas Práticas e Observações</h3>
-                    <ul>
-                        <li><strong>Conteúdo Autocontido:</strong> Use <code>&lt;article&gt;</code> apenas para conteúdo que faria sentido se fosse visto isoladamente (por exemplo, em um feed RSS).</li>
-                        <li><strong>Não confunda com &lt;section&gt;:</strong> Use <code>&lt;section&gt;</code> para agrupar conteúdos temáticos, e <code>&lt;article&gt;</code> para agrupar conteúdos independentes. É comum ter várias <code>&lt;section&gt;</code> dentro de um <code>&lt;article&gt;</code>.</li>
-                        <li><strong>Acessibilidade:</strong> O uso correto de <code>&lt;article&gt;</code> ajuda leitores de tela a navegar pelo conteúdo principal da página de forma mais eficiente.</li>
-                    </ul>
+                    <h3>Atributos Principais</h3>
+                    <table class="attributes-table">
+                        <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><strong>charset</strong></td>
+                            <td><em>character_set</em></td>
+                            <td class="description">Especifica a codificação de caracteres para o documento HTML. UTF-8 é o recomendado.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>name</strong></td>
+                            <td>application-name / author / description / keywords / viewport</td>
+                            <td class="description">Especifica o nome para o metadado. Usado em conjunto com o atributo <code>content</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>content</strong></td>
+                            <td><em>text</em></td>
+                            <td class="description">Fornece o valor associado ao atributo <code>name</code> ou <code>http-equiv</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>http-equiv</strong></td>
+                            <td>content-security-policy / content-type / default-style / refresh</td>
+                            <td class="description">É usado para fornecer um cabeçalho HTTP para o valor do atributo <code>content</code>.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </section>
 
             <section class="example-section">
-                <h3>Exemplos</h3>
-                <p class="subtitle">Veja como a tag <code>&lt;article&gt;</code> pode ser usada:</p>
+                <h3>Exemplos Essenciais</h3>
+                <h4>Definindo o conjunto de caracteres como UTF-8:</h4>
+                <div class="code-block"><pre>&lt;meta charset="UTF-8"&gt;</pre></div>
 
-                <h4>Exemplo 1: Post de um Blog</h4>
-                <div class="code-block">
-                        <pre>
-&lt;article&gt;
-  &lt;h2&gt;O Título do Meu Post&lt;/h2&gt;
-  &lt;p&gt;Este é o primeiro parágrafo do meu post no blog. Fala sobre a importância do HTML semântico.&lt;/p&gt;
-  &lt;p&gt;Aqui continuo com mais detalhes...&lt;/p&gt;
-&lt;/article&gt;
-                        </pre>
-                </div>
+                <h4>Definindo uma descrição para mecanismos de busca:</h4>
+                <div class="code-block"><pre>&lt;meta name="description" content="Tutorial completo sobre as tags do HTML5."&gt;</pre></div>
 
-                <h4>Exemplo 2: Comentários de Usuários</h4>
-                <div class="code-block">
-                        <pre>
-&lt;article&gt;
-  &lt;header&gt;
-    &lt;h3&gt;Comentário de @usuario123&lt;/h3&gt;
-    &lt;p&gt;Postado em &lt;time datetime="2025-10-08"&gt;8 de Outubro de 2025&lt;/time&gt;&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;Ótimo artigo! Muito informativo.&lt;/p&gt;
-&lt;/article&gt;
-                        </pre>
-                </div>
-            </section>
+                <h4>Definindo palavras-chave:</h4>
+                <div class="code-block"><pre>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Web Development"&gt;</pre></div>
+
+                <h4>Definindo o autor da página:</h4>
+                <div class="code-block"><pre>&lt;meta name="author" content="Dijalmir Barbosa"&gt;</pre></div>
+
+                <h4>Configurando a viewport para design responsivo:</h4>
+                <div class="code-block"><pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre></div>
             </section>
         </article>
 
