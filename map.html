@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;map&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,87 +27,106 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;map&gt;</h1>
             </section>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>Cria um mapa de imagem com uma área clicável.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        &lt;img src="planetas.gif" alt="Planetas" usemap="#planetmap"&gt;<br><br>
+                        &lt;map name="planetmap"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="rect" coords="0,0,82,126" href="sol.html" alt="Sol"&gt;<br>
+                        &lt;/map&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p class="description">A tag &lt;map&gt; é usada para definir um mapa de imagem do lado do cliente. Um mapa de imagem é uma imagem com áreas clicáveis.</p>
+                    <p>A tag &lt;map&gt; contém uma série de tags &lt;area&gt;, que definem as áreas clicáveis no mapa de imagem. O atributo <strong>name</strong> da tag &lt;map&gt; é associado ao atributo <strong>usemap</strong> da tag &lt;img&gt;, criando a relação entre a imagem e o mapa.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos da Tag &lt;map&gt;</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><strong>name</strong></td>
+                                <td>text</td>
+                                <td class="description">Especifica o nome do mapa de imagem. Este nome é referenciado pelo atributo `usemap` na tag &lt;img&gt;.</td>
                             </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 style="margin-top: 20px;">Atributos da Tag &lt;area&gt; (usada dentro de &lt;map&gt;)</h3>
+                     <table class="attributes-table">
+                        <thead>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
+                                <td><strong>alt</strong></td>
+                                <td>text</td>
+                                <td class="description">Especifica um texto alternativo para a área, essencial para acessibilidade.</td>
                             </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                             <tr>
+                                <td><strong>coords</strong></td>
+                                <td>coordinates</td>
+                                <td class="description">Especifica as coordenadas da área clicável. Os valores dependem do atributo `shape`.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>href</strong></td>
+                                <td>URL</td>
+                                <td class="description">Especifica o destino do link para a área.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>shape</strong></td>
+                                <td>default / rect / circle / poly</td>
+                                <td class="description">Define a forma da área (retângulo, círculo, polígono ou padrão).</td>
+                            </tr>
+                             <tr>
+                                <td><strong>target</strong></td>
+                                <td>_blank / _parent / _self / _top</td>
+                                <td class="description">Especifica onde abrir o documento vinculado.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Outros exemplos</h3>
+                    
+                    <p>Mapa de imagem com múltiplas formas (círculo e retângulo):</p>
+                    <div class="code-block">
+                        &lt;img src="estacao_trabalho.jpg" alt="Estação de Trabalho" usemap="#workmap" width="400" height="379"&gt;<br><br>
+                        &lt;map name="workmap"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350" alt="Computador" href="computador.html"&gt;<br>
+                        &nbsp;&nbsp;&lt;area shape="circle" coords="290,172,33" alt="Xícara de Café" href="cafe.html"&gt;<br>
+                        &lt;/map&gt;
+                    </div>
                 </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
+
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+
             <ul class="sidebar-links" id="tagList">
 
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
@@ -248,9 +268,13 @@
         </aside>
     </main>
 
+
+
+
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
 </body>
 
@@ -263,6 +287,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

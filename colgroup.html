@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;colgroup&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,90 +27,148 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
 
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;colgroup&gt;</h1>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                <p class="subtitle">
+                    A tag <code>&lt;colgroup&gt;</code> é usada dentro de uma tabela (<code>&lt;table&gt;</code>) para agrupar uma ou mais colunas, permitindo aplicar estilos ou atributos em grupo.
+                </p>
+
+                <section class="content">
+
+                    <section class="example-section">
+                        <h3>Exemplo</h3>
+                        <p>
+                            O exemplo abaixo mostra uma tabela com um grupo de colunas definido por <code>&lt;colgroup&gt;</code> e colunas estilizadas por <code>&lt;col&gt;</code>.
+                        </p>
+
+                        <div class="code-block">
+                            <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Exemplo &lt;colgroup&gt;&lt;/title&gt;
+  &lt;style&gt;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    colgroup col:nth-child(1) {
+      background-color: #e3f2fd;
+    }
+    colgroup col:nth-child(2) {
+      background-color: #bbdefb;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Exemplo de uso da tag &lt;colgroup&gt;&lt;/h1&gt;
+
+  &lt;table&gt;
+    &lt;colgroup&gt;
+      &lt;col span="1"&gt;
+      &lt;col span="1"&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Cargo&lt;/th&gt;
+        &lt;th&gt;Departamento&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Ana&lt;/td&gt;
+        &lt;td&gt;Analista&lt;/td&gt;
+        &lt;td&gt;TI&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Carlos&lt;/td&gt;
+        &lt;td&gt;Designer&lt;/td&gt;
+        &lt;td&gt;Marketing&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                            </pre>
+                        </div>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+
+                        <p>
+                            A tag <code>&lt;colgroup&gt;</code> serve para agrupar uma ou mais colunas em uma tabela, permitindo aplicar atributos ou estilos a todo o grupo de uma só vez. 
+                        </p>
+
+                        <p>
+                            Dentro dela, normalmente são usadas tags <code>&lt;col&gt;</code> que especificam cada coluna ou grupo de colunas individualmente. 
+                            A tag <code>&lt;colgroup&gt;</code> deve aparecer **imediatamente após a tag &lt;caption&gt; (se houver)** e antes do conteúdo da tabela.
+                        </p>
+
+                        <p>
+                            Ela é especialmente útil para definir cores, larguras ou estilos aplicados por colunas, sem precisar aplicar CSS em cada célula individual.
+                        </p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Características</h3>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Propriedade</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de elemento</td>
+                                    <td>Elemento de bloco usado dentro de tabelas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Uso semântico</td>
+                                    <td>Agrupar colunas de uma tabela para aplicar estilos ou propriedades em conjunto.</td>
+                                </tr>
+                                <tr>
+                                    <td>Local permitido</td>
+                                    <td>Dentro de <code>&lt;table&gt;</code>, logo após <code>&lt;caption&gt;</code> (se existir) e antes de <code>&lt;thead&gt;</code> ou <code>&lt;tbody&gt;</code>.</td>
+                                </tr>
+                                <tr>
+                                    <td>Atributos específicos</td>
+                                    <td><code>span</code> — define quantas colunas o grupo representa.</td>
+                                </tr>
+                                <tr>
+                                    <td>Conteúdo permitido</td>
+                                    <td>Somente elementos <code>&lt;col&gt;</code>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
                 </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +304,18 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="sobre.html">Sobre Nós</a> |
+            <a href="referencias.html">Referências</a>
+        </p>
     </footer>
+
 </body>
 
 </html>

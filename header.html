@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;header&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,73 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
-
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;header&gt;</h1>
                 </section>
+            </section>
+            <p class="subtitle">A tag usada para definir um cabeçalho para um documento ou uma seção.</p>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;header&gt;</code> representa um contêiner para conteúdo introdutório ou um conjunto de links de navegação. Um elemento <code>&lt;header&gt;</code> normalmente contém:</p>
+                    <ul>
+                        <li>Um ou mais elementos de cabeçalho (&lt;h1&gt; - &lt;h6&gt;)</li>
+                        <li>Logotipo ou ícone</li>
+                        <li>Informações de autoria</li>
+                    </ul>
+                    <p>Você pode ter vários elementos <code>&lt;header&gt;</code> em um documento. No entanto, um <code>&lt;header&gt;</code> não pode ser colocado dentro de um <code>&lt;footer&gt;</code>, <code>&lt;address&gt;</code> ou outro elemento <code>&lt;header&gt;</code>.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3>Atributos</h3>
+                    <p>A tag <code>&lt;header&gt;</code> não possui atributos específicos, apenas os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code> e <code>class</code>, que são usados para estilização e scripts.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Cabeçalho do Site:</strong> Use a tag <code>&lt;header&gt;</code> no topo do <code>&lt;body&gt;</code> para o cabeçalho principal do site, geralmente contendo o logotipo e a navegação principal (<code>&lt;nav&gt;</code>).</li>
+                        <li><strong>Cabeçalho de Seção:</strong> Também pode ser usada no início de outras seções semânticas, como <code>&lt;article&gt;</code> ou <code>&lt;section&gt;</code>, para agrupar o título e outras informações introdutórias.</li>
+                        <li><strong>Clareza Semântica:</strong> Ajuda leitores de tela a identificar o início de um bloco de conteúdo importante.</li>
+                    </ul>
                 </section>
 
+            <section class="example-section">
+                <h3>Exemplos</h3>
+                <h4>Exemplo 1: Cabeçalho Principal da Página</h4>
+                <div class="code-block">
+                        <pre>
+&lt;header&gt;
+  &lt;h1&gt;Título Principal do Site&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="/home"&gt;Home&lt;/a&gt; |
+    &lt;a href="/sobre"&gt;Sobre&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+                        </pre>
+                </div>
+                <h4>Exemplo 2: Cabeçalho de um Artigo</h4>
+                <div class="code-block">
+                        <pre>
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+    &lt;p&gt;Por: João da Silva&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Conteúdo do artigo começa aqui...&lt;/p&gt;
+&lt;/article&gt;
+                        </pre>
+                </div>
+            </section>
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,29 +227,30 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;article&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,71 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
-
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;article&gt;</h1>
                 </section>
+            </section>
+            <p class="subtitle">A tag usada para representar um conteúdo independente e autocontido
+                em uma página, como um post de blog, artigo de notícia ou um comentário de fórum.</p>
+
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;article&gt;</code> define um conteúdo completo ou autocontido que pode ser distribuído ou reutilizado de forma independente. Exemplos de uso incluem um post de blog, um artigo de notícias, um comentário de usuário ou um widget interativo.</p>
+                    <p>O conteúdo dentro de um <code>&lt;article&gt;</code> deve fazer sentido por si só, e é comum que ele tenha seu próprio cabeçalho (com tags &lt;h1&gt; a &lt;h6&gt;).</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3>Atributos</h3>
+                    <p>A tag <code>&lt;article&gt;</code> não possui atributos específicos, mas suporta todos os <a href="https://www.w3schools.com/tags/ref_standardattributes.asp" target="_blank">atributos globais</a>, como <code>id</code> e <code>class</code>.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Conteúdo Autocontido:</strong> Use <code>&lt;article&gt;</code> apenas para conteúdo que faria sentido se fosse visto isoladamente (por exemplo, em um feed RSS).</li>
+                        <li><strong>Não confunda com &lt;section&gt;:</strong> Use <code>&lt;section&gt;</code> para agrupar conteúdos temáticos, e <code>&lt;article&gt;</code> para agrupar conteúdos independentes. É comum ter várias <code>&lt;section&gt;</code> dentro de um <code>&lt;article&gt;</code>.</li>
+                        <li><strong>Acessibilidade:</strong> O uso correto de <code>&lt;article&gt;</code> ajuda leitores de tela a navegar pelo conteúdo principal da página de forma mais eficiente.</li>
+                    </ul>
                 </section>
 
+            <section class="example-section">
+                <h3>Exemplos</h3>
+                <p class="subtitle">Veja como a tag <code>&lt;article&gt;</code> pode ser usada:</p>
+
+                <h4>Exemplo 1: Post de um Blog</h4>
+                <div class="code-block">
+                        <pre>
+&lt;article&gt;
+  &lt;h2&gt;O Título do Meu Post&lt;/h2&gt;
+  &lt;p&gt;Este é o primeiro parágrafo do meu post no blog. Fala sobre a importância do HTML semântico.&lt;/p&gt;
+  &lt;p&gt;Aqui continuo com mais detalhes...&lt;/p&gt;
+&lt;/article&gt;
+                        </pre>
+                </div>
+
+                <h4>Exemplo 2: Comentários de Usuários</h4>
+                <div class="code-block">
+                        <pre>
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Comentário de @usuario123&lt;/h3&gt;
+    &lt;p&gt;Postado em &lt;time datetime="2025-10-08"&gt;8 de Outubro de 2025&lt;/time&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Ótimo artigo! Muito informativo.&lt;/p&gt;
+&lt;/article&gt;
+                        </pre>
+                </div>
+            </section>
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,29 +225,30 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>

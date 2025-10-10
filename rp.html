@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;rp&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,87 +27,57 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;rp&gt;</h1>
             </section>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>Fornece parênteses para navegadores que não suportam anotações ruby.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        &lt;ruby&gt;<br>
+                        &nbsp;&nbsp;漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+                        &nbsp;&nbsp;字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+                        &lt;/ruby&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p class="description">A tag &lt;rp&gt; (Ruby Parentheses) é usada para definir o que deve ser mostrado por navegadores que não suportam as anotações "ruby".</p>
+                    <p>As anotações ruby são usadas para mostrar a pronúncia de caracteres do Leste Asiático, como Kanji. A tag &lt;rp&gt; é usada dentro de uma tag &lt;ruby&gt;, junto com as tags &lt;rt&gt;, para fornecer parênteses de fallback. Navegadores modernos que entendem a tag &lt;ruby&gt; irão ignorar (não exibir) o conteúdo da tag &lt;rp&gt;.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3>Atributos</h3>
+                    <p>A tag &lt;rp&gt; não possui atributos específicos, ela suporta apenas os <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes" target="_blank">atributos globais</a> em HTML.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Outros exemplos</h3>
+                    
+                    <p>Exemplo com o nome de uma cidade japonesa:</p>
+                    <div class="code-block">
+                         &lt;ruby&gt;<br>
+                        &nbsp;&nbsp;東 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;tō&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+                        &nbsp;&nbsp;京 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kyō&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+                        &lt;/ruby&gt;
+                    </div>
+                    <p><b>Como funciona:</b></p>
+                    <ul>
+                        <li>Em um navegador compatível, o usuário verá "東(tō) 京(kyō)" com a pronúncia acima dos caracteres.</li>
+                        <li>Em um navegador antigo, que não suporta &lt;ruby&gt;, ele mostrará o texto de fallback: "東 (tō) 京 (kyō)".</li>
+                    </ul>
                 </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
+
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+
             <ul class="sidebar-links" id="tagList">
 
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
@@ -248,9 +219,13 @@
         </aside>
     </main>
 
+
+
+
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
 </body>
 
@@ -263,6 +238,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

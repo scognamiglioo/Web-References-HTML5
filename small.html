@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;small&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,90 +28,98 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
 
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;small&gt;</h1>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                <p class="subtitle">
+                    A tag <code>&lt;small&gt;</code> é usada para representar um texto com menor ênfase ou menor importância, geralmente exibido com um tamanho de fonte reduzido em relação ao texto normal.
+                </p>
+
+                <section class="content">
+
+                    <section class="example-section">
+                        <h3>Exemplo</h3>
+                        <p>No exemplo abaixo, a tag <code>&lt;small&gt;</code> é usada para exibir um aviso legal em tamanho menor:</p>
+
+                        <div class="code-block">
+                            <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Exemplo da tag &lt;small&gt;&lt;/h1&gt;
+
+&lt;p&gt;Preço: &lt;strong&gt;R$ 99,00&lt;/strong&gt; &lt;small&gt;(impostos não incluídos)&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Este é um texto normal. &lt;small&gt;E este é um texto menor.&lt;/small&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                            </pre>
+                        </div>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+
+                        <p>
+                            A tag <code>&lt;small&gt;</code> é um elemento de texto em linha (<em>inline</em>) que representa observações laterais, como notas de rodapé, avisos legais, direitos autorais ou outras informações de menor relevância.
+                        </p>
+
+                        <p>
+                            Por padrão, os navegadores exibem o conteúdo da tag <code>&lt;small&gt;</code> em um tamanho de fonte menor que o texto ao redor. No entanto, seu uso é <strong>semântico</strong>, o que significa que indica uma importância reduzida — e não apenas um tamanho visualmente menor.
+                        </p>
+
+                        <p>
+                            É possível aninhar várias tags <code>&lt;small&gt;</code> para reduzir ainda mais o tamanho do texto, embora isso seja pouco comum.
+                        </p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Características</h3>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Propriedade</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de elemento</td>
+                                    <td>Elemento em linha (<code>inline</code>).</td>
+                                </tr>
+                                <tr>
+                                    <td>Tag de fechamento</td>
+                                    <td>Obrigatória: &lt;/small&gt;.</td>
+                                </tr>
+                                <tr>
+                                    <td>Uso comum</td>
+                                    <td>Notas, observações, direitos autorais e informações complementares.</td>
+                                </tr>
+                                <tr>
+                                    <td>Atributos globais</td>
+                                    <td>Suporta todos os <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes" target="_blank">atributos globais</a> do HTML.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
                 </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +255,15 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
+
 </body>
 
 </html>

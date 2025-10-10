@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;aside&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
+
 
 <body>
     <header>
@@ -24,91 +27,60 @@
     </header>
 
     <main>
+
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;aside&gt;</h1>
             </section>
 
-            <section class="content">
+            <p class="subtitle">A tag <code>&lt;aside&gt;</code> é usada para delimitar um conteúdo lateral relacionado indiretamente ao conteúdo principal.</p>
 
+            <section class="content">
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>No exemplo abaixo, <code>&lt;aside&gt;</code> delimita uma curiosidade acerca do artigo definido por <code>&lt;article&gt;</code>.</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>
+
+&lt;article&gt;
+    &lt;h1&gt;A Importância da Atividade Física&lt;/h1&gt;
+    &lt;p&gt;A prática regular de atividade física traz inúmeros benefícios para a saúde.&lt;/p&gt;
+
+    &lt;aside&gt;
+        &lt;h3&gt;Você Sabia?&lt;/h3&gt;
+        &lt;p&gt;De acordo com a OMS, adultos devem praticar de 150 a 300 minutos de atividade física de intensidade moderada por semana.&lt;/p&gt;
+    &lt;/aside&gt;
+
+    &lt;p&gt;Continuando o assunto principal sobre os benefícios...&lt;/p&gt;
+&lt;/article&gt;
+                        
+                        </pre>
                     </div>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
-                </section>
+            <section class="example-section">
+                <h3>Definição e uso</h3>
 
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
+                <p>A tag <code>&lt;aside&gt;</code> é usada para delimitar um conteúdo lateral relacionado indiretamente ao conteúdo principal. Pode ser usada como sidebar, um texto em destaque ou nota especificando um assunto do artigo principal.</p>
+                
+                <p>A tag <code>&lt;aside&gt;</code> é uma tag semântica, logo, é transparente ao usuário.</p>
             </section>
+
+            <section class="example-section">
+                    <h3>Atributos</h3>
+
+                    <p>A tag <code>&lt;aside&gt;</code> suporta os atributos globais e de evento em HTML</p>
+                </section>
+
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +216,19 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
+
     </main>
+
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
+
+
 </body>
 
 </html>
@@ -263,6 +240,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

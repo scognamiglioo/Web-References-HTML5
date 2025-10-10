@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;abbr&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,89 +26,103 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;abbr&gt;</h1>
             </section>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+                    <p>Abreviação de HyperText Markup Language.</p>
+                    <div class="code-block">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</div>
+                    <p>Resultado renderizado: <abbr title="HyperText Markup Language">HTML</abbr></p>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p class="description">A tag &lt;abbr&gt; representa uma abreviação ou sigla, e o seu atributo
+                        <strong>title</strong> fornece a forma por extenso ou o significado da abreviação. Isso ajuda
+                        usuários e tecnologias assistivas a entenderem o conteúdo.</p>
+                    <p>Use &lt;abbr&gt; quando quiser indicar claramente que um texto é uma abreviação e oferecer sua
+                        explicação ao passar o mouse (ou via leitor de tela).</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><strong>title</strong></td>
+                                <td>text</td>
+                                <td class="description">Texto que especifica o significado completo da abreviação. É o
+                                    atributo mais usado com &lt;abbr&gt;.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+                                <td><strong>class</strong></td>
+                                <td>class_name</td>
+                                <td class="description">Atributo global para aplicar estilos CSS.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
+                                <td><strong>id</strong></td>
+                                <td>unique_id</td>
+                                <td class="description">Atributo global para identificar o elemento no DOM.</td>
                             </tr>
                             <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><strong>lang</strong></td>
+                                <td>language_code</td>
+                                <td class="description">Atributo global que indica o idioma do texto da abreviação.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>data-*</strong></td>
+                                <td>custom_data</td>
+                                <td class="description">Atributo global para armazenar dados personalizados.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
+                    <h3>Outros exemplos</h3>
 
+                    <p>Abreviações comuns:</p>
+                    <div class="code-block">
+                        &lt;p&gt;A linguagem &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; é usada para
+                        estruturar páginas web.&lt;/p&gt;
+                    </div>
+
+                    <p>Abreviação com atributo <code>lang</code>:</p>
+                    <div class="code-block">
+                        &lt;abbr title="Document Type Definition" lang="en"&gt;DTD&lt;/abbr&gt;
+                    </div>
+
+                    <p>Usando <code>data-</code> para metadados:</p>
+                    <div class="code-block">
+                        &lt;abbr title="Cascading Style Sheets" data-year="1996"&gt;CSS&lt;/abbr&gt;
+                    </div>
+
+                    <p>Exemplo de acessibilidade (sugestão): ofereça texto alternativo ou uma explicação inline
+                        quando a abreviação for pouco conhecida:</p>
+                    <div class="code-block">
+                        &lt;abbr title="Application Programming Interface"&gt;API&lt;/abbr&gt; — um conjunto de
+                        rotinas e padrões para integrar softwares.
+                    </div>
+
+                </section>
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -250,23 +264,25 @@
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>
