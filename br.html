@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;br&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;br&gt;</h1>
+                </section>
+            </section>
+            <p class="subtitle">
+                Basta inserir a tag <code>&lt;br&gt;</code> no local exato onde a linha deve ser quebrada. Por ser um elemento vazio (void element) ele não possui tag de fechamento; 
+            </p>
+            <section class="content">
+                <section class="content">
+                    <section class="example-section">
+                        <h3>Exemplo simples</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> é usado para forçar uma quebra de linha dentro de um bloco
+                            de texto, como um parágrafo ou um cabeçalho. É útil em situações onde a divisão de linhas é
+                            parte do conteúdo, como em um endereço.</p>
+                        <div class="code-block">
+                            <pre>&lt;p&gt;Google Brasil Ltda.&lt;br&gt;
+Av. Brigadeiro Faria Lima, 3477&lt;br&gt;
+São Paulo, SP&lt;/p&gt;</pre>
+                        </div>
+                    </section>
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> (Line Break) insere uma única quebra de linha. Ele é um
+                            elemento vazio, o que significa que não possui uma tag de fechamento (não se usa
+                            <code>&lt;/br&gt;</code>).
+                        </p>
+                        <p>Seu uso é estritamente para casos onde uma quebra de linha é semanticamente parte do
+                            conteúdo. Ele não deve ser usado para criar espaçamento visual entre elementos.</p>
+                        <ul>
+                            <li><strong>Poesia:</strong> Para separar os versos de um poema.</li>
+                            <li><strong>Endereços:</strong> Para formatar as linhas de um endereço postal.</li>
+                            <li><strong>Música:</strong> Para separar as linhas de uma letra de música.</li>
+                        </ul>
+                        <p>Para criar separação entre blocos de conteúdo, como parágrafos, deve-se usar a propriedade
+                            CSS <code>margin</code>.</p>
+                    </section>
+                    <section class="example-section">
+                        <h3>Atributos</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> não possui atributos específicos e apenas aceita os
+                            atributos globais do HTML.</p>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Atributo</th>
+                                    <th>Valor</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td>Texto</td>
+                                    <td>Define um identificador único para o elemento.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>class</code></td>
+                                    <td>Texto</td>
+                                    <td>Permite associar o elemento a uma classe CSS, embora estilizar
+                                        <code>&lt;br&gt;</code> seja incomum.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Observação:</strong> O atributo <code>clear</code>, que era usado para controlar o
+                            fluxo de texto ao redor de elementos flutuantes, foi depreciado em HTML5. A funcionalidade
+                            equivalente deve ser implementada com CSS.</p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Boas práticas e observações</h3>
+                        <ul>
+                            <li><strong>NÃO use <code>&lt;br&gt;</code> para criar margem:</strong> O erro mais comum é
+                                usar múltiplas tags <code>&lt;br&gt;&lt;br&gt;</code> para criar espaço vertical. Esta é
+                                uma prática ruim que prejudica a acessibilidade e a manutenção. Use CSS
+                                <code>margin</code> para controlar o espaçamento.
+                            </li>
+                            <li><strong>Elemento Vazio (Void Element):</strong> Em HTML5, a sintaxe correta é
+                                simplesmente <code>&lt;br&gt;</code>. A sintaxe de auto-fechamento
+                                (<code>&lt;br /&gt;</code>) é herança do XHTML e, embora seja tolerada pelos
+                                navegadores, não é necessária.</li>
+                            <li><strong>Acessibilidade:</strong> O uso excessivo de quebras de linha pode confundir
+                                leitores de tela. É preferível estruturar o conteúdo com elementos de bloco apropriados
+                                (<code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;ul&gt;</code>, etc.).</li>
+                            <li><strong>Diferença entre <code>&lt;p&gt;</code> e <code>&lt;br&gt;</code>:</strong>
+                                <code>&lt;p&gt;</code> define um parágrafo (um bloco semântico de texto), enquanto
+                                <code>&lt;br&gt;</code> apenas cria uma quebra de linha visual dentro de um bloco
+                                existente.
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="example-section">
+                        <h3>Exemplos de uso</h3>
+                        <h4>1) Formatando um poema</h4>
+                        <div class="code-block">
+                            <pre>&lt;p&gt;No meio do caminho tinha uma pedra&lt;br&gt;
+tinha uma pedra no meio do caminho&lt;br&gt;
+tinha uma pedra&lt;br&gt;
+no meio do caminho tinha uma pedra.&lt;/p&gt;</pre>
+                        </div>
+                        <h4>2) Uso incorreto (a ser evitado)</h4>
+                        <p>O exemplo abaixo usa <code>&lt;br&gt;</code> para criar espaço entre dois parágrafos. Esta é
+                            a forma errada de fazer.</p>
+                        <div class="code-block">
+                            <pre>&lt;!-- Forma Incorreta --&gt;
+&lt;p&gt;Primeiro parágrafo de texto.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Segundo parágrafo de texto.&lt;/p&gt;</pre>
+                        </div>
+
+                        <h4>3) A forma correta de criar espaçamento (com CSS)</h4>
+                        <p>A maneira correta de controlar o espaçamento é usando CSS, por exemplo, definindo uma margem
+                            inferior para os parágrafos.</p>
+                        <div class="code-block">
+                            <pre>&lt;!-- CSS --&gt;
+p {
+  margin-bottom: 24px;
+}
+
+&lt;!-- HTML (Forma Correta) --&gt;
+&lt;p&gt;Primeiro parágrafo de texto.&lt;/p&gt;
+&lt;p&gt;Segundo parágrafo de texto.&lt;/p&gt;</pre>
+                        </div>
+                    </section>
+                </section>
+        </article>
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
+
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
+
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
+
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
+
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
+
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
+
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
+
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
+
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
+
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
+
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
+
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
+
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>

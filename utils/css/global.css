@@ -64,7 +64,7 @@
      overflow: hidden;
  }
 
-.title-section-tag {
+ .title-section-tag {
      background-color: #93C5FD;
      padding: 2rem;
      text-align: center;
@@ -77,7 +77,7 @@
  }
 
  .content {
-     padding: 2rem;
+     padding: 0.2rem;
  }
 
  .example-section {
@@ -101,9 +101,27 @@
      font-family: 'Courier New', monospace;
      font-size: 0.9rem;
      color: #374151;
-     margin: 1rem 0;
+     margin: 1em 0;
      overflow-x: auto;
+
  }
+
+ .code-block pre {
+     margin: 0;
+     padding: 0;
+     overflow: auto;
+     font-family: 'Courier New', monospace;
+     font-size: 0.9rem;
+     white-space: pre-line;
+     word-wrap: break-word;
+     line-height: 1.2;
+     color: #374151;
+     overflow-x: auto;
+     text-indent: 0;
+     text-align: left;
+ }
+
+
 
  .attributes-table {
      width: 100%;
@@ -244,8 +262,8 @@
 
 
  /* Estilos específicos para a página index.html */
-    
-        
+
+
  main.index-main {
      max-width: 1200px;
      margin: 0 auto;
@@ -385,7 +403,7 @@
      text-decoration: underline;
  }
 
-/* Estilos específicos para a página sobre.html */
+ /* Estilos específicos para a página sobre.html */
 
  main.sobre-nos {
      display: block;
@@ -479,9 +497,3 @@
      text-decoration: none;
      color: white;
  }
-        
-
-    
-
-
-
