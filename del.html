@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;del&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/embed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo">Tags HTML5</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="referencias.html">Referências</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <article class="main-content">
+        <section class="title-section-tag">
+            <h1>Tag HTML5 &lt;del&gt;</h1>
+        </section>
+
+        <section class="content">
+
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag &lt;del&gt; indica que o texto foi removido ou deletado de um documento.  
+                    Geralmente é usada em edições, revisões ou alterações de conteúdo, podendo ser combinada com a tag &lt;ins&gt; para mostrar inserções.
+                    <br>
+                    <mark>O texto marcado com &lt;del&gt; geralmente aparece riscado no navegador.</mark>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Estrutura Básica</h3>
+                <p class="description">
+                    A sintaxe típica é: <code>&lt;del&gt;texto removido&lt;/del&gt;</code>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo 1: Texto riscado simples</h3>
+                <div class="code-block">
+                    &lt;p&gt;Preço antigo: &lt;del&gt;R$ 150,00&lt;/del&gt;&lt;/p&gt;
+                </div>
+                <p>Resultado no navegador: Preço antigo: <del>R$ 150,00</del></p>
+
+                <h3>Exemplo 2: Texto com inserção</h3>
+                <div class="code-block">
+                    &lt;p&gt;Preço atualizado: &lt;del&gt;R$ 150,00&lt;/del&gt; &lt;ins&gt;R$ 120,00&lt;/ins&gt;&lt;/p&gt;
+                </div>
+                <p>Resultado no navegador: Preço atualizado: <del>R$ 150,00</del> <ins>R$ 120,00</ins></p>
+            </section>
+
+        </section>
+
+    </article>
+
+    <aside class="sidebar">
+        <h2>Outras Tags HTML5</h2>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+        <ul class="sidebar-links" id="tagList">
+            <li><a href="body.html">&lt;body&gt;</a></li>
+            <li><a href="audio.html">&lt;audio&gt;</a></li>
+            <li><a href="video.html">&lt;video&gt;</a></li>
+            <li><a href="del.html">&lt;del&gt;</a></li>
+            <li><a href="ins.html">&lt;ins&gt;</a></li>
+            <li><a href="section.html">&lt;section&gt;</a></li>
+        </ul>
+
+    </aside>
+
+</main>
+
+<footer>
+    <p>Copyright © 2025 Tutorial HTML5</p>
+    <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+            href="referencias.html">Referências</a></p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const tagList = document.getElementById('tagList');
+const items = tagList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', function () {
+    const filter = this.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+        const link = items[i].getElementsByTagName('a')[0];
+        const text = link.textContent.toLowerCase();
+        items[i].style.display = text.includes(filter) ? '' : 'none';
+    }
+});
+</script>
+</body>
+</html>
