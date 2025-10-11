@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;kbd&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;kbd&gt;</h1>
+                </section>
+            </section>
+            <p class="subtitle">
+                A sintaxe consiste em envolver a representação de uma entrada de teclado com a tag de abertura
+                <code>&lt;kbd&gt;</code> e a de fechamento <code>&lt;/kbd&gt;</code>.
+            </p>
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo simples</h3>
+                    <p>O elemento <code>&lt;kbd&gt;</code> é usado para indicar que um trecho de texto representa uma
+                        entrada do usuário, geralmente via teclado. Por padrão, os navegadores exibem seu conteúdo em
+                        uma fonte monoespaçada.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Para salvar o documento, pressione &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;S&lt;/kbd&gt;.&lt;/p&gt;</pre>
+                    </div>
+                </section>
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>O elemento <code>&lt;kbd&gt;</code> (Keyboard Input) representa uma entrada do usuário. Embora
+                        seja comumente usado para teclas de teclado, ele pode semanticamente representar outras formas
+                        de entrada, como comandos de voz ou entradas de texto genéricas.</p>
+                    <p>O uso da tag <code>&lt;kbd&gt;</code> ajuda a distinguir claramente as instruções de entrada do
+                        usuário do texto normal, melhorando a legibilidade e a acessibilidade de tutoriais, manuais e
+                        guias de ajuda.</p>
+                    <ul>
+                        <li><strong>Teclas de atalho:</strong> Indicar combinações de teclas, como
+                            <code>&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;Tab&lt;/kbd&gt;</code>.</li>
+                        <li><strong>Navegação em menus:</strong> Descrever um caminho, como
+                            <code>&lt;kbd&gt;Arquivo&lt;/kbd&gt; &rarr; &lt;kbd&gt;Salvar como...&lt;/kbd&gt;</code>.
+                        </li>
+                        <li><strong>Entrada de texto:</strong> Mostrar o texto exato que o usuário deve digitar, como
+                            "Digite <code>&lt;kbd&gt;exit&lt;/kbd&gt;</code> e pressione Enter".</li>
+                        <li><strong>Comandos de voz:</strong> Representar um comando de voz, como "Diga
+                            <code>&lt;kbd&gt;Ok Google&lt;/kbd&gt;</code>".</li>
+                    </ul>
+                </section>
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;kbd&gt;</code> não possui atributos específicos e apenas aceita os atributos
+                        globais do HTML.</p>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Define um identificador único para o elemento.</td>
+                            </tr>
+                            <tr>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Permite associar o elemento a uma classe CSS para estilização (ex: para parecer uma
+                                    tecla real).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Diferença entre <code>&lt;kbd&gt;</code>, <code>&lt;code&gt;</code> e
+                                <code>&lt;samp&gt;</code>:</strong> É crucial usar a tag semanticamente correta. Use
+                            <code>&lt;kbd&gt;</code> para entrada do usuário, <code>&lt;code&gt;</code> para código de
+                            computador e <code>&lt;samp&gt;</code> para saída de um programa.</li>
+                        <li><strong>Aninhamento para combinações:</strong> Para representar uma combinação de teclas ou
+                            uma sequência, é uma boa prática aninhar as tags <code>&lt;kbd&gt;</code>. A tag externa
+                            representa a entrada completa, e as internas representam as teclas individuais.</li>
+                        <li><strong>Estilização:</strong> É muito comum estilizar a tag <code>&lt;kbd&gt;</code> com CSS
+                            para que ela se pareça com uma tecla física, usando bordas, sombra e um fundo claro para
+                            melhorar a experiência visual.</li>
+                        <li><strong>Acessibilidade:</strong> O uso correto da tag ajuda tecnologias assistivas a
+                            identificar e anunciar corretamente as instruções para o usuário.</li>
+                    </ul>
+                </section>
+                <section class="example-section">
+                    <h3>Exemplos de uso</h3>
+                    <h4>1) Pressionando uma única tecla</h4>
+                    <p>A forma mais básica, indicando uma tecla individual.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Para continuar, pressione a tecla &lt;kbd&gt;Enter&lt;/kbd&gt;.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>2) Combinação de teclas (aninhamento)</h4>
+                    <p>Mostra o aninhamento para representar um atalho de teclado completo.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Para forçar a atualização da página, use &lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;F5&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>3) Sequência de comandos em um menu</h4>
+                    <p>Descrevendo passo a passo a navegação em uma interface gráfica.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Vá para &lt;kbd&gt;Arquivo&lt;/kbd&gt; &gt; &lt;kbd&gt;Preferências&lt;/kbd&gt; &gt; &lt;kbd&gt;Configurações&lt;/kbd&gt; para abrir o editor.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>4) Distinção semântica (kbd, code, samp)</h4>
+                    <p>Exemplo mostrando o uso correto de cada tag em um mesmo contexto.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Abra seu terminal e digite o comando &lt;kbd&gt;ping 127.0.0.1&lt;/kbd&gt;. O programa irá rodar o código &lt;code&gt;send_icmp_echo()&lt;/code&gt; e você verá uma saída similar a esta:&lt;/p&gt;
+&lt;pre&gt;&lt;samp&gt;Disparando contra 127.0.0.1 com 32 bytes de dados:
+Resposta de 127.0.0.1: bytes=32 tempo&lt;1ms TTL=128&lt;/samp&gt;&lt;/pre&gt;</pre>
+                    </div>
+                </section>
+            </section>
+        </article>
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
+
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
+
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
+
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
+
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
+
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
+
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
+
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
+
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
+
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
+
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
+
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
+
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
