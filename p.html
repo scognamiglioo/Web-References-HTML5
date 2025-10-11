@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;p&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/p.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;p&gt;</h1>
+                </section>
+            </section>
+            <p class="subtitle">
+                A sintaxe é simples: você utiliza uma tag de abertura <code>&lt;p&gt;</code> e uma tag de fechamento
+                <code>&lt;/p&gt;</code>. O texto que compõe o parágrafo é inserido entre elas.
+            </p>
+
+            <section class="content">
+
+                <section class="example-section">
+                    <h3>Exemplo simples</h3>
+                    <p>Neste exemplo, mostramos como parágrafos são usados para estruturar blocos de texto em uma
+                        página:</p>
+
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Este é o primeiro parágrafo. Ele contém texto sobre um determinado assunto, separado logicamente de outros conteúdos.&lt;/p&gt;
+&lt;p&gt;Este é o segundo parágrafo. Usar múltiplos parágrafos melhora a legibilidade e a organização do conteúdo.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <div class="sample-output">
+                        <p>Este é o primeiro parágrafo. Ele contém texto sobre um determinado assunto, separado
+                            logicamente de outros conteúdos.</p>
+                        <p>Este é o segundo parágrafo. Usar múltiplos parágrafos melhora a legibilidade e a
+                            organização do conteúdo.</p>
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p>O elemento <code>&lt;p&gt;</code> é usado para definir um parágrafo de texto. Navegadores
+                        automaticamente adicionam um espaço (margem) antes e depois de cada elemento
+                        <code>&lt;p&gt;</code>, separando-o visualmente de outros blocos.
+                    </p>
+
+                    <p>Semanticamente, <code>&lt;p&gt;</code> agrupa um bloco de texto que forma uma unidade lógica
+                        de pensamento. Isso é fundamental para:</p>
+                    <ul>
+                        <li><strong>Acessibilidade:</strong> Leitores de tela usam parágrafos para pausar a leitura
+                            e permitir que o usuário navegue pelo texto de forma estruturada.</li>
+                        <li><strong>Estilização com CSS:</strong> Facilita a aplicação de estilos como espaçamento,
+                            indentação da primeira linha, alinhamento e altura da linha a blocos de texto
+                            específicos.</li>
+                        <li><strong>Manutenção do código:</strong> Um texto bem estruturado em parágrafos é mais
+                            fácil de ler e editar no código-fonte.</li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;p&gt;</code> suporta principalmente os atributos globais do HTML, que
+                        são comuns a quase todas as tags.</p>
+
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Define um identificador único para o parágrafo, útil para links âncora e
+                                    manipulação com JavaScript.</td>
+                            </tr>
+                            <tr>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Associa o parágrafo a uma ou mais classes CSS para estilização.</td>
+                            </tr>
+                            <tr>
+                                <td><code>style</code></td>
+                                <td>Regras CSS</td>
+                                <td>Aplica estilos CSS diretamente no elemento (inline), embora o uso de classes
+                                    seja geralmente preferível.</td>
+                            </tr>
+                            <tr>
+                                <td><code>title</code></td>
+                                <td>Texto</td>
+                                <td>Fornece informações extras sobre o parágrafo, que geralmente aparecem como uma
+                                    dica (tooltip) ao passar o mouse sobre ele.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Observação:</strong> O atributo <code>align</code> (ex:
+                        <code>&lt;p align="center"&gt;</code>) foi depreciado em HTML5. Para alinhar texto, use a
+                        propriedade CSS <code>text-align</code>.
+                    </p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Não use para espaçamento:</strong> Evite usar parágrafos vazios
+                            (<code>&lt;p&gt;&lt;/p&gt;</code>) apenas para criar espaço vertical. Use as
+                            propriedades CSS <code>margin</code> ou <code>padding</code> para isso.</li>
+                        <li><strong>Uso semântico:</strong> Use <code>&lt;p&gt;</code> para blocos de texto que
+                            realmente formam um parágrafo. Para listas, use <code>&lt;ul&gt;</code> ou
+                            <code>&lt;ol&gt;</code>; para citações, use <code>&lt;blockquote&gt;</code>.
+                        </li>
+                        <li><strong>Fechamento da tag:</strong> Embora alguns navegadores possam renderizar
+                            corretamente sem a tag de fechamento <code>&lt;/p&gt;</code>, a especificação HTML exige
+                            que ela seja fechada. Sempre feche suas tags.</li>
+                        <li><strong>Elementos aninhados:</strong> Um parágrafo pode conter elementos "inline" como
+                            <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code> e
+                            <code>&lt;span&gt;</code>, mas não pode conter elementos de bloco, como outros
+                            parágrafos, cabeçalhos (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>) ou listas.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplos de uso</h3>
+
+                    <h4>1) Parágrafo com elementos inline</h4>
+                    <p>Aqui, usamos <code>&lt;strong&gt;</code> para dar ênfase e <code>&lt;a&gt;</code> para criar
+                        um link dentro do parágrafo.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Para mais informações, &lt;strong&gt;leia nossa documentação&lt;/strong&gt; ou &lt;a href="/contato"&gt;entre em contato&lt;/a&gt; conosco.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>2) Estilização de parágrafo com CSS</h4>
+                    <p>Este exemplo mostra como aplicar um estilo específico a um parágrafo usando uma classe.</p>
+                    <div class="code-block">
+                        <pre>&lt;!-- CSS --&gt;
+.paragrafo-destaque {
+  background-color: #f0f0f0;
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  font-style: italic;
+}
+
+&lt;!-- HTML --&gt;
+&lt;p class="paragrafo-destaque"&gt;Esta é uma nota importante que precisa de atenção especial do leitor.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <div class="sample-output">
+                        <p class="paragrafo-destaque">
+                            Esta é uma nota importante que precisa de atenção especial do leitor.</p>
+                    </div>
+                </section>
+            </section>
+        </article>
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="canvas.html">&lt;canvas&gt;</a></li>
+                <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
+                <li><a href="legend.html">&lt;legend&gt;</a></li>
+                <li><a href="picture.html">&lt;picture&gt;</a></li>
+                <li><a href="sub.html">&lt;sub&gt;</a></li>
+                <li><a href="var.html">&lt;var&gt;</a></li>
+
+                <li><a href="base.html">&lt;base&gt;</a></li>
+                <li><a href="dfn.html">&lt;dfn&gt;</a></li>
+                <li><a href="i.html">&lt;i&gt;</a></li>
+                <li><a href="object.html">&lt;object&gt;</a></li>
+                <li><a href="section.html">&lt;section&gt;</a></li>
+                <li><a href="thead.html">&lt;thead&gt;</a></li>
+
+                <li><a href="a.html">&lt;a&gt;</a></li>
+                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="footer.html">&lt;footer&gt;</a></li>
+                <li><a href="main.html">&lt;main&gt;</a></li>
+                <li><a href="q.html">&lt;q&gt;</a></li>
+                <li><a href="svg.html">&lt;svg&gt;</a></li>
+
+                <li><a href="audio.html">&lt;audio&gt;</a></li>
+                <li><a href="del.html">&lt;del&gt;</a></li>
+                <li><a href="hr.html">&lt;hr&gt;</a></li>
+                <li><a href="nav.html">&lt;nav&gt;</a></li>
+                <li><a href="script.html">&lt;script&gt;</a></li>
+                <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+
+                <li><a href="article.html">&lt;article&gt;</a></li>
+                <li><a href="datalist.html">&lt;datalist&gt;</a></li>
+                <li><a href="header.html">&lt;header&gt;</a></li>
+                <li><a href="meta.html">&lt;meta&gt;</a></li>
+                <li><a href="s.html">&lt;s&gt;</a></li>
+                <li><a href="template.html">&lt;template&gt;</a></li>
+
+                <li><a href="body.html">&lt;body&gt;</a></li>
+                <li><a href="dt.html">&lt;dt&gt;</a></li>
+                <li><a href="ins.html">&lt;ins&gt;</a></li>
+                <li><a href="output.html">&lt;output&gt;</a></li>
+                <li><a href="span.html">&lt;span&gt;</a></li>
+                <li><a href="track.html">&lt;track&gt;</a></li>
+
+                <li><a href="abbr.html">&lt;abbr&gt;</a></li>
+                <li><a href="col.html">&lt;col&gt;</a></li>
+                <li><a href="form.html">&lt;form&gt;</a></li>
+                <li><a href="map.html">&lt;map&gt;</a></li>
+                <li><a href="rp.html">&lt;rp&gt;</a></li>
+                <li><a href="table.html">&lt;table&gt;</a></li>
+
+                <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
+                <li><a href="figure.html">&lt;figure&gt;</a></li>
+                <li><a href="link.html">&lt;link&gt;</a></li>
+                <li><a href="progress.html">&lt;progress&gt;</a></li>
+                <li><a href="sup.html">&lt;sup&gt;</a></li>
+                <li><a href="wbr.html">&lt;wbr&gt;</a></li>
+
+                <li><a href="area.html">&lt;area&gt;</a></li>
+                <li><a href="data.html">&lt;data&gt;</a></li>
+                <li><a href="head.html">&lt;head&gt;</a></li>
+                <li><a href="menu.html">&lt;menu&gt;</a></li>
+                <li><a href="ruby.html">&lt;ruby&gt;</a></li>
+                <li><a href="td.html">&lt;td&gt;</a></li>
+
+                <li><a href="button.html">&lt;button&gt;</a></li>
+                <li><a href="embed.html">&lt;embed&gt;</a></li>
+                <li><a href="label.html">&lt;label&gt;</a></li>
+                <li><a href="param.html">&lt;param&gt;</a></li>
+                <li><a href="style.html">&lt;style&gt;</a></li>
+                <li><a href="ul.html">&lt;ul&gt;</a></li>
+
+                <li><a href="br.html">&lt;br&gt;</a></li>
+                <li><a href="em.html">&lt;em&gt;</a></li>
+                <li><a href="kbd.html">&lt;kbd&gt;</a></li>
+                <li><a href="p.html">&lt;p&gt;</a></li>
+                <li><a href="strong.html">&lt;strong&gt;</a></li>
+                <li><a href="u.html">&lt;u&gt;</a></li>
+
+                <li><a href="blockquote.html">&lt;blockquote&gt;</a></li>
+                <li><a href="dl.html">&lt;dl&gt;</a></li>
+                <li><a href="input.html">&lt;input&gt;</a></li>
+                <li><a href="option.html">&lt;option&gt;</a></li>
+                <li><a href="source.html">&lt;source&gt;</a></li>
+                <li><a href="tr.html">&lt;tr&gt;</a></li>
+
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+
+                <li><a href="bdo.html">&lt;bdo&gt;</a></li>
+                <li><a href="div.html">&lt;div&gt;</a></li>
+                <li><a href="img.html">&lt;img&gt;</a></li>
+                <li><a href="optgroup.html">&lt;optgroup&gt;</a></li>
+                <li><a href="small.html">&lt;small&gt;</a></li>
+                <li><a href="title.html">&lt;title&gt;</a></li>
+
+                <li><a href="b.html">&lt;b&gt;</a></li>
+                <li><a href="details.html">&lt;details&gt;</a></li>
+                <li><a href="html.html">&lt;html&gt;</a></li>
+                <li><a href="noscript.html">&lt;noscript&gt;</a></li>
+                <li><a href="search.html">&lt;search&gt;</a></li>
+                <li><a href="th.html">&lt;th&gt;</a></li>
+
+                <li><a href="aside.html">&lt;aside&gt;</a></li>
+                <li><a href="dd.html">&lt;dd&gt;</a></li>
+                <li><a href="hgroup.html">&lt;hgroup&gt;</a></li>
+                <li><a href="meter.html">&lt;meter&gt;</a></li>
+                <li><a href="samp.html">&lt;samp&gt;</a></li>
+                <li><a href="textarea.html">&lt;textarea&gt;</a></li>
+
+                <li><a href="address.html">&lt;address&gt;</a></li>
+                <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
+
+                <li><a href="h1.html">&lt;h1&gt;</a></li>
+                <li><a href="h2.html">&lt;h2&gt;</a></li>
+                <li><a href="h3.html">&lt;h3&gt;</a></li>
+                <li><a href="h4.html">&lt;h4&gt;</a></li>
+                <li><a href="h5.html">&lt;h5&gt;</a></li>
+                <li><a href="h6.html">&lt;h6&gt;</a></li>
+
+                <li><a href="mark.html">&lt;mark&gt;</a></li>
+                <li><a href="rt.html">&lt;rt&gt;</a></li>
+                <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+
+                <li><a href="comment.html">&lt;!--...--&gt;</a></li>
+                <li><a href="caption.html">&lt;caption&gt;</a></li>
+                <li><a href="figcaption.html">&lt;figcaption&gt;</a></li>
+                <li><a href="li.html">&lt;li&gt;</a></li>
+                <li><a href="pre.html">&lt;pre&gt;</a></li>
+                <li><a href="summary.html">&lt;summary&gt;</a></li>
+                <li><a href="video.html">&lt;video&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
