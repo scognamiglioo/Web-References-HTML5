@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;nav&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/embed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo">Tags HTML5</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="referencias.html">Referências</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <article class="main-content">
+        <section class="title-section-tag">
+            <h1>Tag HTML5 &lt;nav&gt;</h1>
+        </section>
+
+        <section class="content">
+
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag &lt;nav&gt; define uma **área de navegação** em uma página HTML5, geralmente contendo links para seções importantes do site.  
+                    É recomendada para menus principais, barras de navegação e links de rodapé que organizam a navegação do usuário.  
+                    <br>
+                    <mark>Conteúdos dentro de &lt;nav&gt; devem ser links de navegação relevantes. Não use para links internos genéricos.</mark>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Estrutura Básica</h3>
+                <p class="description">
+                    A sintaxe típica é: <br>
+                    <code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo 1: Menu de navegação horizontal</h3>
+                <div class="code-block">
+                    &lt;nav&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="sobre.html"&gt;Sobre&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;
+                </div>
+
+                <h3>Exemplo 2: Navegação vertical</h3>
+                <div class="code-block">
+                    &lt;nav style="width: 200px;"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul style="list-style: none; padding: 0;"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="pagina1.html"&gt;Página 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="pagina2.html"&gt;Página 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="pagina3.html"&gt;Página 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;
+                </div>
+
+            </section>
+
+        </section>
+
+    </article>
+
+    <aside class="sidebar">
+        <h2>Outras Tags HTML5</h2>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+        <ul class="sidebar-links" id="tagList">
+            <li><a href="body.html">&lt;body&gt;</a></li>
+            <li><a href="nav.html">&lt;nav&gt;</a></li>
+            <li><a href="section.html">&lt;section&gt;</a></li>
+            <li><a href="footer.html">&lt;footer&gt;</a></li>
+            <li><a href="header.html">&lt;header&gt;</a></li>
+        </ul>
+
+    </aside>
+
+</main>
+
+<footer>
+    <p>Copyright © 2025 Tutorial HTML5</p>
+    <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+            href="referencias.html">Referências</a></p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const tagList = document.getElementById('tagList');
+const items = tagList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', function () {
+    const filter = this.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+        const link = items[i].getElementsByTagName('a')[0];
+        const text = link.textContent.toLowerCase();
+        items[i].style.display = text.includes(filter) ? '' : 'none';
+    }
+});
+</script>
+</body>
+</html>

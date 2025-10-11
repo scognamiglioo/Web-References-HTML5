@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;tfoot&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/embed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo">Tags HTML5</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="referencias.html">Referências</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <article class="main-content">
+        <section class="title-section-tag">
+            <h1>Tag HTML5 &lt;tfoot&gt;</h1>
+        </section>
+
+        <section class="content">
+
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag &lt;tfoot&gt; é usada para **definir o rodapé de uma tabela HTML**.  
+                    Ela geralmente contém linhas de resumo, totais ou notas relacionadas aos dados da tabela.  
+                    <br>
+                    <mark>O &lt;tfoot&gt; deve ser colocado **antes de &lt;tbody&gt;** no HTML, embora visualmente apareça no final da tabela.</mark>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Estrutura Básica</h3>
+                <p class="description">
+                    Sintaxe típica: <br>
+                    <code>&lt;table&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;tfoot&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Rodapé&lt;/td&gt;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/tfoot&gt;<br>
+                    &lt;/table&gt;</code>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo 1: Tabela com rodapé</h3>
+                <div class="code-block">
+                    &lt;table border="1"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th>Produto&lt;/th&gt;&lt;th>Preço&lt;/th&gt;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&lt;tfoot&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td>Total&lt;/td&gt;&lt;td>R$ 300,00&lt;/td&gt;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/tfoot&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td>Produto A&lt;/td&gt;&lt;td>R$ 100,00&lt;/td&gt;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td>Produto B&lt;/td&gt;&lt;td>R$ 200,00&lt;/td&gt;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                    &lt;/table&gt;
+                </div>
+
+                <p>Resultado: A linha do &lt;tfoot&gt; aparece como rodapé da tabela com o total.</p>
+            </section>
+
+        </section>
+
+    </article>
+
+    <aside class="sidebar">
+        <h2>Outras Tags HTML5</h2>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+        <ul class="sidebar-links" id="tagList">
+            <li><a href="table.html">&lt;table&gt;</a></li>
+            <li><a href="thead.html">&lt;thead&gt;</a></li>
+            <li><a href="tbody.html">&lt;tbody&gt;</a></li>
+            <li><a href="tfoot.html">&lt;tfoot&gt;</a></li>
+            <li><a href="tr.html">&lt;tr&gt;</a></li>
+        </ul>
+
+    </aside>
+
+</main>
+
+<footer>
+    <p>Copyright © 2025 Tutorial HTML5</p>
+    <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+            href="referencias.html">Referências</a></p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const tagList = document.getElementById('tagList');
+const items = tagList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', function () {
+    const filter = this.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+        const link = items[i].getElementsByTagName('a')[0];
+        const text = link.textContent.toLowerCase();
+        items[i].style.display = text.includes(filter) ? '' : 'none';
+    }
+});
+</script>
+</body>
+</html>
