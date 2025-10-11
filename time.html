@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;time&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;time&gt;</h1>
+            </section>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>A tag &lt;time&gt; é usada para representar datas e/ou horários.</p>
+                    <div class="code-block">
+                        &lt;time datetime="2025-10-11"&gt;11 de outubro de 2025&lt;/time&gt;<br>
+                        &lt;time datetime="14:30"&gt;14:30&lt;/time&gt;
+                    </div>
+                    <p>O atributo <strong>datetime</strong> fornece a data/hora em formato legível por máquina, enquanto o conteúdo interno é legível por humanos.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;time&gt; aumenta a semântica de datas e horários, sendo útil para SEO, microdados e scripts.</p>
+                    <p>Permite marcar datas completas, apenas anos, meses, dias ou horários específicos.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>datetime</strong></td>
+                                <td>YYYY-MM-DD ou HH:MM</td>
+                                <td class="description">Define a data ou hora em formato padrão ISO 8601.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>pubdate</strong></td>
+                                <td>booleano</td>
+                                <td>Indica que a data/hora representa a publicação de um artigo (HTML5 obsoleto, mas ainda suportado).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+
+                    <p>Data completa com conteúdo legível:</p>
+                    <div class="code-block">
+                        &lt;time datetime="2025-10-11T14:30"&gt;11 de outubro de 2025 às 14:30&lt;/time&gt;
+                    </div>
+
+                    <p>Apenas o ano:</p>
+                    <div class="code-block">
+                        &lt;time datetime="2025"&gt;2025&lt;/time&gt;
+                    </div>
+                </section>
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
