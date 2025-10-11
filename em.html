@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;em&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,90 +26,119 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;em&gt;</h1>
+                </section>
             </section>
-
+            <p class="subtitle">
+                Você utiliza uma tag de abertura <code>&lt;em&gt;</code> e uma de fechamento
+                <code>&lt;/em&gt;</code> para envolver o texto que receberá ênfase.
+            </p>
             <section class="content">
-
                 <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <h3>Exemplo simples</h3>
+                    <p>O elemento <code>&lt;em&gt;</code> é usado para aplicar ênfase a uma parte do texto. Por padrão,
+                        os navegadores renderizam o conteúdo dentro da tag <code>&lt;em&gt;</code> em itálico.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>&lt;p&gt;Gatos são &lt;em&gt;geralmente&lt;/em&gt; mais independentes que cachorros.&lt;/p&gt;</pre>
                     </div>
                 </section>
-
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>O elemento <code>&lt;em&gt;</code> (Emphasis) marca um texto que possui uma ênfase especial em
+                        relação ao conteúdo ao redor. O significado da frase pode mudar dependendo da palavra
+                        enfatizada.</p>
+                    <p>Essa tag não é apenas para estilização; ela tem um propósito semântico. Leitores de tela podem
+                        alterar a entonação da voz ao ler o texto contido em <code>&lt;em&gt;</code>, transmitindo a
+                        ênfase para usuários com deficiência visual.</p>
+                    <ul>
+                        <li><strong>Alterar o sentido:</strong> Usado para indicar qual palavra de uma frase é o foco
+                            principal.</li>
+                        <li><strong>Contraste:</strong> Para contrastar um termo com outro.</li>
+                        <li><strong>Definições ou termos técnicos:</strong> Frequentemente usado ao introduzir um
+                            conceito pela primeira vez.</li>
+                    </ul>
+                    <p>Para fins puramente visuais de itálico, sem carga semântica, a tag <code>&lt;i&gt;</code> ou a
+                        propriedade CSS <code>font-style: italic;</code> são mais apropriadas.</p>
                 </section>
-
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;em&gt;</code> não possui atributos específicos e apenas aceita os atributos
+                        globais do HTML.</p>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Define um identificador único para o elemento.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Permite associar o elemento a uma classe CSS para estilização.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Ênfase vs. Importância:</strong> Use <code>&lt;em&gt;</code> para dar ênfase
+                            (mudança de entonação). Para indicar que algo é importante, sério ou urgente (conteúdo de
+                            grande importância), use a tag <code>&lt;strong&gt;</code>.</li>
+                        <li><strong>Semântica vs. Estilo:</strong> Não use <code>&lt;em&gt;</code> apenas para obter o
+                            efeito de itálico. Se o texto não precisa de ênfase semântica, use a propriedade CSS
+                            <code>font-style: italic;</code>.</li>
+                        <li><strong>Aninhamento:</strong> É possível aninhar tags <code>&lt;em&gt;</code> para indicar
+                            um nível maior de ênfase. Cada nível de aninhamento aumenta a importância da ênfase.</li>
+                        <li><strong>Alternativa ao <code>&lt;i&gt;</code>:</strong> Enquanto <code>&lt;em&gt;</code>
+                            indica ênfase, a tag <code>&lt;i&gt;</code> é usada para texto que se diferencia do normal,
+                            como um termo técnico, um nome de navio ou uma palavra em outro idioma, sem implicar ênfase
+                            ou importância.</li>
+                    </ul>
                 </section>
+                <section class="example-section">
+                    <h3>Exemplos de uso</h3>
+                    <h4>1) Alterando o foco de uma frase</h4>
+                    <p>Note como a ênfase em palavras diferentes muda o que está sendo comunicado.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Eu &lt;em&gt;não&lt;/em&gt; disse que ele roubou o dinheiro.&lt;/p&gt; &lt;!-- Outra pessoa disse. --&gt;
+&lt;p&gt;Eu não disse que &lt;em&gt;ele&lt;/em&gt; roubou o dinheiro.&lt;/p&gt; &lt;!-- Outra pessoa roubou. --&gt;
+&lt;p&gt;Eu não disse que ele roubou o &lt;em&gt;dinheiro&lt;/em&gt;.&lt;/p&gt; &lt;!-- Ele roubou outra coisa. --&gt;</pre>
+                    </div>
 
+                    <h4>2) Aninhando para maior ênfase</h4>
+                    <p>O aninhamento aumenta o nível de ênfase na palavra "única".</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Esta é a &lt;em&gt;única&lt;/em&gt; forma de resolver o problema.&lt;/p&gt;
+&lt;p&gt;Não, esta é &lt;em&gt;a &lt;em&gt;única&lt;/em&gt;&lt;/em&gt; forma de resolver o problema!&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>3) Comparação com &lt;strong&gt; e &lt;i&gt;</h4>
+                    <p>Exemplo prático mostrando a diferença semântica entre as tags.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;A &lt;i&gt;Felis catus&lt;/i&gt; é uma espécie popular de animal de estimação.&lt;/p&gt; &lt;!-- Termo técnico, sem ênfase --&gt;
+&lt;p&gt;Você precisa alimentar o gato &lt;em&gt;todos os dias&lt;/em&gt;.&lt;/p&gt; &lt;!-- Ênfase na frequência --&gt;
+&lt;p&gt;&lt;strong&gt;Atenção:&lt;/strong&gt; Não dê chocolate para seu gato.&lt;/p&gt; &lt;!-- Alerta importante --&gt;</pre>
+                    </div>
+                </section>
             </section>
         </article>
-
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +274,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +294,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

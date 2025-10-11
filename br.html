@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;br&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,90 +26,139 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;br&gt;</h1>
+                </section>
             </section>
-
+            <p class="subtitle">
+                Basta inserir a tag <code>&lt;br&gt;</code> no local exato onde a linha deve ser quebrada. Por ser um elemento vazio (void element) ele não possui tag de fechamento; 
+            </p>
             <section class="content">
+                <section class="content">
+                    <section class="example-section">
+                        <h3>Exemplo simples</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> é usado para forçar uma quebra de linha dentro de um bloco
+                            de texto, como um parágrafo ou um cabeçalho. É útil em situações onde a divisão de linhas é
+                            parte do conteúdo, como em um endereço.</p>
+                        <div class="code-block">
+                            <pre>&lt;p&gt;Google Brasil Ltda.&lt;br&gt;
+Av. Brigadeiro Faria Lima, 3477&lt;br&gt;
+São Paulo, SP&lt;/p&gt;</pre>
+                        </div>
+                    </section>
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> (Line Break) insere uma única quebra de linha. Ele é um
+                            elemento vazio, o que significa que não possui uma tag de fechamento (não se usa
+                            <code>&lt;/br&gt;</code>).
+                        </p>
+                        <p>Seu uso é estritamente para casos onde uma quebra de linha é semanticamente parte do
+                            conteúdo. Ele não deve ser usado para criar espaçamento visual entre elementos.</p>
+                        <ul>
+                            <li><strong>Poesia:</strong> Para separar os versos de um poema.</li>
+                            <li><strong>Endereços:</strong> Para formatar as linhas de um endereço postal.</li>
+                            <li><strong>Música:</strong> Para separar as linhas de uma letra de música.</li>
+                        </ul>
+                        <p>Para criar separação entre blocos de conteúdo, como parágrafos, deve-se usar a propriedade
+                            CSS <code>margin</code>.</p>
+                    </section>
+                    <section class="example-section">
+                        <h3>Atributos</h3>
+                        <p>O elemento <code>&lt;br&gt;</code> não possui atributos específicos e apenas aceita os
+                            atributos globais do HTML.</p>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Atributo</th>
+                                    <th>Valor</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td>Texto</td>
+                                    <td>Define um identificador único para o elemento.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>class</code></td>
+                                    <td>Texto</td>
+                                    <td>Permite associar o elemento a uma classe CSS, embora estilizar
+                                        <code>&lt;br&gt;</code> seja incomum.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Observação:</strong> O atributo <code>clear</code>, que era usado para controlar o
+                            fluxo de texto ao redor de elementos flutuantes, foi depreciado em HTML5. A funcionalidade
+                            equivalente deve ser implementada com CSS.</p>
+                    </section>
 
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+                    <section class="example-section">
+                        <h3>Boas práticas e observações</h3>
+                        <ul>
+                            <li><strong>NÃO use <code>&lt;br&gt;</code> para criar margem:</strong> O erro mais comum é
+                                usar múltiplas tags <code>&lt;br&gt;&lt;br&gt;</code> para criar espaço vertical. Esta é
+                                uma prática ruim que prejudica a acessibilidade e a manutenção. Use CSS
+                                <code>margin</code> para controlar o espaçamento.
+                            </li>
+                            <li><strong>Elemento Vazio (Void Element):</strong> Em HTML5, a sintaxe correta é
+                                simplesmente <code>&lt;br&gt;</code>. A sintaxe de auto-fechamento
+                                (<code>&lt;br /&gt;</code>) é herança do XHTML e, embora seja tolerada pelos
+                                navegadores, não é necessária.</li>
+                            <li><strong>Acessibilidade:</strong> O uso excessivo de quebras de linha pode confundir
+                                leitores de tela. É preferível estruturar o conteúdo com elementos de bloco apropriados
+                                (<code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;ul&gt;</code>, etc.).</li>
+                            <li><strong>Diferença entre <code>&lt;p&gt;</code> e <code>&lt;br&gt;</code>:</strong>
+                                <code>&lt;p&gt;</code> define um parágrafo (um bloco semântico de texto), enquanto
+                                <code>&lt;br&gt;</code> apenas cria uma quebra de linha visual dentro de um bloco
+                                existente.
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="example-section">
+                        <h3>Exemplos de uso</h3>
+                        <h4>1) Formatando um poema</h4>
+                        <div class="code-block">
+                            <pre>&lt;p&gt;No meio do caminho tinha uma pedra&lt;br&gt;
+tinha uma pedra no meio do caminho&lt;br&gt;
+tinha uma pedra&lt;br&gt;
+no meio do caminho tinha uma pedra.&lt;/p&gt;</pre>
+                        </div>
+                        <h4>2) Uso incorreto (a ser evitado)</h4>
+                        <p>O exemplo abaixo usa <code>&lt;br&gt;</code> para criar espaço entre dois parágrafos. Esta é
+                            a forma errada de fazer.</p>
+                        <div class="code-block">
+                            <pre>&lt;!-- Forma Incorreta --&gt;
+&lt;p&gt;Primeiro parágrafo de texto.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Segundo parágrafo de texto.&lt;/p&gt;</pre>
+                        </div>
+
+                        <h4>3) A forma correta de criar espaçamento (com CSS)</h4>
+                        <p>A maneira correta de controlar o espaçamento é usando CSS, por exemplo, definindo uma margem
+                            inferior para os parágrafos.</p>
+                        <div class="code-block">
+                            <pre>&lt;!-- CSS --&gt;
+p {
+  margin-bottom: 24px;
+}
+
+&lt;!-- HTML (Forma Correta) --&gt;
+&lt;p&gt;Primeiro parágrafo de texto.&lt;/p&gt;
+&lt;p&gt;Segundo parágrafo de texto.&lt;/p&gt;</pre>
+                        </div>
+                    </section>
                 </section>
-
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
-                </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
-            </section>
         </article>
-
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +294,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +314,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

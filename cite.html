@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;cite&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,79 +26,57 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;cite&gt;</h1>
             </section>
 
             <section class="content">
 
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>Marca o título de uma obra citada, como livros, filmes, músicas ou artigos.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        &lt;p&gt;O filme &lt;cite&gt;Interestelar&lt;/cite&gt; foi dirigido por Christopher Nolan.&lt;/p&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
                     <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
+                        A tag <strong>&lt;cite&gt;</strong> é usada para indicar o título de uma obra criativa,
+                        como um livro, filme, poema, pintura, peça de teatro ou artigo científico.
                     </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
+                    <p>
+                        O texto dentro de <strong>&lt;cite&gt;</strong> geralmente é exibido em <em>itálico</em>
+                        pelos navegadores, representando uma citação de uma fonte criativa.
                     </p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3>Exemplo com citação real</h3>
+                    <p>Exemplo de uso em contexto literário:</p>
+                    <div class="code-block">
+                        &lt;p&gt;Em &lt;cite&gt;Dom Casmurro&lt;/cite&gt;, Machado de Assis explora temas de ciúme e memória.&lt;/p&gt;
+                    </div>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
+                    <h3>Diferente de &lt;blockquote&gt; e &lt;q&gt;</h3>
+                    <p>
+                        Enquanto <strong>&lt;cite&gt;</strong> serve para marcar o nome de uma obra,
+                        as tags <strong>&lt;blockquote&gt;</strong> e <strong>&lt;q&gt;</strong> são usadas
+                        para inserir o conteúdo de uma citação (texto dito ou escrito por alguém).
                     </p>
+                    <div class="code-block">
+                        &lt;blockquote&gt;<br>
+                        &nbsp;&nbsp;&nbsp;"Ser ou não ser, eis a questão."<br>
+                        &lt;/blockquote&gt;<br>
+                        &lt;p&gt;— &lt;cite&gt;Hamlet&lt;/cite&gt;, de William Shakespeare&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <p>A tag <strong>&lt;cite&gt;</strong> não possui atributos específicos no HTML5.</p>
                 </section>
 
             </section>
@@ -124,7 +102,7 @@
                 <li><a href="thead.html">&lt;thead&gt;</a></li>
 
                 <li><a href="a.html">&lt;a&gt;</a></li>
-                <li><a href="code.html">&lt;code&gt;</a></li>
+                <li><a href="cite.html">&lt;cite&gt;</a></li>
                 <li><a href="footer.html">&lt;footer&gt;</a></li>
                 <li><a href="main.html">&lt;main&gt;</a></li>
                 <li><a href="q.html">&lt;q&gt;</a></li>
@@ -159,7 +137,6 @@
                 <li><a href="table.html">&lt;table&gt;</a></li>
 
                 <li><a href="doctype.html">&lt;!DOCTYPE&gt;</a></li>
-                <li><a href="cite.html">&lt;cite&gt;</a></li>
                 <li><a href="figure.html">&lt;figure&gt;</a></li>
                 <li><a href="link.html">&lt;link&gt;</a></li>
                 <li><a href="progress.html">&lt;progress&gt;</a></li>
@@ -224,14 +201,12 @@
 
                 <li><a href="address.html">&lt;address&gt;</a></li>
                 <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
-
                 <li><a href="h1.html">&lt;h1&gt;</a></li>
                 <li><a href="h2.html">&lt;h2&gt;</a></li>
                 <li><a href="h3.html">&lt;h3&gt;</a></li>
                 <li><a href="h4.html">&lt;h4&gt;</a></li>
                 <li><a href="h5.html">&lt;h5&gt;</a></li>
                 <li><a href="h6.html">&lt;h6&gt;</a></li>
-
                 <li><a href="mark.html">&lt;mark&gt;</a></li>
                 <li><a href="rt.html">&lt;rt&gt;</a></li>
                 <li><a href="tbody.html">&lt;tbody&gt;</a></li>
@@ -243,8 +218,8 @@
                 <li><a href="pre.html">&lt;pre&gt;</a></li>
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
-            </ul>
 
+            </ul>
         </aside>
     </main>
 
@@ -252,21 +227,22 @@
         <p>Copyright © 2025 Tutorial HTML5</p>
         <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>

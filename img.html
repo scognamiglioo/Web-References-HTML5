@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;img&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,90 +28,104 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
 
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;img&gt;</h1>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                <p class="subtitle">A tag <code>&lt;img&gt;</code> é usada para incorporar imagens em uma página HTML. Ela não possui tag de fechamento e requer atributos obrigatórios como <code>src</code> e <code>alt</code>.</p>
+
+                <section class="content">
+                    <section class="example-section">
+                        <h3>Exemplo</h3>
+                        <p>No exemplo abaixo, a tag <code>&lt;img&gt;</code> é usada para exibir uma imagem localizada na pasta <code>imagens</code>:</p>
+
+                        <div class="code-block">
+                            <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Exemplo da tag &lt;img&gt;&lt;/h1&gt;
+
+&lt;p&gt;Exemplo de imagem em HTML:&lt;/p&gt;
+
+&lt;img src="imagens/exemplo.jpg" alt="Exemplo de imagem" width="300" height="200"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                            </pre>
+                        </div>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+
+                        <p>A tag <code>&lt;img&gt;</code> é responsável por inserir imagens em um documento HTML. Ela é um elemento <strong>vazio</strong>, ou seja, não possui uma tag de fechamento.</p>
+
+                        <p>O atributo <code>src</code> define o caminho (URL) da imagem, enquanto o atributo <code>alt</code> fornece um texto alternativo, que é exibido caso a imagem não possa ser carregada — e também é essencial para acessibilidade.</p>
+
+                        <p>Outros atributos opcionais permitem ajustar dimensões, bordas e descrições, além de ajudar na otimização e no desempenho da página.</p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Atributos</h3>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Atributo</th>
+                                    <th>Valor</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>src</code></td>
+                                    <td>URL</td>
+                                    <td>Define o caminho da imagem. Pode ser um caminho local ou um link externo. <strong>Obrigatório.</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><code>alt</code></td>
+                                    <td>texto</td>
+                                    <td>Texto alternativo exibido se a imagem não carregar. Também usado por leitores de tela. <strong>Obrigatório.</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><code>width</code></td>
+                                    <td>pixels</td>
+                                    <td>Define a largura da imagem (em pixels).</td>
+                                </tr>
+                                <tr>
+                                    <td><code>height</code></td>
+                                    <td>pixels</td>
+                                    <td>Define a altura da imagem (em pixels).</td>
+                                </tr>
+                                <tr>
+                                    <td><code>title</code></td>
+                                    <td>texto</td>
+                                    <td>Exibe uma dica (tooltip) quando o usuário passa o mouse sobre a imagem.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>loading</code></td>
+                                    <td><code>lazy</code> | <code>eager</code></td>
+                                    <td>Define se a imagem deve ser carregada de forma preguiçosa (lazy) ou imediata (eager), ajudando na performance.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
                 </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +261,15 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;head&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,128 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;head&gt;</h1>
+                </section>
             </section>
+            <p class="subtitle">A tag usada para conter metadados e informações que não são exibidas diretamente na página.</p>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>No exemplo abaixo, a tag <code>&lt;head&gt;</code> contém elementos essenciais como <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code> e <code>&lt;link&gt;</code>:</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>
+                            &lt;p&gt;O produto foi lançado em &lt;data value="2025-10-10"&gt;10 de outubro de 2025&lt;/data&gt;.&lt;/p&gt;
+
+                        </pre>
                     </div>
+
+                    <p>Neste exemplo, tudo dentro de <code>&lt;head&gt;</code> é usado pelo navegador e mecanismos de busca, mas não é exibido na área visível da página.</p>
                 </section>
+
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;head&gt;</code> contém informações sobre o documento HTML, conhecidas como metadados. Esses dados ajudam navegadores, mecanismos de busca e outros sistemas a entenderem o conteúdo e o comportamento da página.</p>
+                    <p>Dentro de <code>&lt;head&gt;</code> geralmente são incluídos elementos como:</p>
+                    <ul>
+                        <li><mark style="background-color: rgb(217, 217, 217);">&lt;title&gt;</mark> — título da aba ou página.</li>
+                        <li><mark style="background-color: rgb(217, 217, 217);">&lt;meta&gt;</mark> — informações sobre codificação, autor, descrição e SEO.</li>
+                        <li><mark style="background-color: rgb(217, 217, 217);">&lt;link&gt;</mark> — ligação com arquivos externos como CSS ou ícones.</li>
+                        <li><mark style="background-color: rgb(217, 217, 217);">&lt;style&gt;</mark> — regras de estilo internas.</li>
+                        <li><mark style="background-color: rgb(217, 217, 217);">&lt;script&gt;</mark> — scripts executados antes do carregamento do corpo.</li>
+                    </ul>
+                    <p>O elemento <code>&lt;head&gt;</code> fica sempre antes do <code>&lt;body&gt;</code>.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code><i>(nenhum específico)<i></code></td>
+                                <td>—</td>
+                                <td>A tag <head> não possui atributos próprios.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Estrutura:</strong> Sempre inclua <code>&lt;head&gt;</code> em documentos HTML válidos.</li>
+                        <li><strong>Conteúdo permitido:</strong> Apenas elementos de metadados devem estar dentro do <code>&lt;head&gt;</code>.</li>
+                        <li><strong>SEO:</strong> Utilize <meta name="description"> e <code>&lt;title&gt;</code> adequadamente para melhorar indexação.</li>
+                        <li><strong>Performance:</strong> Coloque <code>&lt;link&gt;</code> para CSS no <code>&lt;head&gt;</code>, e scripts JavaScript preferencialmente antes do fechamento de <code>&lt;body&gt;</code> para melhorar o carregamento.</li>
+                        <li><strong>Codificação:</strong> Use <code>&lt;meta charset="UTF-8"&gt;</code> para garantir compatibilidade com caracteres acentuados.</li>
+                    </ul>
                 </section>
 
-            </section>
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;data&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Cabeçalho com título e CSS externo</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;head&gt;
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;title&gt;Loja Virtual&lt;/title&gt;
+                                &lt;link rel="stylesheet" href="style.css"&gt;
+                            &lt;/head&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Define título e aplica um arquivo CSS externo..</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Cabeçalho com meta description</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;head&gt;
+                                &lt;meta name="description" content="Aprenda HTML de forma simples e prática."&gt;
+                                &lt;title&gt;Tutorial HTML&lt;/title&gt;
+                            &lt;/head&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Melhora a visibilidade da página em mecanismos de busca.</p>
+                    
+                    <hr>
+
+                    <h4>Exemplo 3: Cabeçalho com ícone personalizado</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;head&gt;
+                                &lt;title>Portal de Notícias&lt;/title&gt;
+                                &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+                            &lt;/head&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Define um ícone exibido na aba do navegador.</p>
+                
+                </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +282,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +302,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

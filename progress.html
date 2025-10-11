@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;progress&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,79 +26,72 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;progress&gt;</h1>
             </section>
 
             <section class="content">
 
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>Usada para representar o progresso de uma tarefa, como o carregamento de um arquivo.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        &lt;label for="file"&gt;Carregando arquivo:&lt;/label&gt;<br>
+                        &lt;progress id="file" value="70" max="100"&gt;70%&lt;/progress&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
                     <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
+                        A tag <strong>&lt;progress&gt;</strong> é usada para indicar o progresso de uma tarefa em execução, exibindo visualmente quanto da tarefa já foi concluída.
                     </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
+                    <p>
+                        O elemento aceita os atributos <strong>value</strong> (valor atual) e <strong>max</strong> (valor máximo), permitindo calcular a porcentagem automaticamente.
                     </p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><strong>value</strong></td>
+                                <td>número</td>
+                                <td>Valor atual do progresso.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><strong>max</strong></td>
+                                <td>número</td>
+                                <td>Valor máximo da tarefa. O padrão é 1.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Exemplo dinâmico com JavaScript</h3>
+                    <div class="code-block">
+                        &lt;progress id="barra" value="0" max="100"&gt;&lt;/progress&gt;<br>
+                        &lt;button onclick="preencher()"&gt;Atualizar&lt;/button&gt;<br><br>
+                        &lt;script&gt;<br>
+                        &nbsp;&nbsp;function preencher() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;const barra = document.getElementById('barra');<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;let valor = 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;const intervalo = setInterval(() =&gt; {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valor += 10;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;barra.value = valor;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (valor &gt;= 100) clearInterval(intervalo);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}, 300);<br>
+                        &nbsp;&nbsp;}<br>
+                        &lt;/script&gt;
+                    </div>
                 </section>
 
             </section>
@@ -108,6 +101,7 @@
             <h2>Outras Tags HTML</h2>
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
             <ul class="sidebar-links" id="tagList">
+                
 
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
@@ -224,14 +218,12 @@
 
                 <li><a href="address.html">&lt;address&gt;</a></li>
                 <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
-
                 <li><a href="h1.html">&lt;h1&gt;</a></li>
                 <li><a href="h2.html">&lt;h2&gt;</a></li>
                 <li><a href="h3.html">&lt;h3&gt;</a></li>
                 <li><a href="h4.html">&lt;h4&gt;</a></li>
                 <li><a href="h5.html">&lt;h5&gt;</a></li>
                 <li><a href="h6.html">&lt;h6&gt;</a></li>
-
                 <li><a href="mark.html">&lt;mark&gt;</a></li>
                 <li><a href="rt.html">&lt;rt&gt;</a></li>
                 <li><a href="tbody.html">&lt;tbody&gt;</a></li>
@@ -243,8 +235,8 @@
                 <li><a href="pre.html">&lt;pre&gt;</a></li>
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
-            </ul>
 
+            </ul>
         </aside>
     </main>
 

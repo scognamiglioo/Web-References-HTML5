@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;ruby&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,136 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;ruby&gt;</h1>
+                </section>
             </section>
+            <p class="subtitle">A tag usada para exibir anotações fonéticas ou explicativas sobre caracteres, geralmente usada em textos asiáticos como chinês ou japonês.</p>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>No exemplo abaixo, a tag <code>&lt;ruby&gt;</code> é usada para mostrar a pronúncia de uma palavra japonesa:</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>
+                           &lt;ruby&gt;
+                                漢 &lt;rt&gt;かん&lt;/rt&gt;
+                                字 &lt;rt&gt;じ&lt;/rt&gt;
+                            &lt;/ruby&gt;
+                        </pre>
                     </div>
+
+                    <p>Neste exemplo, os caracteres japoneses (“漢字”) são acompanhados por suas leituras fonéticas (“かん” e “じ”), exibidas acima ou ao lado conforme o idioma e o navegador.</p>
                 </section>
+
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;ruby&gt;</code> define anotações curtas sobre um texto, chamadas de <i>“ruby annotations”</i>. Essas anotações são muito usadas em línguas que utilizam ideogramas (como japonês e chinês) para mostrar a pronúncia ou significado de um caractere.</p>
+                    <p>Dentro de <code>&lt;ruby&gt;</code>, geralmente se usa:</p>
+                    <ul>
+                        <li>&lt;rt&gt; (ruby text) — contém o texto da anotação (ex.: pronúncia)</li>
+                        <li>&lt;rp&gt; (ruby parentheses) — define o texto alternativo a ser exibido em navegadores que não suportam ruby (por exemplo, parênteses).</li>
+                    </ul>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code><i>(nenhum específico)<i></code></td>
+                                <td>—</td>
+                                <td>A tag <head> não possui atributos próprios.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Semântica:</strong> Use <code>&lt;ruby&gt;</code> apenas para anotações fonéticas, traduções curtas ou explicações curtas sobre caracteres.</li>
+                        <li><strong>Compatibilidade:</strong> Navegadores modernos suportam <code>&lt;ruby&gt;</code>, <code>&lt;rt&gt;</code> e <code>&lt;rp&gt;</code>, mas o estilo pode variar entre idiomas.</li>
+                        <li><strong>Acessibilidade:</strong> Ajuda leitores de tela e ferramentas linguísticas a interpretar melhor textos com caracteres não latinos.</li>
+                        <li><strong>Estilo:</strong> Você pode ajustar o tamanho, espaçamento e posição das anotações com propriedades como <code>&lt;ruby-position&gt;</code>, <code>&lt;font-size&gt;</code> e <code>&lt;line-height&gt;</code>.</li>
+                        <li><strong>Uso comum:</strong> Ideal para glossários bilíngues, textos educacionais e sistemas de aprendizado de idiomas.</li>
+                    </ul>
                 </section>
 
-            </section>
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;menu&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Anotação fonética japonesa</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;ruby&gt;
+                                学&lt;rt&gt;がく&lt;/rt&gt;
+                                校&lt;rt&gt;こう&lt;/rt&gt;
+                            &lt;/ruby&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <ruby>
+                        学<rt>がく</rt>
+                        校<rt>こう</rt>
+                    </ruby>
+                    <p>Exibe os caracteres “学校” com a pronúncia “がくこう” (gakkō).</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Uso com <code>&lt;rp&gt;</code> para fallback</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;ruby&gt;
+                                水&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;みず&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+                            &lt;/ruby&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <ruby>
+                        水<rp>(</rp><rt>みず</rt><rp>)</rp>
+                    </ruby>
+                    <p>Exibe “水” com “みず” acima (ou “水(みず)” em navegadores sem suporte a ruby).</p>
+
+                    <hr>
+
+                    <h4>Exemplo 3: Tradução curta</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;menu type="context" id="menuArquivo"&gt;
+                                &lt;menuitem label="Abrir"&gt;&lt;/menuitem&gt;
+                                &lt;menuitem label="Salvar"&gt;&lt;/menuitem&gt;
+                                &lt;menuitem label="Fechar"&gt;&lt;/menuitem&gt;
+                            &lt;/menu&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <ruby>
+                        友達<rt>amigo</rt>
+                    </ruby>
+                    <p>Mostra o caractere “友達” com o significado “amigo” acima.</p>
+
+                
+                </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +290,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +310,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

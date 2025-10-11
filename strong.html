@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;strong&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,90 +26,126 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;strong&gt;</h1>
+                </section>
             </section>
-
+            <p class="subtitle">
+                A sintaxe requer que o texto a ser destacado seja envolvido pela tag de abertura
+                <code>&lt;strong&gt;</code> e a de fechamento <code>&lt;/strong&gt;</code>.
+            </p>
             <section class="content">
-
                 <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <h3>Exemplo simples</h3>
+                    <p>O elemento <code>&lt;strong&gt;</code> é usado para indicar que um texto tem grande importância,
+                        seriedade ou urgência. Os navegadores, por padrão, renderizam o conteúdo desta tag em negrito.
+                    </p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>&lt;p&gt;&lt;strong&gt;Atenção:&lt;/strong&gt; Este produto contém amendoim.&lt;/p&gt;</pre>
                     </div>
                 </section>
-
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>O elemento <code>&lt;strong&gt;</code> define um texto com "forte importância". A tag não é
+                        meramente estilística; ela carrega um peso semântico que informa aos navegadores e tecnologias
+                        assistivas que aquele conteúdo é mais importante que o restante.</p>
+                    <p>Leitores de tela podem usar uma entonação de voz diferente para o conteúdo dentro de
+                        <code>&lt;strong&gt;</code>, ajudando a transmitir a urgência ou importância da informação para
+                        o usuário.</p>
+                    <ul>
+                        <li><strong>Avisos e alertas:</strong> Para destacar informações críticas que não podem ser
+                            ignoradas.</li>
+                        <li><strong>Urgência:</strong> Indicar prazos ou informações sensíveis ao tempo.</li>
+                        <li><strong>Pontos-chave:</strong> Enfatizar a parte mais importante de uma frase ou parágrafo.
+                        </li>
+                        <li><strong>Rótulos:</strong> Destacar o conceito principal que o texto seguinte irá descrever.
+                        </li>
+                    </ul>
+                    <p>Para texto que deve ser apenas visualmente em negrito sem adicionar importância semântica (como o
+                        nome de um produto em uma análise), a tag <code>&lt;b&gt;</code> ou a propriedade CSS
+                        <code>font-weight: bold;</code> são mais adequadas.</p>
                 </section>
-
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;strong&gt;</code> não possui atributos específicos e apenas aceita os
+                        atributos globais do HTML.</p>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Define um identificador único para o elemento.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Permite associar o elemento a uma classe CSS para estilização.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Importância vs. Ênfase (<code>&lt;strong&gt;</code> vs.
+                                <code>&lt;em&gt;</code>):</strong> Use <code>&lt;strong&gt;</code> para indicar
+                            importância. Use <code>&lt;em&gt;</code> para dar ênfase, o que altera o significado de uma
+                            frase através da entonação.</li>
+                        <li><strong>Semântica vs. Estilo (<code>&lt;strong&gt;</code> vs.
+                                <code>&lt;b&gt;</code>):</strong> A tag <code>&lt;strong&gt;</code> é semântica. A tag
+                            <code>&lt;b&gt;</code> é para chamar a atenção visualmente sem adicionar importância (ex:
+                            palavras-chave). Para negrito puramente decorativo, use CSS.</li>
+                        <li><strong>Não use para títulos:</strong> Para criar títulos e subtítulos, use as tags de
+                            cabeçalho (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>). Elas estruturam a página, o
+                            que é algo que <code>&lt;strong&gt;</code> não faz.</li>
+                        <li><strong>Não abuse:</strong> Usar <code>&lt;strong&gt;</code> em excesso dilui o seu
+                            propósito. Reserve a tag para as partes do texto que são genuinamente mais importantes.</li>
+                    </ul>
                 </section>
+                <section class="example-section">
+                    <h3>Exemplos de uso</h3>
+                    <h4>1) Alerta de segurança</h4>
+                    <p>Um uso clássico para indicar uma informação crítica que o usuário precisa saber.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;&lt;strong&gt;Cuidado:&lt;/strong&gt; Não compartilhe sua senha com ninguém.&lt;/p&gt;</pre>
+                    </div>
 
+                    <h4>2) Indicando urgência</h4>
+                    <p>Destacando uma informação sensível ao tempo para criar um senso de urgência.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Sua oferta expira em &lt;strong&gt;24 horas&lt;/strong&gt;.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>3) Aninhamento para aumentar a importância</h4>
+                    <p>Aninhar uma tag <code>&lt;strong&gt;</code> dentro de outra indica um nível ainda maior de
+                        importância.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;&lt;strong&gt;Aviso final: A sua conta será permanentemente excluída se nenhuma ação for tomada &lt;strong&gt;hoje&lt;/strong&gt;.&lt;/strong&gt;&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>4) Comparação semântica (strong, em, b)</h4>
+                    <p>Exemplo mostrando o uso correto de cada tag de acordo com seu significado.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;&lt;strong&gt;Regra 1:&lt;/strong&gt; O tópico principal do trabalho deve ser definido na primeira semana. Isso &lt;em&gt;não&lt;/em&gt; é negociável. O formato de citação a ser utilizado é o &lt;b&gt;ABNT&lt;/b&gt;.&lt;/p&gt;</pre>
+                    </div>
+                </section>
             </section>
         </article>
-
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +281,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +301,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

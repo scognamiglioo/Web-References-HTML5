@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;p&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/p.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,90 +27,163 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;p&gt;</h1>
+                </section>
             </section>
+            <p class="subtitle">
+                A sintaxe é simples: você utiliza uma tag de abertura <code>&lt;p&gt;</code> e uma tag de fechamento
+                <code>&lt;/p&gt;</code>. O texto que compõe o parágrafo é inserido entre elas.
+            </p>
 
             <section class="content">
 
                 <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <h3>Exemplo simples</h3>
+                    <p>Neste exemplo, mostramos como parágrafos são usados para estruturar blocos de texto em uma
+                        página:</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>&lt;p&gt;Este é o primeiro parágrafo. Ele contém texto sobre um determinado assunto, separado logicamente de outros conteúdos.&lt;/p&gt;
+&lt;p&gt;Este é o segundo parágrafo. Usar múltiplos parágrafos melhora a legibilidade e a organização do conteúdo.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <div class="sample-output">
+                        <p>Este é o primeiro parágrafo. Ele contém texto sobre um determinado assunto, separado
+                            logicamente de outros conteúdos.</p>
+                        <p>Este é o segundo parágrafo. Usar múltiplos parágrafos melhora a legibilidade e a
+                            organização do conteúdo.</p>
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
+                    <p>O elemento <code>&lt;p&gt;</code> é usado para definir um parágrafo de texto. Navegadores
+                        automaticamente adicionam um espaço (margem) antes e depois de cada elemento
+                        <code>&lt;p&gt;</code>, separando-o visualmente de outros blocos.
                     </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+
+                    <p>Semanticamente, <code>&lt;p&gt;</code> agrupa um bloco de texto que forma uma unidade lógica
+                        de pensamento. Isso é fundamental para:</p>
+                    <ul>
+                        <li><strong>Acessibilidade:</strong> Leitores de tela usam parágrafos para pausar a leitura
+                            e permitir que o usuário navegue pelo texto de forma estruturada.</li>
+                        <li><strong>Estilização com CSS:</strong> Facilita a aplicação de estilos como espaçamento,
+                            indentação da primeira linha, alinhamento e altura da linha a blocos de texto
+                            específicos.</li>
+                        <li><strong>Manutenção do código:</strong> Um texto bem estruturado em parágrafos é mais
+                            fácil de ler e editar no código-fonte.</li>
+                    </ul>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
+                    <h3>Atributos</h3>
+                    <p>O elemento <code>&lt;p&gt;</code> suporta principalmente os atributos globais do HTML, que
+                        são comuns a quase todas as tags.</p>
 
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><code>id</code></td>
+                                <td>Texto</td>
+                                <td>Define um identificador único para o parágrafo, útil para links âncora e
+                                    manipulação com JavaScript.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+                                <td><code>class</code></td>
+                                <td>Texto</td>
+                                <td>Associa o parágrafo a uma ou mais classes CSS para estilização.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
+                                <td><code>style</code></td>
+                                <td>Regras CSS</td>
+                                <td>Aplica estilos CSS diretamente no elemento (inline), embora o uso de classes
+                                    seja geralmente preferível.</td>
                             </tr>
                             <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code>title</code></td>
+                                <td>Texto</td>
+                                <td>Fornece informações extras sobre o parágrafo, que geralmente aparecem como uma
+                                    dica (tooltip) ao passar o mouse sobre ele.</td>
                             </tr>
                         </tbody>
                     </table>
-                </section>
 
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
+                    <p><strong>Observação:</strong> O atributo <code>align</code> (ex:
+                        <code>&lt;p align="center"&gt;</code>) foi depreciado em HTML5. Para alinhar texto, use a
+                        propriedade CSS <code>text-align</code>.
                     </p>
                 </section>
 
+                <section class="example-section">
+                    <h3>Boas práticas e observações</h3>
+                    <ul>
+                        <li><strong>Não use para espaçamento:</strong> Evite usar parágrafos vazios
+                            (<code>&lt;p&gt;&lt;/p&gt;</code>) apenas para criar espaço vertical. Use as
+                            propriedades CSS <code>margin</code> ou <code>padding</code> para isso.</li>
+                        <li><strong>Uso semântico:</strong> Use <code>&lt;p&gt;</code> para blocos de texto que
+                            realmente formam um parágrafo. Para listas, use <code>&lt;ul&gt;</code> ou
+                            <code>&lt;ol&gt;</code>; para citações, use <code>&lt;blockquote&gt;</code>.
+                        </li>
+                        <li><strong>Fechamento da tag:</strong> Embora alguns navegadores possam renderizar
+                            corretamente sem a tag de fechamento <code>&lt;/p&gt;</code>, a especificação HTML exige
+                            que ela seja fechada. Sempre feche suas tags.</li>
+                        <li><strong>Elementos aninhados:</strong> Um parágrafo pode conter elementos "inline" como
+                            <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code> e
+                            <code>&lt;span&gt;</code>, mas não pode conter elementos de bloco, como outros
+                            parágrafos, cabeçalhos (<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>) ou listas.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="example-section">
+                    <h3>Exemplos de uso</h3>
+
+                    <h4>1) Parágrafo com elementos inline</h4>
+                    <p>Aqui, usamos <code>&lt;strong&gt;</code> para dar ênfase e <code>&lt;a&gt;</code> para criar
+                        um link dentro do parágrafo.</p>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Para mais informações, &lt;strong&gt;leia nossa documentação&lt;/strong&gt; ou &lt;a href="/contato"&gt;entre em contato&lt;/a&gt; conosco.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>2) Estilização de parágrafo com CSS</h4>
+                    <p>Este exemplo mostra como aplicar um estilo específico a um parágrafo usando uma classe.</p>
+                    <div class="code-block">
+                        <pre>&lt;!-- CSS --&gt;
+.paragrafo-destaque {
+  background-color: #f0f0f0;
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  font-style: italic;
+}
+
+&lt;!-- HTML --&gt;
+&lt;p class="paragrafo-destaque"&gt;Esta é uma nota importante que precisa de atenção especial do leitor.&lt;/p&gt;</pre>
+                    </div>
+
+                    <h4>Output</h4>
+                    <div class="sample-output">
+                        <p class="paragrafo-destaque">
+                            Esta é uma nota importante que precisa de atenção especial do leitor.</p>
+                    </div>
+                </section>
             </section>
         </article>
-
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +319,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +339,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

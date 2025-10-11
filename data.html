@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;data&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,104 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;data&gt;</h1>
+                </section>
             </section>
+            <p class="subtitle">A tag usada para associar conteúdo legível por humanos a um valor legível por máquina.</p>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>No exemplo abaixo, usamos a tag <data> para associar uma data ao conteúdo textual exibido:</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>
+                            &lt;p&gt;O produto foi lançado em &lt;data value="2025-10-10"&gt;10 de outubro de 2025&lt;/data&gt;.&lt;/p&gt;
+
+                        </pre>
                     </div>
+
+                    <p>Neste exemplo, o texto “10 de outubro de 2025” é visível para o usuário, enquanto o valor 2025-10-10 pode ser lido por máquinas, como scripts ou mecanismos de busca.</p>
                 </section>
+
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;data&gt;</code> liga uma informação legível por humanos a um valor legível por máquina. É útil para dados como datas, preços, medidas ou qualquer valor que precise ser compreendido tanto por pessoas quanto por sistemas automáticos.</p>
+                    <p>O valor legível por máquina é especificado no atributo value, enquanto o conteúdo da tag é exibido normalmente no navegador.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                                <td><code>value</code></td>
+                                <td>Texto ou número</td>
+                                <td>Representa o valor legível por máquina associado ao conteúdo.</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Semântica:</strong> Use <code>&lt;data&gt;</code> apenas quando houver um valor legível por máquina associado ao conteúdo.</li>
+                        <li><strong>Formato correto:</strong> O valor do atributo <code>&lt;value&gt;</code> deve ser consistente e padronizado (ex.: datas em formato ISO YYYY-MM-DD).</li>
+                        <li><strong>Acessibilidade:</strong> Ajuste as coordenadas de acordo com o tamanho real da imagem. Se a imagem for redimensionada via CSS, o mapeamento pode perder a precisão.</li>
+                        <li><strong>Estilo CSS:</strong> Pode ser estilizado como qualquer outro texto usando <code>&lt;font-style&gt;</code>, color ou classes CSS.</li>
+                        <li><strong>Uso comum:</strong> Datas, preços, medições, IDs de produtos ou qualquer dado estruturado que precise ser interpretado por sistemas.</li>
+                    </ul>
                 </section>
 
-            </section>
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;data&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Data de nascimento</h4>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Data de nascimento: &lt;data value="1990-05-23"&gt;23 de maio de 1990&lt;/data&gt;&lt;/p&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Exibe a data para o usuário e mantém o valor legível por máquina.</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Preço de produto</h4>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Preço: &lt;data value="299.99"&gt;R$ 299,99&lt;/data&gt;&lt;/p&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>Mostra o preço formatado para humanos, mas o valor 299.99 pode ser usado por scripts.</p>
+                    
+                    <hr>
+
+                    <h4>Exemplo 3: Identificador de produto</h4>
+                    <div class="code-block">
+                        <pre>&lt;p&gt;Produto ID: &lt;data value="A123B456"&gt;A123B456&lt;/data&gt;&lt;/p&gt;</pre>
+                    </div>
+                    <h4>Output</h4>
+                    <p>O mesmo valor visível e legível por máquinas, útil para sistemas automatizados.</p>
+                
+                </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +258,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +278,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

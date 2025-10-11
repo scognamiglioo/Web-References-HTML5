@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;address&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,90 +28,110 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
 
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;address&gt;</h1>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                <p class="subtitle">
+                    A tag <code>&lt;address&gt;</code> é um elemento semântico para agrupar informações de contato do autor ou da organização responsável pelo conteúdo da página.
+                </p>
+
+                <section class="content">
+
+                    <section class="example-section">
+                        <h3>Exemplo</h3>
+                        <p>O exemplo abaixo mostra o uso comum da tag <code>&lt;address&gt;</code> no rodapé de um site, com e-mail, telefone e endereço físico:</p>
+
+                        <div class="code-block">
+                            <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Exemplo &lt;address&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Contato&lt;/h1&gt;
+
+  &lt;address&gt;
+    Empresa Exemplo Ltda.&lt;br&gt;
+    Rua das Flores, 123&lt;br&gt;
+    Centro — Cidade/UF&lt;br&gt;
+    Telefone: (&lt;span&gt;11&lt;/span&gt;) 98765-4321&lt;br&gt;
+    E-mail: &lt;a href="mailto:contato@exemplo.com"&gt;contato@exemplo.com&lt;/a&gt;
+  &lt;/address&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                            </pre>
+                        </div>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+
+                        <p>
+                            A tag <code>&lt;address&gt;</code> é usada para marcar informações de contato do autor ou da organização relacionada ao conteúdo da página. Normalmente aparece no rodapé (<code>&lt;footer&gt;</code>) ou na seção de contato.
+                        </p>
+
+                        <p>
+                            Ela é um elemento de nível bloco (<code>block</code>) e deve conter apenas informações de contato — por exemplo, nome do autor, endereço físico, telefone, e-mail, links de redes sociais ou formulários de contato.
+                        </p>
+
+                        <p>
+                            Evite usar <code>&lt;address&gt;</code> apenas para fins de formatação; sua finalidade é semântica: indicar que o conteúdo representa dados de contato.
+                        </p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Características</h3>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Propriedade</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de elemento</td>
+                                    <td>Elemento de bloco (<code>block</code>).</td>
+                                </tr>
+                                <tr>
+                                    <td>Uso semântico</td>
+                                    <td>Informações de contato do autor/organização relacionadas ao conteúdo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Local comum</td>
+                                    <td>Rodapé (<code>&lt;footer&gt;</code>) ou seção de contato da página.</td>
+                                </tr>
+                                <tr>
+                                    <td>Atributos</td>
+                                    <td>Não possui atributos específicos; aceita atributos globais do HTML (class, id, title, etc.).</td>
+                                </tr>
+                                <tr>
+                                    <td>Conteúdo permitido</td>
+                                    <td>Texto e elementos em linha (links, &lt;br&gt;, &lt;span&gt;, etc.) que representem contato.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
                 </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +267,18 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="sobre.html">Sobre Nós</a> | 
+            <a href="referencias.html">Referências</a>
+        </p>
     </footer>
+
 </body>
 
 </html>

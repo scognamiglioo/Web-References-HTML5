@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;td&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,189 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;td&gt;</h1>
+                </section>
             </section>
+            <p class="subtitle">A tag usada para definir células de dados dentro de uma linha de uma tabela HTML.</p>
 
             <section class="content">
-
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>No exemplo abaixo, a tag <code>&lt;td&gt;</code> é usada para preencher as células de uma tabela simples:</p>
+
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        <pre>
+                            &lt;table border="1"&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Nome&lt;/td&gt;
+                                &lt;td&gt;Idade&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Ana&lt;/td&gt;
+                                &lt;td&gt;22&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/table&gt;
+
+                        </pre>
                     </div>
+
+                    <p>Neste exemplo, cada <code>&lt;td&gt;</code> representa uma célula comum da tabela. O primeiro <code>&lt;tr&gt;</code> contém os títulos das colunas e o segundo contém os dados.</p>
+
+                    <h4>Output</h4>
+                    <table border="1">
+                        <tr>
+                            <td>Nome</td>
+                            <td>Idade</td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                        </tr>
+                        </table>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;td&gt;</code> <i>(table data)</i> é usada para definir uma célula de dados em uma tabela. Ela deve estar sempre dentro de uma tag <code>&lt;tr&gt;</code> (linha da tabela) e, normalmente, dentro de uma <code>&lt;table&gt;</code>.</p>
+                    <p>Os conteúdos de <code>&lt;td&gt;</code> podem ser texto, imagens, links, listas, formulários ou qualquer outro elemento HTML.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos</h3>
                     <table class="attributes-table">
                         <thead>
                             <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
+                                <td><code>colspan</code></td>
+                                <td>número</td>
+                                <td>Define quantas colunas a célula deve ocupar.</td>
                             </tr>
                             <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+                                <td><code>rowspan</code></td>
+                                <td>número</td>
+                                <td>Define quantas linhas a célula deve ocupar.</td>
                             </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                             <tr>
+                                <td><code>headers</code></td>
+                                <td>id(s) de <code>&lt;th&gt;</code> </td>
+                                <td>Associa a célula a cabeçalhos específicos (para acessibilidade).</td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
+                    <h3>Boas Práticas e Observações</h3>
+                    <ul>
+                        <li><strong>Estrutura:</strong> Use <code>&lt;td&gt;</code> para dados comuns e <code>&lt;th&gt;</code> para cabeçalhos de tabela.</li>
+                        <li><strong>Semântica:</strong> Prefira CSS para definir estilos e alinhamentos em vez de atributos obsoletos (align, valign, bgcolor).</li>
+                        <li><strong>Acessibilidade:</strong> Quando a tabela for complexa, use os atributos headers e scope para melhorar a leitura por leitores de tela.</li>
+                        <li><strong>Estilização:</strong> O CSS pode controlar bordas, cores, espaçamento e alinhamento com propriedades como border, padding, text-align e vertical-align.</li>
+                        <li><strong>Boa prática:</strong> Sempre feche a tag <code>&lt;td&gt;</code> explicitamente, mesmo que alguns navegadores a fechem automaticamente.</li>
+                    </ul>
                 </section>
 
-            </section>
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p class="subtitle">Veja alguns usos práticos da tag <code>&lt;td&gt;</code>:</p>
+
+                    <h4>Exemplo 1: Mesclando colunas</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;table border="1"&gt;
+                                &lt;tr&gt;
+                                    &lt;td colspan="2"&gt;Informações Pessoais&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Nome&lt;/td&gt;
+                                    &lt;td&gt;Maria&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <table border="1">
+                        <tr>
+                            <td colspan="2">Informações Pessoais</td>
+                        </tr>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Maria</td>
+                        </tr>
+                    </table>
+                    <p>A primeira célula ocupa duas colunas.</p>
+
+                    <hr>
+
+                    <h4>Exemplo 2: Mesclando linhas</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;table border="1"&gt;
+                                &lt;tr&gt;
+                                    &lt;td rowspan="2"&gt;Endereço&lt;/td&gt;
+                                    &lt;td&gt;Rua A&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Rua B&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <table border="1">
+                        <tr>
+                            <td rowspan="2">Endereço</td>
+                            <td>Rua A</td>
+                        </tr>
+                        <tr>
+                            <td>Rua B</td>
+                        </tr>
+                    </table>
+                    <p>A célula “Endereço” ocupa duas linhas</p>
+                    
+                    <hr>
+
+                    <h4>Exemplo 3: Célula com conteúdo misto</h4>
+                    <div class="code-block">
+                        <pre>
+                            &lt;table border="1"&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;
+                                    &lt;strong&gt;Foto:&lt;/strong&gt; Sistema solar&lt;br&gt;
+                                    &lt;img src=""utils/imgs/planeta.jpg" width="60" alt="solar"&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/table&gt;
+                        </pre>
+                    </div>
+                    <h4>Output</h4>
+                    <table border="1">
+                        <tr>
+                            <td>
+                            <strong>Foto:</strong> Sistema Solar<br>
+                            <img src="utils/imgs/planeta.jpg" width="60" alt="solar">
+                            </td>
+                        </tr>
+                    </table>
+                    <p>A célula contém texto e imagem.</p>
+                
+                </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,13 +343,14 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
 </body>
 
@@ -263,6 +363,7 @@
 
     searchInput.addEventListener('keyup', function () {
         const filter = this.value.toLowerCase();
+
         for (let i = 0; i < items.length; i++) {
             const link = items[i].getElementsByTagName('a')[0];
             const text = link.textContent.toLowerCase();

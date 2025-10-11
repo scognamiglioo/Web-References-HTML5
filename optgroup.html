@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;optgroup&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,90 +28,107 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
 
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;optgroup&gt;</h1>
                 </section>
 
-                <section class="example-section">
-                    <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                <p class="subtitle">
+                    A tag <code>&lt;optgroup&gt;</code> é usada dentro de um elemento <code>&lt;select&gt;</code> para agrupar opções relacionadas (<code>&lt;option&gt;</code>) em uma lista suspensa, facilitando a organização e a compreensão das opções pelo usuário.
+                </p>
+
+                <section class="content">
+                    <section class="example-section">
+                        <h3>Exemplo</h3>
+                        <p>No exemplo abaixo, as opções de um menu suspenso são agrupadas por categoria usando a tag <code>&lt;optgroup&gt;</code>:</p>
+
+                        <div class="code-block">
+                            <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Exemplo da tag &lt;optgroup&gt;&lt;/h1&gt;
+
+&lt;form&gt;
+  &lt;label for="carros"&gt;Escolha um carro:&lt;/label&gt;
+  &lt;select id="carros" name="carros"&gt;
+
+    &lt;optgroup label="Carros Alemães"&gt;
+      &lt;option value="audi"&gt;Audi&lt;/option&gt;
+      &lt;option value="bmw"&gt;BMW&lt;/option&gt;
+      &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+    &lt;/optgroup&gt;
+
+    &lt;optgroup label="Carros Japoneses"&gt;
+      &lt;option value="toyota"&gt;Toyota&lt;/option&gt;
+      &lt;option value="nissan"&gt;Nissan&lt;/option&gt;
+      &lt;option value="honda"&gt;Honda&lt;/option&gt;
+    &lt;/optgroup&gt;
+
+  &lt;/select&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+                            </pre>
+                        </div>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Definição e uso</h3>
+
+                        <p>
+                            A tag <code>&lt;optgroup&gt;</code> define um grupo de opções dentro de um elemento <code>&lt;select&gt;</code>. Ela é especialmente útil em formulários longos, onde há muitas opções que podem ser classificadas por categorias.
+                        </p>
+
+                        <p>
+                            Cada grupo é identificado por meio do atributo <code>label</code>, que fornece um título visível na lista suspensa. Opcionalmente, o grupo pode ser desativado com o atributo <code>disabled</code>.
+                        </p>
+
+                        <p>
+                            Essa tag melhora a <strong>usabilidade</strong> e a <strong>acessibilidade</strong> de formulários, permitindo que os usuários encontrem opções com mais facilidade.
+                        </p>
+                    </section>
+
+                    <section class="example-section">
+                        <h3>Atributos</h3>
+                        <table class="attributes-table">
+                            <thead>
+                                <tr>
+                                    <th>Atributo</th>
+                                    <th>Valor</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>label</code></td>
+                                    <td>texto</td>
+                                    <td>Define o nome do grupo de opções exibido na lista. <strong>Obrigatório.</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><code>disabled</code></td>
+                                    <td>disabled</td>
+                                    <td>Desativa todas as opções dentro do grupo, tornando-as não selecionáveis.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
                 </section>
-
-                <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
-
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
-            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,14 +264,15 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a></p>
     </footer>
+
 </body>
 
 </html>

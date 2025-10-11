@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;figure&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,78 +26,46 @@
     <main>
         <article class="main-content">
             <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
+                <h1>Tag HTML &lt;figure&gt;</h1>
             </section>
 
             <section class="content">
 
                 <section class="example-section">
                     <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
+                    <p>Usada para agrupar conteúdo visual com uma legenda.</p>
                     <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
+                        &lt;figure&gt;<br>
+                        &nbsp;&nbsp;&lt;img src="paisagem.jpg" alt="Paisagem ao pôr do sol"&gt;<br>
+                        &nbsp;&nbsp;&lt;figcaption&gt;Vista do pôr do sol na serra.&lt;/figcaption&gt;<br>
+                        &lt;/figure&gt;
                     </div>
                 </section>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
                     <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
+                        A tag <strong>&lt;figure&gt;</strong> é usada para agrupar conteúdo de mídia — como imagens, gráficos, diagramas, vídeos ou trechos de código — e uma legenda opcional, fornecida pela tag <strong>&lt;figcaption&gt;</strong>.
                     </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
+                    <p>
+                        O conteúdo dentro de <strong>&lt;figure&gt;</strong> é independente do fluxo principal da página e pode ser movido sem alterar o significado do texto.
                     </p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
-                    <table class="attributes-table">
-                        <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3>Exemplo com citação e legenda</h3>
+                    <div class="code-block">
+                        &lt;figure&gt;<br>
+                        &nbsp;&nbsp;&lt;blockquote&gt;"A simplicidade é o último grau da sofisticação."&lt;/blockquote&gt;<br>
+                        &nbsp;&nbsp;&lt;figcaption&gt;— Leonardo da Vinci&lt;/figcaption&gt;<br>
+                        &lt;/figure&gt;
+                    </div>
                 </section>
 
                 <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
+                    <h3>Atributos</h3>
+                    <p>
+                        A tag <strong>&lt;figure&gt;</strong> não possui atributos específicos. Ela apenas organiza semanticamente elementos visuais com uma legenda.
                     </p>
                 </section>
 
@@ -224,14 +192,12 @@
 
                 <li><a href="address.html">&lt;address&gt;</a></li>
                 <li><a href="colgroup.html">&lt;colgroup&gt;</a></li>
-
                 <li><a href="h1.html">&lt;h1&gt;</a></li>
                 <li><a href="h2.html">&lt;h2&gt;</a></li>
                 <li><a href="h3.html">&lt;h3&gt;</a></li>
                 <li><a href="h4.html">&lt;h4&gt;</a></li>
                 <li><a href="h5.html">&lt;h5&gt;</a></li>
                 <li><a href="h6.html">&lt;h6&gt;</a></li>
-
                 <li><a href="mark.html">&lt;mark&gt;</a></li>
                 <li><a href="rt.html">&lt;rt&gt;</a></li>
                 <li><a href="tbody.html">&lt;tbody&gt;</a></li>
@@ -243,8 +209,8 @@
                 <li><a href="pre.html">&lt;pre&gt;</a></li>
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
-            </ul>
 
+            </ul>
         </aside>
     </main>
 

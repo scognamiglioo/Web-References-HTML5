@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag &lt;!DOCTYPE&gt;</title>
+    <title>Tag &lt;meta&gt;</title>
     <link rel="stylesheet" href="utils/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,90 +25,79 @@
 
     <main>
         <article class="main-content">
-            <section class="title-section-tag">
-                <h1>Tag HTML &lt;!DOCTYPE&gt;</h1>
-            </section>
-
-            <section class="content">
-
-                <section class="example-section">
-                    <h3>Exemplo</h3>
-                    <p>Define o tipo de documento e a versão do HTML utilizada.</p>
-                    <div class="code-block">
-                        &lt;!DOCTYPE html&gt;<br>
-                        &lt;html&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Exemplo&lt;/title&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Olá, mundo!&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                        &lt;/html&gt;
-                    </div>
+            <section class="title-section">
+                <section class="title-section-tag">
+                    <h1>Tag HTML &lt;meta&gt;</h1>
                 </section>
+            </section>
+            <p class="subtitle">A tag que fornece metadados sobre o documento HTML,
+                como conjunto de caracteres, descrição da página, palavras-chave e autor.</p>
 
                 <section class="example-section">
                     <h3>Definição e uso</h3>
-                    <p class="description">
-                        A declaração <strong>&lt;!DOCTYPE&gt;</strong> não é uma tag HTML propriamente dita, mas uma instrução
-                        para o navegador sobre qual versão do HTML o documento está usando.
-                    </p>
-                    <p>Ela deve aparecer no topo do documento, antes da tag <strong>&lt;html&gt;</strong>.  
-                       No HTML5, a declaração é simples e padronizada: <strong>&lt;!DOCTYPE html&gt;</strong>.
-                    </p>
+                    <p>A tag <code>&lt;meta&gt;</code> define metadados sobre um documento HTML. Metadados são informações sobre dados. As tags <code>&lt;meta&gt;</code> sempre vão dentro do elemento <code>&lt;head&gt;</code> e são normalmente usadas para especificar o conjunto de caracteres, a descrição da página, palavras-chave, o autor do documento e as configurações da janela de visualização (viewport).</p>
+                    <p>Os metadados não são exibidos na página, mas são utilizados por navegadores (como exibir conteúdo ou recarregar a página), por mecanismos de busca (para palavras-chave) e outros serviços da web.</p>
                 </section>
 
                 <section class="example-section">
-                    <h3>Versões anteriores do DOCTYPE</h3>
-                    <p>A declaração DOCTYPE variava conforme a versão do HTML. Veja alguns exemplos históricos:</p>
-
+                    <h3>Atributos Principais</h3>
                     <table class="attributes-table">
                         <thead>
-                            <tr>
-                                <th>Versão</th>
-                                <th>Declaração</th>
-                            </tr>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><strong>HTML 5</strong></td>
-                                <td>&lt;!DOCTYPE html&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Strict</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                                    "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>HTML 4.01 Transitional</strong></td>
-                                <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                                    "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                            </tr>
-                            <tr>
-                                <td><strong>XHTML 1.0 Strict</strong></td>
-                                <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                            </tr>
+                        <tr>
+                            <td><strong>charset</strong></td>
+                            <td><em>character_set</em></td>
+                            <td class="description">Especifica a codificação de caracteres para o documento HTML. UTF-8 é o recomendado.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>name</strong></td>
+                            <td>application-name / author / description / keywords / viewport</td>
+                            <td class="description">Especifica o nome para o metadado. Usado em conjunto com o atributo <code>content</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>content</strong></td>
+                            <td><em>text</em></td>
+                            <td class="description">Fornece o valor associado ao atributo <code>name</code> ou <code>http-equiv</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>http-equiv</strong></td>
+                            <td>content-security-policy / content-type / default-style / refresh</td>
+                            <td class="description">É usado para fornecer um cabeçalho HTTP para o valor do atributo <code>content</code>.</td>
+                        </tr>
                         </tbody>
                     </table>
                 </section>
 
-                <section class="example-section">
-                    <h3>Importância</h3>
-                    <p>Sem o <strong>&lt;!DOCTYPE&gt;</strong>, os navegadores podem entrar em <em>quirks mode</em>, renderizando a página
-                        com comportamento inconsistente.  
-                        Por isso, ele garante que o navegador siga o modo de compatibilidade padrão.
-                    </p>
-                </section>
+            <section class="example-section">
+                <h3>Exemplos Essenciais</h3>
+                <h4>Definindo o conjunto de caracteres como UTF-8:</h4>
+                <div class="code-block"><pre>&lt;meta charset="UTF-8"&gt;</pre></div>
 
+                <h4>Definindo uma descrição para mecanismos de busca:</h4>
+                <div class="code-block"><pre>&lt;meta name="description" content="Tutorial completo sobre as tags do HTML5."&gt;</pre></div>
+
+                <h4>Definindo palavras-chave:</h4>
+                <div class="code-block"><pre>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Web Development"&gt;</pre></div>
+
+                <h4>Definindo o autor da página:</h4>
+                <div class="code-block"><pre>&lt;meta name="author" content="Dijalmir Barbosa"&gt;</pre></div>
+
+                <h4>Configurando a viewport para design responsivo:</h4>
+                <div class="code-block"><pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre></div>
             </section>
         </article>
 
         <aside class="sidebar">
             <h2>Outras Tags HTML</h2>
             <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
-            <ul class="sidebar-links" id="tagList">
 
+            <ul class="sidebar-links" id="tagList">
                 <li><a href="canvas.html">&lt;canvas&gt;</a></li>
                 <li><a href="fieldset.html">&lt;fieldset&gt;</a></li>
                 <li><a href="legend.html">&lt;legend&gt;</a></li>
@@ -244,29 +233,30 @@
                 <li><a href="summary.html">&lt;summary&gt;</a></li>
                 <li><a href="video.html">&lt;video&gt;</a></li>
             </ul>
-
         </aside>
     </main>
 
     <footer>
         <p>Copyright © 2025 Tutorial HTML5</p>
-        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+                href="referencias.html">Referências</a>
+        </p>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const tagList = document.getElementById('tagList');
+        const items = tagList.getElementsByTagName('li');
+
+        searchInput.addEventListener('keyup', function () {
+            const filter = this.value.toLowerCase();
+            for (let i = 0; i < items.length; i++) {
+                const link = items[i].getElementsByTagName('a')[0];
+                const text = link.textContent.toLowerCase();
+                items[i].style.display = text.includes(filter) ? '' : 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const tagList = document.getElementById('tagList');
-    const items = tagList.getElementsByTagName('li');
-
-    searchInput.addEventListener('keyup', function () {
-        const filter = this.value.toLowerCase();
-        for (let i = 0; i < items.length; i++) {
-            const link = items[i].getElementsByTagName('a')[0];
-            const text = link.textContent.toLowerCase();
-            items[i].style.display = text.includes(filter) ? '' : 'none';
-        }
-    });
-</script>

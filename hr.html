@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;hr&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="stylesheet" href="utils/css/embed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo">Tags HTML5</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="referencias.html">Referências</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <article class="main-content">
+        <section class="title-section-tag">
+            <h1>Tag HTML5 &lt;hr&gt;</h1>
+        </section>
+
+        <section class="content">
+
+            <section class="example-section">
+                <h3>Definição e uso</h3>
+                <p class="description">
+                    A tag &lt;hr&gt; é usada para inserir uma **linha horizontal** que separa conteúdos em uma página HTML.  
+                    No HTML5, é considerada um elemento **autônomo**, ou seja, **não precisa de tag de fechamento**.  
+                    <br>
+                    <mark>Ela é útil para destacar mudanças de tema, seções ou separar blocos de conteúdo.</mark>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Estrutura Básica</h3>
+                <p class="description">
+                    A sintaxe típica é simples: <code>&lt;hr&gt;</code>
+                </p>
+            </section>
+
+            <section class="example-section">
+                <h3>Exemplo 1: Separando parágrafos</h3>
+                <div class="code-block">
+                    &lt;p&gt;Este é o primeiro parágrafo.&lt;/p&gt;<br>
+                    &lt;hr&gt;<br>
+                    &lt;p&gt;Este é o segundo parágrafo.&lt;/p&gt;
+                </div>
+
+                <h3>Exemplo 2: Linha estilizada</h3>
+                <div class="code-block">
+                    &lt;hr style="border: 2px solid #000; width: 50%; margin: 20px 0;"&gt;
+                </div>
+                <p>Resultado: Uma linha horizontal preta, com 50% da largura da tela e espaçamento de 20px acima e abaixo.</p>
+
+            </section>
+
+        </section>
+
+    </article>
+
+    <aside class="sidebar">
+        <h2>Outras Tags HTML5</h2>
+
+        <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+        <ul class="sidebar-links" id="tagList">
+            <li><a href="body.html">&lt;body&gt;</a></li>
+            <li><a href="hr.html">&lt;hr&gt;</a></li>
+            <li><a href="del.html">&lt;del&gt;</a></li>
+            <li><a href="ins.html">&lt;ins&gt;</a></li>
+            <li><a href="section.html">&lt;section&gt;</a></li>
+        </ul>
+
+    </aside>
+
+</main>
+
+<footer>
+    <p>Copyright © 2025 Tutorial HTML5</p>
+    <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a
+            href="referencias.html">Referências</a></p>
+</footer>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const tagList = document.getElementById('tagList');
+const items = tagList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', function () {
+    const filter = this.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+        const link = items[i].getElementsByTagName('a')[0];
+        const text = link.textContent.toLowerCase();
+        items[i].style.display = text.includes(filter) ? '' : 'none';
+    }
+});
+</script>
+</body>
+</html>
