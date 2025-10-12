@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;select&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;select&gt;</h1>
+            </section>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>A tag &lt;select&gt; cria uma lista suspensa (dropdown) de opções.</p>
+                    <div class="code-block">
+                        &lt;label for="linguagem"&gt;Escolha uma linguagem:&lt;/label&gt;<br>
+                        &lt;select id="linguagem" name="linguagem"&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="html"&gt;HTML&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="css"&gt;CSS&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option value="js"&gt;JavaScript&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </div>
+                    <p>Resultado:</p>
+                    <label for="linguagem">Escolha uma linguagem:</label>
+                    <select id="linguagem" name="linguagem">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                    </select>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;select&gt; é usada para criar menus suspensos, permitindo que o usuário escolha uma ou mais opções.</p>
+                    <p>Cada item dentro do &lt;select&gt; é definido por uma tag &lt;option&gt;.</p>
+                    <p>É comum ser usada em formulários, junto com a tag &lt;label&gt; para identificar o campo.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>name</strong></td>
+                                <td>texto</td>
+                                <td class="description">Define o nome do campo, usado no envio de formulários.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>multiple</strong></td>
+                                <td>booleano</td>
+                                <td>Permite selecionar múltiplas opções (usando Ctrl ou Shift).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>size</strong></td>
+                                <td>número</td>
+                                <td>Define quantas opções são visíveis sem rolar.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>disabled</strong></td>
+                                <td>booleano</td>
+                                <td>Desativa o campo, impedindo interação.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+
+                    <p>Menu com múltiplas seleções possíveis:</p>
+                    <div class="code-block">
+                        &lt;select multiple size="3"&gt;<br>
+                        &nbsp;&nbsp;&lt;option&gt;PHP&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option&gt;Python&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;option&gt;Java&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </div>
+
+                    <p>Grupo de opções categorizadas:</p>
+                    <div class="code-block">
+                        &lt;select&gt;<br>
+                        &nbsp;&nbsp;&lt;optgroup label="Front-end"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;/optgroup&gt;<br>
+                        &nbsp;&nbsp;&lt;optgroup label="Back-end"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Node.js&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Python&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&lt;/optgroup&gt;<br>
+                        &lt;/select&gt;
+                    </div>
+                </section>
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
