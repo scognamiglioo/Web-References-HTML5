@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;bdi&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;bdi&gt;</h1>
+            </section>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>A tag &lt;bdi&gt; isola uma parte do texto para garantir a direção correta quando misturada com outros idiomas que possuem direção diferente (como árabe e hebraico).</p>
+                    <div class="code-block">
+                        &lt;p&gt;Usuário 1: &lt;bdi&gt;محمد&lt;/bdi&gt;&lt;/p&gt;<br>
+                        &lt;p&gt;Usuário 2: &lt;bdi&gt;Ana&lt;/bdi&gt;&lt;/p&gt;<br>
+                        &lt;p&gt;Pontuação: 80&lt;/p&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;bdi&gt; (Bi-Directional Isolation) é usada para isolar uma parte do texto que pode ter direção diferente do restante, garantindo que a exibição ocorra corretamente em idiomas RTL (da direita para a esquerda).</p>
+                    <p>Isso é especialmente útil em interfaces multilíngues, onde nomes de usuários ou trechos de texto podem ter direções distintas.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>dir</strong></td>
+                                <td>ltr | rtl | auto</td>
+                                <td class="description">Define a direção do texto dentro do elemento &lt;bdi&gt;.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p>O exemplo abaixo mostra como o &lt;bdi&gt; evita confusões quando há mistura de idiomas com direções diferentes:</p>
+                    <div class="code-block">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;Usuário: &lt;bdi&gt;علي&lt;/bdi&gt; - Pontuação: 90&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;Usuário: &lt;bdi&gt;João&lt;/bdi&gt; - Pontuação: 80&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                </section>
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
