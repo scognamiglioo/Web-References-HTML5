@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;dialog&gt;</title>
+    <link rel="stylesheet" href="utils/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tags HTML</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="referencias.html">Referências</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="main-content">
+            <section class="title-section-tag">
+                <h1>Tag HTML &lt;dialog&gt;</h1>
+            </section>
+
+            <section class="content">
+                <section class="example-section">
+                    <h3>Exemplo</h3>
+                    <p>A tag &lt;dialog&gt; cria uma caixa de diálogo ou janela modal interativa.</p>
+                    <div class="code-block">
+                        &lt;dialog id="meuDialogo"&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Deseja confirmar esta ação?&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&lt;button id="fecharBtn"&gt;Fechar&lt;/button&gt;<br>
+                        &lt;/dialog&gt;<br><br>
+                        &lt;button id="abrirBtn"&gt;Abrir Diálogo&lt;/button&gt;<br><br>
+                        &lt;script&gt;<br>
+                        &nbsp;&nbsp;const dialog = document.getElementById('meuDialogo');<br>
+                        &nbsp;&nbsp;document.getElementById('abrirBtn').onclick = () =&gt; dialog.showModal();<br>
+                        &nbsp;&nbsp;document.getElementById('fecharBtn').onclick = () =&gt; dialog.close();<br>
+                        &lt;/script&gt;
+                    </div>
+                </section>
+
+                <section class="example-section">
+                    <h3>Definição e uso</h3>
+                    <p class="description">A tag &lt;dialog&gt; é usada para criar janelas de diálogo, caixas de alerta ou modais embutidas no HTML.</p>
+                    <p>O elemento pode ser aberto com os métodos JavaScript <code>show()</code> e <code>showModal()</code>, e fechado com <code>close()</code>.</p>
+                    <p>É uma forma nativa e sem dependência de bibliotecas externas para criar pop-ups interativos.</p>
+                </section>
+
+                <section class="example-section">
+                    <h3>Atributos</h3>
+                    <table class="attributes-table">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>open</strong></td>
+                                <td>booleano</td>
+                                <td class="description">Define se o diálogo está visível. Quando presente, o diálogo é exibido automaticamente.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="example-section">
+                    <h3>Outros exemplos</h3>
+                    <p>Exemplo de caixa de diálogo simples aberta automaticamente:</p>
+                    <div class="code-block">
+                        &lt;dialog open&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Mensagem automática&lt;/p&gt;<br>
+                        &lt;/dialog&gt;
+                    </div>
+                    <p>Exemplo com botão para fechar:</p>
+                    <div class="code-block">
+                        &lt;dialog id="janela"&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Olá! Clique abaixo para fechar.&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&lt;button onclick="janela.close()"&gt;Fechar&lt;/button&gt;<br>
+                        &lt;/dialog&gt;<br><br>
+                        &lt;button onclick="janela.showModal()"&gt;Abrir&lt;/button&gt;
+                    </div>
+                </section>
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <h2>Outras Tags HTML</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar tag..." class="btn search-box">
+            <ul class="sidebar-links" id="tagList">
+                <li><a href="bdi.html">&lt;bdi&gt;</a></li>
+                <li><a href="dialog.html">&lt;dialog&gt;</a></li>
+                <li><a href="iframe.html">&lt;iframe&gt;</a></li>
+                <li><a href="ol.html">&lt;ol&gt;</a></li>
+                <li><a href="select.html">&lt;select&gt;</a></li>
+                <li><a href="time.html">&lt;time&gt;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Tutorial HTML5</p>
+        <p><a href="index.html">Home</a> | <a href="sobre.html">Sobre Nós</a> | <a href="referencias.html">Referências</a></p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tagList = document.getElementById('tagList');
+    const items = tagList.getElementsByTagName('li');
+
+    searchInput.addEventListener('keyup', function () {
+        const filter = this.value.toLowerCase();
+        for (let i = 0; i < items.length; i++) {
+            const link = items[i].getElementsByTagName('a')[0];
+            const text = link.textContent.toLowerCase();
+            items[i].style.display = text.includes(filter) ? '' : 'none';
+        }
+    });
+</script>
